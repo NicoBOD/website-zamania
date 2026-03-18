@@ -1,0 +1,1752 @@
+/* ==========================================
+   FEUILLE DE STYLE PRINCIPALE - ZAMANIA
+   ==========================================
+   
+   Cette feuille de style définit l'apparence visuelle
+   du site web ZamanIA en mode clair.
+   
+   Organisation :
+   1. Variables CSS (couleurs, espacements)
+   2. Reset et styles de base
+   3. Typographie
+   4. En-tête et navigation
+   5. Section Hero
+   6. Sections de contenu
+   7. Composants réutilisables
+   8. Pied de page
+   9. Responsive (media queries)
+   ========================================== */
+
+
+/* ==========================================
+   1. VARIABLES CSS GLOBALES
+   ==========================================
+   Les variables CSS permettent de centraliser
+   les valeurs réutilisées (couleurs, espacements)
+   pour faciliter la maintenance du code.
+   ========================================== */
+
+:root {
+    /* Couleurs principales */
+    --primary: #1a2332;           /* Bleu foncé pour les éléments principaux */
+    --accent: #c9a05f;            /* Or/beige pour les accents et boutons */
+    --accent-light: #e8d4b0;      /* Version plus claire de l'accent */
+    --background: #fafbfc;        /* Fond général du site (gris très clair) */
+    --surface: #ffffff;           /* Fond des cartes et surfaces blanches */
+    --text-primary: #1a2332;      /* Couleur du texte principal (bleu foncé) */
+    --text-secondary: #5a6c7d;    /* Couleur du texte secondaire (gris-bleu) */
+    --border: #e1e8ed;            /* Couleur des bordures (gris clair) */
+    
+    /* Espacements responsifs utilisant clamp() */
+    /* clamp(min, préféré, max) permet d'avoir des tailles fluides */
+    --space-lg: clamp(1.5rem, 4vw, 2.5rem);   /* Grand espacement */
+    --space-xl: clamp(2rem, 5vw, 4rem);       /* Très grand espacement */
+    --space-2xl: clamp(3rem, 7vw, 6rem);      /* Espacement maximum */
+    
+    /* Largeur maximale du contenu */
+    --container-2xl: 1400px;
+}
+
+
+/* ==========================================
+   2. RESET ET STYLES DE BASE
+   ==========================================
+   Ces règles normalisent l'affichage entre
+   les différents navigateurs.
+   ========================================== */
+
+/* Suppression des marges et paddings par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Le padding et border sont inclus dans la largeur totale */
+}
+
+/* Activation du scroll fluide lors des clics sur les ancres */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styles de base du body (corps de la page) */
+body {
+    /* Police par défaut : Work Sans, avec fallback sur les polices système */
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;                    /* Hauteur de ligne pour une bonne lisibilité */
+    color: var(--text-primary);          /* Couleur du texte */
+    background: var(--background);        /* Couleur de fond */
+    overflow-x: hidden;                   /* Empêche le scroll horizontal */
+    -webkit-font-smoothing: antialiased;  /* Lissage des polices sur Mac/iOS */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Transition douce lors du changement de thème */
+}
+
+
+/* ==========================================
+   3. TYPOGRAPHIE
+   ==========================================
+   Styles pour les titres et textes.
+   ========================================== */
+
+/* Styles communs à tous les titres */
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;  /* Police élégante pour les titres */
+    font-weight: 300;                          /* Poids léger pour un aspect raffiné */
+    letter-spacing: -0.02em;                   /* Léger rapprochement des lettres */
+}
+
+/* Titre principal (h1) */
+h1 {
+    /* Taille responsive : minimum 2rem, préféré 4.5vw, maximum 3.5rem */
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    line-height: 1.2;           /* Hauteur de ligne pour une meilleure lisibilité */
+    margin-bottom: 1.5rem;
+}
+
+/* Titre de section (h2) */
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+/* Sous-titre (h3) */
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+/* Sous-titres de section */
+.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 3rem;  /* Centré avec espacement en bas */
+}
+
+
+/* ==========================================
+   4. EN-TÊTE ET NAVIGATION
+   ==========================================
+   Header fixe en haut de la page avec menu.
+   ========================================== */
+
+/* En-tête fixe */
+header {
+    position: fixed;              /* Reste en haut lors du scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);  /* Fond blanc semi-transparent */
+    backdrop-filter: blur(10px);             /* Effet de flou sur l'arrière-plan */
+    z-index: 1000;                          /* Au-dessus du contenu */
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Effet lors du scroll */
+header.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);  /* Ombre portée */
+}
+
+/* Container de la navigation */
+nav {
+    display: flex;
+    justify-content: space-between;  /* Logo à gauche, menu à droite */
+    align-items: center;
+    padding: clamp(1rem, 3vw, 1.5rem) 5%;  /* Padding responsive */
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+    
+    /* ... tes propriétés existantes ... */
+    padding: clamp(1rem, 3vw, 1.5rem) 5%;
+    
+    /* AJOUT ICI : On anime le changement de padding */
+    transition: padding 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Logo de l'entreprise */
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    z-index: 1001;
+    gap: 0.8rem;  /* Espacement entre l'image et le texte */
+    transition: color 0.3s ease;
+}
+
+/* ==========================================
+   MISE À JOUR DU LOGO
+   ========================================== */
+
+/* État initial (Grand logo qui dépasse) */
+.logo-img {
+    height: 85px;
+    width: auto;
+    object-fit: contain;
+    
+    /* Les marges négatives pour qu'il dépasse sans agrandir le header */
+    margin-top: -15px;
+    margin-bottom: -15px;
+
+    /* ← Aligne le texte au centre de l'image */
+    vertical-align: -20px;
+
+    /* Animation fluide (transition longue et douce) de TOUTES les propriétés (hauteur et marges) */
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   ÉTAT SCROLLÉ (Quand on descend)
+   ========================================== */
+
+/* Quand on scrolle, on réduit le padding du container NAV */
+header.scrolled nav {
+    padding-top: 0.8rem;    /* Plus petit qu'au départ */
+    padding-bottom: 0.8rem;
+}
+
+/* Quand on scrolle, le logo reprend sa place et diminue */
+header.scrolled .logo-img {
+    height: 60px;           /* Taille réduite */
+    margin-top: 0px;        /* Marges remises à zéro */
+    margin-bottom: 0px;
+}
+
+/* Optionnel : Ajustement de l'ombre pour qu'elle arrive doucement */
+header.scrolled {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08); /* Ombre plus diffuse */
+}
+
+/* ========================================== */
+
+/* Coloration de "IA" dans le logo */
+.logo span {
+    color: var(--accent);
+}
+
+/* Liste des liens de navigation */
+.nav-links {
+    display: flex;
+    gap: clamp(1.5rem, 3vw, 2.5rem);  /* Espacement responsive entre les liens */
+    list-style: none;                  /* Supprime les puces */
+    align-items: center;
+}
+
+/* Liens de navigation */
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* Ligne animée sous les liens */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;                      /* Commence à 0 */
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s;        /* Animation de la largeur */
+}
+
+/* Au survol, change la couleur et affiche la ligne */
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-links a:hover::after {
+    width: 100%;  /* La ligne s'étend sur toute la largeur */
+}
+
+/* Bouton d'appel à l'action dans la navigation */
+.cta-nav {
+    background: linear-gradient(135deg, var(--accent) 0%, #d4a962 100%);
+    color: #1a2332 !important; /* Texte foncé pour un contraste premium */
+    padding: 0.75rem 2.5rem;
+    border-radius: 50px; /* Forme de pilule */
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(201, 160, 95, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-nav::after {
+    display: none;
+}
+
+.cta-nav:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(201, 160, 95, 0.6); /* Le halo s'agrandit */
+    background: linear-gradient(135deg, #d4a962 0%, var(--accent) 100%);
+}
+
+/* Bouton du menu mobile (hamburger) */
+.mobile-menu-btn {
+    display: none;  /* Caché par défaut, visible sur mobile */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+
+/* ==========================================
+   5. SECTION HERO (BANNIÈRE PRINCIPALE)
+   ==========================================
+   Première section visible avec titre et CTA.
+   ========================================== */
+
+.hero {
+    min-height: 100vh;  /* Prend au minimum toute la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    padding: max(8rem, 15vh) 5% var(--space-2xl);  /* Padding adaptatif */
+    background: linear-gradient(135deg, var(--background) 0%, #f0f4f8 100%);  /* Dégradé de fond */
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+
+/* Contenu du hero (grille responsive) */
+.hero-content {
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+    display: grid;
+    /* Grille adaptative : colonnes de minimum 400px, maximum 1 fraction */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    position: relative;
+    z-index: 1;  /* Au-dessus de l'élément ::before */
+    width: 100%;
+}
+
+/* Phrase d'accroche courte */
+.hero-tagline {
+    font-size: 1rem;
+    color: var(--accent);
+    text-transform: uppercase;  /* Texte en majuscules */
+    letter-spacing: 0.15em;     /* Espacement des lettres */
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Paragraphe dans le hero */
+.hero p {
+    font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* Container des boutons dans le hero */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;  /* Les boutons passent à la ligne si nécessaire */
+}
+
+
+/* ==========================================
+   6. BOUTONS
+   ==========================================
+   Styles des boutons d'action.
+   ========================================== */
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);  /* Courbe d'animation personnalisée */
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet de cercle au survol */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Bouton principal (accent) */
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton secondaire (transparent avec bordure) */
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background: var(--text-primary);
+    color: var(--background);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   7. ÉLÉMENT VISUEL DU HERO (CERCLE ANIMÉ)
+   ==========================================
+   Cercle décoratif avec image ou emoji.
+   ========================================== */
+
+.visual-circle {
+    width: min(400px, 80vw);   /* Largeur responsive */
+    height: min(400px, 80vw);  /* Hauteur responsive */
+    border-radius: 50%;        /* Cercle parfait */
+    background: linear-gradient(135deg, var(--accent-light), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 20px 60px rgba(201, 160, 95, 0.3);
+    animation: pulse 4s ease-in-out infinite;  /* Animation de pulsation */
+    margin: 0 auto;
+    padding: 3rem;
+    overflow: hidden;
+    position: relative;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Élément décoratif rotatif à l'intérieur du cercle */
+.visual-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+/* Animation de rotation */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Image à l'intérieur du cercle */
+.visual-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Animation de pulsation */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+
+/* ==========================================
+   8. SECTIONS DE CONTENU
+   ==========================================
+   Styles communs à toutes les sections.
+   ========================================== */
+
+section {
+    padding: var(--space-2xl) 5%;
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+}
+
+/* En-tête des sections */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+/* Label des sections (petit texte au-dessus du titre) */
+.section-label {
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   9. GRILLE DES SERVICES
+   ==========================================
+   Cartes présentant les services.
+   ========================================== */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 colonnes égales */
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Carte de service */
+.service-card {
+    background: var(--surface);
+    padding: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet de dégradé au survol */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.service-card:hover::before {
+    opacity: 0.05;
+}
+
+/* Effet au survol de la carte */
+.service-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent);
+}
+
+/* Contenu de la carte au-dessus du ::before */
+.service-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Icône du service */
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Titre de la carte */
+.service-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+    color: var(--accent);
+}
+
+/* Texte de la carte */
+.service-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover p {
+    color: var(--text-primary);
+}
+
+
+/* ==========================================
+   10. SECTION APPROCHE
+   ==========================================
+   Section avec fond coloré et étapes numérotées.
+   ========================================== */
+
+.approach {
+    background: var(--surface);
+    border-radius: 4px;
+    padding: var(--space-2xl) 5%;
+    transition: background-color 0.3s ease;
+}
+
+.approach-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Texte descriptif de l'approche */
+.approach-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.approach-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* Grille des étapes */
+.approach-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Carte d'étape */
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--background);
+    border-radius: 4px;
+    border-left: 3px solid var(--accent);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet de fond au survol */
+.step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-light) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.step:hover::before {
+    opacity: 0.1;
+}
+
+/* Effet au survol de l'étape */
+.step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border-left-width: 4px;
+}
+
+/* Contenu au-dessus du ::before */
+.step > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Numéro de l'étape */
+.step-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.step:hover .step-number {
+    transform: scale(1.1);
+}
+
+/* Contenu de l'étape */
+.step-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.step:hover .step-content h4 {
+    color: var(--accent);
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+
+
+/* ==========================================
+   11. GRILLE DES AVANTAGES
+   ==========================================
+   Présentation des bénéfices clients.
+   ========================================== */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+/* Élément d'avantage */
+.benefit-item {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    background: var(--surface);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Icône de l'avantage (cercle coloré) */
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--accent-light), var(--accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 10px 30px rgba(201, 160, 95, 0.4);
+}
+
+/* Titre de l'avantage */
+.benefit-item h3 {
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.benefit-item:hover h3 {
+    color: var(--accent);
+}
+
+/* Description de l'avantage */
+.benefit-item p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   12. SECTION CAS D'USAGE
+   ==========================================
+   Section avec fond sombre et cas d'usage.
+   ========================================== */
+
+.cas-usage-section {
+    background: var(--primary);
+    color: white;
+    padding: var(--space-2xl) 0;
+    margin: var(--space-2xl) 0;
+    width: 100%;
+    max-width: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Couleurs spécifiques pour cette section */
+.cas-usage-section h2 {
+    color: white; /* Le grand titre reste blanc pour la lisibilité sur fond sombre */
+}
+
+.cas-usage-section .section-label {
+    color: var(--accent); /* Le petit label "Cas d'usage concrets" devient OR */
+}
+
+.cas-usage-section .subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cas-usage-section .section-header {
+    padding: 0 5%;
+    max-width: var(--container-2xl);
+    margin: 0 auto var(--space-2xl);
+}
+
+/* Grille des cas d'usage */
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 2rem;
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Carte de cas d'usage */
+.use-case {
+    background: rgba(255, 255, 255, 0.05);  /* Fond légèrement transparent */
+    backdrop-filter: blur(10px);             /* Effet de flou */
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.use-case:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   IMAGES + EMOJIS
+   ========================================== */
+
+.use-case-icon {
+    /* On utilise Flexbox pour mettre l'emoji et l'img côte à côte */
+    display: flex;
+    align-items: center;     /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal dans la carte */
+    gap: 15px;               /* Espace entre l'emoji et l'image */
+    
+    /* Propriétés existantes conservées pour l'animation */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Style de la nouvelle image ajoutée */
+.use-case-img {
+    height: 60px;       /* Hauteur fixe pour uniformiser */
+    width: auto;        /* Largeur s'adapte auto */
+    object-fit: contain;
+    display: block;
+}
+
+/* L'animation s'applique déjà sur .use-case-icon, 
+   donc l'image bougera AVEC l'emoji automatiquement */
+
+.use-case:hover .use-case-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Titre du cas d'usage */
+.use-case h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.use-case:hover h4 {
+    color: var(--accent);
+}
+
+/* Description du cas d'usage */
+.use-case p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+
+/* ==========================================
+   13. SECTION APPEL À L'ACTION (CTA)
+   ==========================================
+   Section colorée avec message final.
+   ========================================== */
+
+.cta-section {
+    position: relative; /* Important pour le positionnement absolu du canvas */
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    padding: 5rem 5%;
+    text-align: center;
+    color: white;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    transition: background 0.3s ease;
+    overflow: hidden; /* Empêche les points de sortir de la zone */
+}
+
+/* Style du Canvas */
+#networkCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Derrière le texte */
+    pointer-events: none; /* Laisse passer les clics vers le fond si besoin */
+    max-width: 100vw; /* Empêche le dépassement */
+    overflow: hidden;
+}
+
+/* Wrapper pour que le texte soit au-dessus */
+.cta-content-wrapper {
+    position: relative;
+    z-index: 2; /* Devant le canvas */
+}
+
+.cta-section h2 {
+    color: white;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Container des boutons CTA */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Bouton clair pour la section CTA */
+.btn-light {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-light:hover {
+    background: var(--accent-light);
+}
+
+/* Bouton avec bordure claire */
+.btn-outline-light {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: var(--primary);
+}
+
+
+/* ==========================================
+   14. PIED DE PAGE (FOOTER)
+   ==========================================
+   Informations de contact et liens.
+   ========================================== */
+
+footer {
+    background: var(--primary);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 4rem 5% 2rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Contenu du footer en grille */
+.footer-content {
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Section "À propos" du footer */
+.footer-about h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-about p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Titres des sections du footer */
+.footer-section h4 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+/* Liste de liens du footer */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+/* Bas du footer (copyright) */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   15. BANNIÈRE DE COOKIES
+   ==========================================
+   Bannière de consentement en bas de page.
+   ========================================== */
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 5%;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    transform: translateY(100%);  /* Caché en dessous de l'écran */
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Bannière visible */
+.cookie-banner.show {
+    transform: translateY(0);
+}
+
+/* Contenu de la bannière */
+.cookie-content {
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Texte de la bannière */
+.cookie-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cookie-text p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cookie-text a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Boutons de la bannière */
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Bouton accepter */
+.cookie-btn-accept {
+    background: var(--accent);
+    color: white;
+}
+
+.cookie-btn-accept:hover {
+    background: #b08f54;
+    transform: translateY(-2px);
+}
+
+/* Bouton refuser */
+.cookie-btn-decline {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+.cookie-btn-decline:hover {
+    background: var(--background);
+    color: var(--text-primary);
+}
+
+
+/* ==========================================
+   16. ANIMATIONS AU SCROLL
+   ==========================================
+   Classes pour les animations d'apparition.
+   ========================================== */
+
+/* États par défaut (visibles sans JavaScript) */
+.animate,
+.animate-left,
+.animate-right,
+.animate-scale {
+    opacity: 1;
+    transform: none;
+}
+
+/* État initial avec JavaScript activé */
+.will-animate.animate {
+    opacity: 0;
+    transform: translateY(40px);  /* Décalé vers le bas */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* État visible */
+.will-animate.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation depuis la gauche */
+.will-animate.animate-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.will-animate.animate-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation depuis la droite */
+.will-animate.animate-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.will-animate.animate-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation de zoom */
+.will-animate.animate-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.will-animate.animate-scale.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* ==========================================
+   17. MEDIA QUERIES (RESPONSIVE)
+   ==========================================
+   Adaptations pour différentes tailles d'écran.
+   ========================================== */
+
+/* Tablettes et petits ordinateurs (largeur max 968px) */
+@media (max-width: 968px) {
+    /* Menu mobile */
+    .mobile-menu-btn {
+        display: block;  /* Affiche le bouton hamburger */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;  /* Caché hors de l'écran à droite */
+        width: min(350px, 80vw);
+        height: 100vh;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 6rem 2rem 2rem;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s, background-color 0.3s ease;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    /* Menu ouvert */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .cta-nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    /* Fond sombre derrière le menu */
+    .nav-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        z-index: 999;
+    }
+
+    .nav-backdrop.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    /* Hero en colonne sur mobile */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-visual {
+        order: -1;  /* Place le visuel en haut */
+    }
+
+    .hero p {
+        margin: 0 auto 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+/* Smartphones et petites tablettes (largeur max 768px) */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;  /* Une seule colonne */
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-steps {
+        grid-template-columns: 1fr;
+    }
+
+    /* Bannière cookies en colonne */
+    .cookie-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cookie-buttons {
+        width: 100%;
+    }
+
+    .cookie-btn {
+        flex: 1;
+    }
+}
+
+/* Petits smartphones (largeur max 640px) */
+@media (max-width: 640px) {
+    .hero {
+        padding: max(7rem, 12vh) 5% var(--space-xl);
+    }
+
+    /* Boutons en colonne sur très petit écran */
+    .cta-buttons,
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   BOUTON CTA PRINCIPAL - STYLE DEMANDÉ
+   ==========================================
+   Styles de base pour les boutons
+   ========================================== */
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Style "light" utilisé par le bouton */
+.btn-light {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-light:hover {
+    background: var(--accent-light);
+}
+
+[data-theme="dark"] .btn-light {
+    background: var(--accent);
+    color: #1a2332;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .btn-light:hover {
+    background: var(--accent-light);
+    color: #1a2332;
+}
+
+/* Style spécifique CTA Primary (bouton "Prêt") */
+.cta-primary {
+    font-size: 1.2rem !important;
+    padding: 1.5rem 3.5rem !important;
+    background: linear-gradient(135deg, var(--accent) 0%, #d4a962 100%) !important;
+    color: #1a2332 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 8px 25px rgba(201, 160, 95, 0.4),
+                0 0 40px rgba(201, 160, 95, 0.3);
+    animation: pulseGlow 2s ease-in-out infinite;
+    position: relative;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent) !important;
+}
+
+[data-theme="dark"] .cta-primary {
+    background: linear-gradient(135deg, var(--accent) 0%, #e8d4b0 100%) !important;
+    box-shadow: 0 8px 30px rgba(201, 160, 95, 0.5),
+                0 0 50px rgba(201, 160, 95, 0.4);
+    border: 2px solid #e8d4b0 !important;
+}
+
+.cta-primary::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 70%
+    );
+    animation: shimmer 3s infinite;
+}
+
+.cta-primary:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(201, 160, 95, 0.6),
+                0 0 60px rgba(201, 160, 95, 0.5);
+}
+
+[data-theme="dark"] .cta-primary:hover {
+    box-shadow: 0 12px 40px rgba(201, 160, 95, 0.7),
+                0 0 70px rgba(201, 160, 95, 0.6);
+}
+
+/* Animations Keyframes */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(201, 160, 95, 0.4),
+                    0 0 40px rgba(201, 160, 95, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(201, 160, 95, 0.6),
+                    0 0 60px rgba(201, 160, 95, 0.5);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* ==========================================
+   SECTION FAQ (Foire Aux Questions)
+   ==========================================
+   Styles pour la section des questions fréquentes
+   avec accordéon interactif
+   ========================================== */
+
+.faq-section {
+    padding: var(--space-2xl) var(--space-lg);
+    background: var(--background);
+    position: relative;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: var(--space-xl);
+}
+
+/* Item de FAQ */
+.faq-item {
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(201, 160, 95, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.faq-item:hover {
+    border-color: rgba(201, 160, 95, 0.4);
+    box-shadow: 0 4px 20px rgba(201, 160, 95, 0.1);
+}
+
+/* Question (bouton) */
+.faq-question {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(201, 160, 95, 0.05);
+}
+
+/* Texte des questions */
+.faq-question-text {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text);
+    flex: 1;
+    padding-right: 1rem;
+}
+
+/* Icône + / - */
+.faq-icon {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--accent);
+    transition: transform 0.3s ease, color 0.3s ease;
+    min-width: 30px;
+    text-align: center;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(45deg);
+    color: var(--primary);
+}
+
+/* Réponse */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer.active {
+    max-height: 500px;
+    padding: 0 2rem 1.5rem 2rem;
+}
+
+.faq-answer p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 1.2rem 1.5rem;
+    }
+    
+    .faq-question-text {
+        font-size: 1rem;
+    }
+    
+    .faq-icon {
+        font-size: 1.5rem;
+    }
+    
+    .faq-answer.active {
+        padding: 0 1.5rem 1.2rem 1.5rem;
+    }
+}
+
+/* ==========================================
+   CTA PUNCHLINE - STYLE AMÉLIORÉ
+   ==========================================
+   Mise en forme esthétique de la punchline
+   ========================================== */
+
+.cta-punchline {
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.cta-intro {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.cta-question {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--accent);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    line-height: 1.4;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-transition {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.cta-answer {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: var(--primary);
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mode sombre */
+[data-theme="dark"] .cta-question {
+    color: var(--accent);
+}
+
+[data-theme="dark"] .cta-answer {
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-punchline {
+        margin-bottom: 3rem;
+    }
+    
+    .cta-intro {
+        font-size: 1rem;
+    }
+    
+    .cta-transition {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================
+   GESTION DES CANVAS (HERO & CONTACT)
+   ========================================== */
+
+/* Style générique pour tous les canvas de particules */
+.particle-network-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Derrière le contenu */
+    pointer-events: none; /* Laisse passer les clics */
+}
+
+/* On s'assure que les sections parentes sont en position relative */
+.hero, .cta-section {
+    position: relative;
+    /* Important : le fond doit laisser voir le canvas si besoin, 
+       mais ici le canvas est PAR-DESSUS le background-color mais DESSOUS le texte */
+}
+
+/* Le contenu doit passer devant le canvas */
+.hero-content, 
+.cta-content-wrapper {
+    position: relative;
+    z-index: 2; /* Devant le canvas */
+}
+
+/* ==========================================
+   VARIABLES COULEURS PARTICULES (MODE CLAIR)
+   ========================================== */
+
+/* 1. Section HERO en mode clair :
+   Fond clair -> Particules Bleu Foncé (Ta couleur primaire) */
+.hero {
+    --particle-rgb: 192, 192, 192; /* C'est le code RGB de #1a2332 */
+}
+
+/* 2. Section CONTACT en mode clair :
+   Fond coloré -> Particules Blanches */
+.cta-section {
+    --particle-rgb: 255, 255, 255;
+}
+
+/* ==========================================
+   IMAGES SERVICES (REMPLACEMENT EMOJIS)
+   ========================================== */
+
+/* Style de la nouvelle image */
+.service-img {
+    max-height: 200px;      /* On garde la hauteur max souhaitée pour le design desktop */
+    height: auto;           /* La hauteur s'adapte si l'image doit rétrécir en largeur */
+    
+    /* Gestion de la largeur */
+    max-width: 100%;        /* L'image ne dépassera jamais la largeur de son conteneur (la carte) */
+    width: auto;            /* Conserve les proportions (ratio) de l'image */
+    
+    object-fit: contain;    /* L'image reste nette */
+    display: inline-block;
+    transition: inherit;    /* Hérite des transitions du parent */
+}
+ 
+
+/* Style de l'émoticone de secours (Fallback) */
+.service-emoji {
+    font-size: 3rem;       /* Taille originale */
+    display: none;         /* Caché par défaut (si l'image charge bien) */
+}
+
+/* Utilitaire pour colorer les suffixes IA */
+.highlight-ia {
+    color: var(--accent);
+}

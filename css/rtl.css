@@ -1,0 +1,77 @@
+/* ==========================================
+   CORRECTIFS POUR LANGUES RTL (ARABE)
+   ========================================== */
+
+/* Inversion globale de la direction */
+html[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Miroir de la navigation */
+html[dir="rtl"] .nav-links {
+    padding-right: 0;
+    /* Inversion des marges si nécessaire */
+}
+
+/* Correction des listes et icônes */
+html[dir="rtl"] .service-icon,
+html[dir="rtl"] .benefit-icon,
+html[dir="rtl"] .use-case-icon {
+    margin-left: 0;
+    /* margin-right géré par le flux naturel */
+}
+
+/* Le Hero background (forme flottante) doit passer à gauche */
+html[dir="rtl"] .hero::before {
+    right: auto;
+    left: -20%;
+}
+
+/* Les étapes de l'approche : Bordure colorée à droite */
+html[dir="rtl"] .step {
+    border-left: none;
+    border-right: 3px solid var(--accent);
+}
+
+html[dir="rtl"] .step:hover {
+    border-right-width: 4px;
+}
+
+/* FAQ : Icône à gauche */
+html[dir="rtl"] .faq-question-text {
+    padding-right: 0;
+    padding-left: 1rem;
+    text-align: right;
+}
+
+html[dir="rtl"] .faq-icon {
+    /* L'icône passe naturellement à gauche avec le flexbox RTL */
+}
+
+/* Footer : Liens alignés à droite */
+html[dir="rtl"] footer {
+    text-align: right;
+}
+
+/* Bouton Toggle (Gardons-le LTR pour ne pas casser l'animation du soleil) */
+html[dir="rtl"] .theme-toggle {
+    direction: ltr; 
+}
+
+/* Police spécifique pour l'arabe (Optionnel mais recommandé) */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+
+html[dir="rtl"] body,
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4 {
+    font-family: 'Tajawal', 'Work Sans', sans-serif;
+}
+
+/* ==========================================
+   CORRECTION MASCOTTE (MIROIR)
+   ========================================== */
+
+/* Retourne l'image horizontalement pour qu'elle regarde vers le texte (droite) */
+html[dir="rtl"] .visual-circle img {
+    transform: scaleX(-1);
+}

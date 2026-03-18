@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charte IA Éthique – ZamanIA</title>
+    <meta name="description" content="La charte éthique de ZamanIA : nos engagements concrets en matière d'IA responsable, de conformité européenne et de respect des données personnelles.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+
+    <style>
+
+        /* ==========================================
+           ANIMATIONS D'ENTRÉE
+        ========================================== */
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes lineGrow {
+            from { transform: scaleX(0); }
+            to   { transform: scaleX(1); }
+        }
+
+        /* ==========================================
+           LAYOUT GÉNÉRAL DE LA PAGE
+        ========================================== */
+
+        .charte-page {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 120px 5% 100px;
+        }
+
+        .charte-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+            transition: opacity 0.2s ease;
+            animation: fadeUp 0.5s ease both;
+        }
+
+        .charte-back-link:hover { opacity: 0.65; }
+
+        /* ==========================================
+           EN-TÊTE ÉDITORIAL
+        ========================================== */
+
+        .charte-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: end;
+            margin-bottom: 6rem;
+            animation: fadeUp 0.6s ease 0.1s both;
+        }
+
+        @media (max-width: 768px) {
+            .charte-header { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        .charte-eyebrow {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+        }
+
+        .charte-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .charte-title em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .charte-intro-text {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.85;
+            color: var(--text-secondary);
+            padding-top: 0.5rem;
+        }
+
+        .charte-intro-text strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Ligne décorative sous l'en-tête */
+        .charte-divider {
+            height: 1px;
+            background: var(--border);
+            margin-bottom: 5rem;
+            position: relative;
+            overflow: hidden;
+            animation: fadeUp 0.5s ease 0.2s both;
+        }
+
+        .charte-divider::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            width: 40%;
+            transform-origin: left;
+            animation: lineGrow 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+        }
+
+        /* ==========================================
+           GRILLE DES 4 PILIERS
+        ========================================== */
+
+        .charte-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px; /* joints entre les cartes */
+            margin-bottom: 6rem;
+        }
+
+        @media (max-width: 700px) {
+            .charte-grid { grid-template-columns: 1fr; }
+        }
+
+        .pilier {
+            background: var(--surface);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s ease;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .pilier:nth-child(1) { animation-delay: 0.15s; }
+        .pilier:nth-child(2) { animation-delay: 0.25s; }
+        .pilier:nth-child(3) { animation-delay: 0.35s; }
+        .pilier:nth-child(4) { animation-delay: 0.45s; }
+
+        .pilier:hover {
+            background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
+        }
+
+        /* Numéro décoratif en filigrane */
+        .pilier-number {
+            position: absolute;
+            top: -0.5rem;
+            right: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 7rem;
+            font-weight: 300;
+            color: var(--accent);
+            opacity: 0.07;
+            line-height: 1;
+            user-select: none;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .pilier:hover .pilier-number {
+            opacity: 0.13;
+        }
+
+        /* Badge organisme */
+        .pilier-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+            border-radius: 2px;
+            padding: 0.25rem 0.6rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .pilier-badge::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .pilier-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .pilier-body {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .pilier-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: gap 0.2s ease, opacity 0.2s ease;
+        }
+
+        .pilier-link:hover {
+            gap: 0.7rem;
+            opacity: 0.8;
+        }
+
+        .pilier-link::after {
+            content: '→';
+        }
+
+        /* ==========================================
+           SECTION ENGAGEMENT GLOBAL (bas de page)
+        ========================================== */
+
+        .charte-commitment {
+            border-top: 1px solid var(--border);
+            padding-top: 3.5rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+            animation: fadeUp 0.6s ease 0.5s both;
+        }
+
+        @media (max-width: 768px) {
+            .charte-commitment { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        .charte-commitment-label {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .charte-commitment-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .charte-commitment-text strong {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* ==========================================
+           CONTACT DE CONFORMITÉ
+        ========================================== */
+
+        .charte-contact {
+            margin-top: 3rem;
+            padding: 1.5rem 2rem;
+            background: var(--surface);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 6px 6px 0;
+            animation: fadeUp 0.6s ease 0.6s both;
+        }
+
+        .charte-contact p {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .charte-contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .charte-contact a:hover { text-decoration: underline; }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================
+         COLLER ICI VOTRE BALISE <header>...</header> DE index.html
+    ============================================================ -->
+
+
+    <main>
+        <div class="charte-page">
+
+            <a href="/" class="charte-back-link">← Retour à l'accueil</a>
+
+            <!-- EN-TÊTE -->
+            <div class="charte-header">
+                <div>
+                    <p class="charte-eyebrow">Responsabilité &amp; Conformité</p>
+                    <h1 class="charte-title">L'IA que nous construisons,<br><em>vous pouvez lui faire confiance.</em></h1>
+                </div>
+                <div>
+                    <p class="charte-intro-text">
+                        Construire des solutions d'intelligence artificielle performantes ne suffit pas. Chez ZamanIA, 
+                        nous nous engageons à ce que chaque système livré soit <strong>transparent, supervisé et conforme</strong> 
+                        aux standards les plus exigeants — européens et internationaux.<br><br>
+                        Cette charte décrit les quatre cadres de référence qui guident concrètement notre façon de concevoir, 
+                        déployer et accompagner l'IA pour vos projets.
+                    </p>
+                </div>
+            </div>
+
+            <div class="charte-divider"></div>
+
+            <!-- GRILLE DES 4 PILIERS -->
+            <div class="charte-grid">
+
+                <!-- Pilier 1 : AI Act -->
+                <div class="pilier">
+                    <span class="pilier-number">01</span>
+                    <span class="pilier-badge">Union Européenne</span>
+                    <h2 class="pilier-title">AI Act européen</h2>
+                    <p class="pilier-body">
+                        Premier règlement mondial contraignant sur l'IA, l'AI Act classe les systèmes par niveau de risque 
+                        et impose des obligations strictes pour les usages à fort impact. Nous concevons nos solutions selon 
+                        ses trois piliers fondamentaux : <strong style="color: var(--text-primary); font-weight: 500;">transparence des algorithmes, 
+                        supervision humaine obligatoire et traçabilité des décisions</strong>. 
+                        Votre conformité légale est intégrée dès la phase de conception, pas ajoutée après coup.
+                    </p>
+                    <a href="https://digital-strategy.ec.europa.eu/fr/policies/regulatory-framework-ai"
+                       target="_blank" rel="noopener noreferrer" class="pilier-link">
+                        Consulter le règlement officiel
+                    </a>
+                </div>
+
+                <!-- Pilier 2 : ISO 42001 -->
+                <div class="pilier">
+                    <span class="pilier-number">02</span>
+                    <span class="pilier-badge">ISO International</span>
+                    <h2 class="pilier-title">Norme ISO 42001<br>Gouvernance IA</h2>
+                    <p class="pilier-body">
+                        La norme ISO 42001 définit le cadre international de référence pour un <strong style="color: var(--text-primary); font-weight: 500;">système de management 
+                        de l'intelligence artificielle</strong> rigoureux et évolutif. Nous structurons notre gouvernance IA en 
+                        nous alignant sur ses exigences : identification des risques, politiques d'utilisation responsable, 
+                        revues régulières et amélioration continue. Cette rigueur garantit une qualité cohérente, 
+                        projet après projet.
+                    </p>
+                    <a href="https://www.iso.org/fr/standard/81230.html"
+                       target="_blank" rel="noopener noreferrer" class="pilier-link">
+                        En savoir plus sur l'ISO 42001
+                    </a>
+                </div>
+
+                <!-- Pilier 3 : Hub France IA -->
+                <div class="pilier">
+                    <span class="pilier-number">03</span>
+                    <span class="pilier-badge">Écosystème français</span>
+                    <h2 class="pilier-title">Charte éthique<br>Hub France IA</h2>
+                    <p class="pilier-body">
+                        Le Hub France IA fédère les acteurs publics et privés de l'IA en France autour de principes 
+                        d'<strong style="color: var(--text-primary); font-weight: 500;">IA inclusive, durable et au service de l'humain</strong>. 
+                        Nous nous imposons les engagements de sa charte éthique comme discipline interne : non-discrimination 
+                        des algorithmes, impact environnemental maîtrisé et bénéfice réel pour les utilisateurs finaux. 
+                        Une auto-régulation exigeante, au-delà de la seule obligation légale.
+                    </p>
+                    <a href="https://www.hub-franceia.fr/"
+                       target="_blank" rel="noopener noreferrer" class="pilier-link">
+                        Découvrir le Hub France IA
+                    </a>
+                </div>
+
+                <!-- Pilier 4 : CNIL -->
+                <div class="pilier">
+                    <span class="pilier-number">04</span>
+                    <span class="pilier-badge">RGPD &amp; Données</span>
+                    <h2 class="pilier-title">Recommandations CNIL<br>IA &amp; RGPD</h2>
+                    <p class="pilier-body">
+                        La CNIL encadre spécifiquement l'usage de l'IA sur les données personnelles et publie des 
+                        guides d'auto-évaluation que nous appliquons systématiquement : <strong style="color: var(--text-primary); font-weight: 500;">minimisation 
+                        des données collectées, droit d'opposition effectif et explicabilité des décisions automatisées</strong>. 
+                        La conformité RGPD n'est pas une case à cocher — c'est le socle technique de chaque 
+                        solution que nous livrons.
+                    </p>
+                    <a href="https://www.cnil.fr/fr/intelligence-artificielle"
+                       target="_blank" rel="noopener noreferrer" class="pilier-link">
+                        Lire les recommandations CNIL
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- ENGAGEMENT GLOBAL -->
+            <div class="charte-commitment">
+                <div class="charte-commitment-label">Notre engagement</div>
+                <blockquote class="charte-commitment-text">
+                    « L'éthique IA n'est pas un frein à l'innovation — c'est la condition pour que 
+                    l'innovation <strong>dure</strong>. Chaque projet que nous livrons doit pouvoir être 
+                    expliqué, audité et amélioré. C'est notre promesse. »
+                    <br><br>
+                    <span style="font-family: 'Work Sans', sans-serif; font-size: 0.85rem; font-style: normal; color: var(--text-secondary); font-weight: 400;">
+                        — Nicolas BODAINE, fondateur de ZamanIA
+                    </span>
+                </blockquote>
+            </div>
+
+            <!-- CONTACT CONFORMITÉ -->
+            <div class="charte-contact">
+                <p>
+                    <strong style="color: var(--text-primary);">Une question sur notre conformité ou sur les exigences réglementaires de votre projet ?</strong><br>
+                    Contactez-nous à <a href="mailto:contact@zamania.fr">contact@zamania.fr</a> — 
+                    nous répondons dans un délai de 5 jours ouvrés et pouvons organiser un point dédié 
+                    conformité dans le cadre de tout nouveau projet.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ============================================================
+         COLLER ICI VOTRE BALISE <footer>...</footer> DE index.html
+    ============================================================ -->
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <!-- À propos -->
+            <div class="footer-about">
+                <h3>Zaman<span class="highlight-ia">IA</span></h3>
+                <p>Solutions d'intelligence artificielle sur mesure pour TPE et PME. Nous redonnons du temps à votre
+                    entreprise grâce à l'automatisation intelligente.</p>
+                <!-- <p><strong>Solutions IA pour automatiser vos processus métier et gagner du temps</strong></p> -->
+            </div>
+
+            <!-- Liens Services -->
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Audit <span class="highlight-ia">IA</span></a></li>
+                    <li><a href="#services">Automatisation <span class="highlight-ia">IA</span></a></li>
+                    <li><a href="#services">Intégration <span class="highlight-ia">IA</span></a></li>
+                    <li><a href="#services">Formation <span class="highlight-ia">IA</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Liens Entreprise -->
+            <div class="footer-section">
+                <h4>Entreprise</h4>
+                <ul class="footer-links">
+                    <li><a href="#approche">Notre approche</a></li>                   
+                    <li><a href="#avantages">Avantages</a></li>
+                    <li><a href="#cas-usage">Cas d'usage</a></li>
+                    <li><a href="#faq">F.A.Q</a></li>
+                    <!-- <li><a href="#contact">Contact</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Informations de contact -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/ContactPoint">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:contact@zamania.fr" itemprop="email">contact@zamania.fr</a></li>
+                    <li><a href="tel:+33972118168" itemprop="telephone">+33 9 72 11 81 68</a></li>
+                    <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-top: 0.3rem;">(appel non surtaxé)</li>
+                    <li style="margin-top: 0.8rem;">Paris, France</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bas du pied de page avec copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zaman<span class="highlight-ia">IA</span>. Tous droits réservés. | <a href="/mentions-legales.html">Mentions légales</a> | <a href="/cgv.html">CGV</a> | <a href="/cgu.html">CGU</a> | <a href="/politique-de-confidentialite.html">Politique de confidentialité</a> | <a href="/charte-ia-ethique.html">Charte IA éthique</a></p>
+        </div>
+    </footer>
+
+    <!-- Bannière de consentement aux cookies -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>🍪 Nous utilisons des cookies pour améliorer votre expérience et mémoriser vos préférences (comme votre choix de thème). En continuant, vous acceptez notre <a href="/politique-de-confidentialite.html">politique de confidentialité</a>.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" id="acceptCookies">Accepter</button>
+                <button class="cookie-btn cookie-btn-decline" id="declineCookies">Refuser</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chargement des scripts JavaScript externes -->
+    <!-- defer permet de charger le script en parallèle et de l'exécuter après le parsing du HTML -->
+    <script src="js/cookies.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "name": "ZamanIA - Intelligence Artificielle sur Mesure",
+  "short_name": "ZamanIA",
+  "description": "Solutions d'intelligence artificielle sur mesure pour TPE et PME. Automatisation des processus, audit IA et formation.",
+  "id": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a2332",
+  "theme_color": "#1a2332",
+  "lang": "fr",
+  "dir": "ltr",
+  "scope": "/",
+  "categories": [
+    "business",
+    "productivity",
+    "technology"
+  ],
+  "icons": [
+    {
+      "src": "images/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "monochrome"
+    }
+  ]
+}

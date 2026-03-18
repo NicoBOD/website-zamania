@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<!-- Déclaration du type de document HTML5 -->
+<html lang="fr" data-theme="dark">
+<!-- Balise HTML principale avec l'attribut lang="fr" pour indiquer que le contenu est en français -->
+
+<head>
+    <!-- En-tête du document contenant les métadonnées et les liens vers les ressources externes -->
+    
+    <!-- Encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux -->
+    <meta charset="UTF-8">
+    
+    <!-- Configuration de la vue pour les appareils mobiles (responsive design) -->
+    <!-- viewport-fit=cover permet d'utiliser tout l'espace disponible sur les appareils avec encoche (iPhone X, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- Couleur du thème pour les navigateurs mobiles (apparaît dans la barre d'adresse sur Android) -->
+    <meta name="theme-color" content="#1a2332">
+
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur et dans les résultats de recherche -->
+    <title>ZamanIA - Intelligence Artificielle sur Mesure pour Entreprises | Automatisation des Processus</title>
+    
+    <!-- Description pour les moteurs de recherche (SEO) -->
+    <meta name="description"
+        content="ZamanIA propose des solutions d'intelligence artificielle sur mesure, automatisation des processus, audit IA et formation IA pour optimiser votre productivité.">
+    
+    <!-- Mots-clés principaux pour le référencement -->
+    <meta name="keywords" content="intelligence artificielle, IA sur mesure, automatisation processus, audit IA, formation IA, transformation digitale, IA générative, TPE PME, gain productivité, ROI IA, consultation IA, intégration IA, Paris">
+    
+    <!-- Auteur du site -->
+    <meta name="author" content="ZamanIA">
+    
+    <!-- Robots d'indexation : index et follow pour un bon référencement -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Langue du contenu -->
+    <meta http-equiv="content-language" content="fr">
+    
+    <!-- Open Graph pour les réseaux sociaux (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZamanIA - Intelligence Artificielle sur Mesure pour Entreprises">
+    <meta property="og:description" content="Transformez vos processus répétitifs en opportunités de croissance. Solutions d'IA personnalisées pour TPE et PME.">
+    <meta property="og:url" content="https://zamania.fr">
+    <meta property="og:site_name" content="ZamanIA">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="https://zamania.fr/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ZamanIA - Solutions d'Intelligence Artificielle">
+    
+    <!-- Twitter Card pour Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZamanIA - Intelligence Artificielle sur Mesure">
+    <meta name="twitter:description" content="Transformez vos processus répétitifs en opportunités de croissance avec nos solutions d'IA personnalisées.">
+    <meta name="twitter:image" content="https://zamania.fr/images/twitter-card.jpg">
+    <meta name="twitter:image:alt" content="ZamanIA - Solutions IA">
+    
+    <!-- Pour que Google ne considère pas le site comme du "contenu dupliqué" et qu'il propose la bonne langue au bon visiteur -->
+    <link rel="alternate" hreflang="fr" href="https://zamania.fr/" />
+    <link rel="alternate" hreflang="en" href="https://zamania.fr/en/" />
+    <link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/" />
+    <link rel="alternate" hreflang="x-default" href="https://zamania.fr/" />
+    
+    <!-- Canonical URL pour éviter le contenu dupliqué -->
+    <link rel="canonical" href="https://zamania.fr/">
+    
+    <!-- Favicon et icônes pour différents appareils -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+    
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">  
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+    <meta name="apple-mobile-web-app-title" content="ZamanIA" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Informations de contact structurées -->
+    <meta name="contact" content="contact@zamania.fr">
+    <meta name="geo.region" content="FR-75">
+    <meta name="geo.placename" content="Paris">
+    <meta name="geo.position" content="48.856614;2.352222">
+    
+    <!-- Préconnexion aux serveurs de Google Fonts pour améliorer les performances de chargement -->
+    <!-- rel="preconnect" établit une connexion anticipée avec le serveur -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Importation des polices Google Fonts : Cormorant Garamond (pour les titres) et Work Sans (pour le texte) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Lien vers la feuille de style CSS externe -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Lien vers la feuille de style pour le mode sombre -->
+    <link rel="stylesheet" href="css/dark-mode.css">
+    
+    <!-- Données structurées Schema.org pour le SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ZamanIA",
+        "url": "https://zamania.fr",
+        "logo": "https://zamania.fr/images/logo.png",
+        "description": "Solutions d'intelligence artificielle sur mesure pour TPE et PME. Automatisation des processus, audit IA, formation et intégration d'IA générative.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "Paris",
+            "postalCode": "",
+            "addressCountry": "FR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33-9-72-11-81-68",
+            "contactType": "Customer Service",
+            "email": "contact@zamania.fr",
+            "availableLanguage": ["French"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/zamania",
+            "https://twitter.com/zamania"
+        ],
+        "foundingDate": "2024",
+        "keywords": "intelligence artificielle, IA sur mesure, automatisation, audit IA, formation IA, transformation digitale"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ZamanIA",
+        "url": "https://zamania.fr",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://zamania.fr/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Intelligence Artificielle",
+        "provider": {
+            "@type": "Organization",
+            "name": "ZamanIA"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "France"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services IA",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Audit IA de Processus",
+                        "description": "Identification des tâches répétitives et opportunités d'automatisation"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Automatisation Personnalisée",
+                        "description": "Développement de solutions sur mesure adaptées à votre secteur"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "IA Générative & Intégration",
+                        "description": "Déploiement de systèmes d'IA générative intégrés"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Formation IA pour Équipes",
+                        "description": "Programmes de formation pratiques pour l'autonomie"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que l'automatisation IA ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'automatisation IA consiste à utiliser l'intelligence artificielle pour automatiser des tâches répétitives et chronophages, permettant à vos équipes de se concentrer sur des missions à haute valeur ajoutée."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quel est le ROI de l'IA ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nos clients constatent un retour sur investissement en moyenne sous 6 mois grâce à l'optimisation des coûts opérationnels et une augmentation de 40% de la productivité."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Pour quelles entreprises sont vos solutions ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nos solutions d'IA sur mesure sont conçues pour les TPE et PME souhaitant transformer leurs processus et gagner en efficacité sans investissement initial prohibitif."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://zamania.fr/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://zamania.fr/#services"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Approche",
+                "item": "https://zamania.fr/#approche"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Contact",
+                "item": "https://zamania.fr/#contact"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Mouvement mécanique de la poignée de main (style inséré directement dans le fichier HTML - dans la balise <head> - pour forcer le navigateur à prendre en compte l'animation -->
+    <style>
+        /* Conteneur pour centrer */
+        .handshake-container {
+            max-width: 300px; /* Taille contenue */
+            margin: 2rem auto 0;
+            display: block;
+        }
+
+        /* L'image animée */
+        .handshake-anim {
+            display: block;
+            width: 100%;
+            height: auto;
+            /* Animation plus rapide (2s) pour un effet plus réaliste */
+            animation: handshakeAction 2s ease-in-out infinite;
+            transform-origin: bottom center; /* On secoue à partir du bas (poignet) */
+        }
+
+        /* Définition du mouvement */
+        @keyframes handshakeAction {
+            0% { transform: translateY(0) rotate(0deg); }
+            
+            /* 1ère secousse (Rapide et visible) */
+            15% { transform: translateY(-15px) rotate(-2deg); }
+            30% { transform: translateY(0) rotate(0deg); }
+            
+            /* 2ème secousse */
+            45% { transform: translateY(-10px) rotate(-1deg); }
+            60% { transform: translateY(0) rotate(0deg); }
+            
+            /* 3ème secousse (Plus petite) */
+            75% { transform: translateY(-5px); }
+            90% { transform: translateY(0); }
+            
+            /* Pause à la fin */
+            100% { transform: translateY(0); }
+        }
+    </style>
+    <!-- Fin du bloc de code pour le mouvement mécanique de la poignée de main -->
+</head>
+
+<body>
+    <!-- Corps du document contenant tout le contenu visible de la page -->
+
+    <!-- En-tête fixe du site avec navigation -->
+    <header itemscope itemtype="https://schema.org/WPHeader">
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Navigation principale">
+            <!-- Logo de l'entreprise (lien vers la page d'accueil) -->
+            <a href="https://zamania.fr" class="logo" itemprop="url" aria-label="Retour à l'accueil ZamanIA">
+                <!-- Image du logo avec gestion d'erreur : si l'image ne charge pas, elle sera cachée -->
+                <img src="images/logo.png" alt="Logo ZamanIA" class="logo-img" onerror="this.style.display='none';">
+                <!-- Nom de l'entreprise avec mise en valeur de "IA" -->
+                ZAMAN<span class="highlight-ia">IA</span>
+            </a>
+            
+            <!-- Liste des liens de navigation -->
+            <ul class="nav-links">
+                <!-- Chaque lien pointe vers une section de la page via son ID -->
+                <li><a href="#services" itemprop="url"><span itemprop="name">Services</span></a></li>
+                <li><a href="#approche" itemprop="url"><span itemprop="name">Approche</span></a></li>
+                <li><a href="#avantages" itemprop="url"><span itemprop="name">Avantages</span></a></li>
+                <li><a href="#cas-usage" itemprop="url"><span itemprop="name">Cas d'usage</span></a></li>
+                <li><a href="#faq" itemprop="url"><span itemprop="name">F.A.Q</span></a></li>
+                
+                <!-- Bouton de bascule entre le mode clair et le mode sombre -->
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                        <span class="theme-toggle-slider">
+                            <!-- Icône qui change selon le thème actif -->
+                            <span class="theme-toggle-icon">🌙</span>
+                        </span>
+                    </button>
+                </li>
+                <!-- Le sélecteur de langue -->
+                <li class="lang-switch">
+                    <a href="./" style="font-weight: bold; color: var(--accent);" title="French version">FR</a> 
+                    <span style="color: var(--text-secondary); margin: 0 5px;">|</span> 
+                    <a href="en/" title="English version">EN</a>
+                    <span style="color: var(--text-secondary); margin: 0 5px;">|</span>
+                    <a href="ar/" title="Arabic version">AR</a>
+                </li>
+                
+                <!-- Bouton d'appel à l'action (CTA) pour contacter l'entreprise -->
+                <li><a href="#contact" class="cta-nav">✨ Contact ✨</a></li>
+            </ul>
+            
+            <!-- Bouton du menu mobile (hamburger) visible uniquement sur petits écrans -->
+            <button class="mobile-menu-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false">☰</button>
+        </nav>
+    </header>
+
+    <!-- Fond sombre semi-transparent qui apparaît derrière le menu mobile ouvert -->
+    <div class="nav-backdrop"></div>
+
+    <!-- Section Hero (bannière principale avec accroche) -->
+    <section class="hero" itemscope itemtype="https://schema.org/WebPageElement">
+        <canvas class="particle-network-canvas"></canvas>
+        <div class="hero-content">
+            <!-- Bloc de texte principal -->
+            <div class="hero-text">
+                <!-- Phrase d'accroche courte -->
+                <div class="hero-tagline" itemprop="about">Intelligence Artificielle sur mesure</div>
+                
+                <!-- Titre principal de la page - Optimisé pour le SEO avec mots-clés -->
+                <h1 itemprop="headline">Redonnez du temps à votre entreprise avec un agent <span class="highlight-ia">IA</span></h1>
+                
+                <!-- Paragraphe descriptif -->
+                <p>Transformez vos processus répétitifs en opportunités de croissance. ZamanIA déploie des solutions
+                    d'automatisations IA personnalisées qui libèrent votre équipe pour se concentrer sur l'essentiel.</p>
+                
+                <!-- Boutons d'action -->
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Demander une démo</a>
+                    <a href="#services" class="btn btn-secondary">Découvrir nos services</a>
+                </div>
+            </div>
+            
+            <!-- Élément visuel décoratif (cercle animé avec mascotte) -->
+            <div class="hero-visual">
+                <div class="visual-circle">
+                    <!-- Image de la mascotte avec gestion d'erreur : si l'image ne charge pas, affiche ⚡ -->
+                    <img src="images/mascotte.png" alt="Mascotte ZamanIA"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='⚡';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" itemscope itemtype="https://schema.org/ItemList">
+        <!-- En-tête de section avec animation au scroll -->
+        <div class="section-header animate">
+            <div class="section-label">Nos Services IA</div>
+            <h2 itemprop="name">Solutions d'automatisation des processus par IA</h2>
+            <p class="subtitle">De l'audit à l'intégration, nous vous accompagnons à chaque étape de votre
+                transformation digitale avec des solutions personnalisées adaptées à vos besoins.</p>
+        </div>
+
+        <!-- Grille de cartes de services -->
+        <div class="services-grid">
+               
+            <!-- Carte de service 1 : Audit -->
+            <article class="service-card animate" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <span class="service-icon" aria-hidden="true">
+                  <img src="images/service-1.png" class="service-img" alt="Audit Icon" 
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="service-emoji">🔍</span>
+                </span>
+                <h3 itemprop="name">Audit de processus métier</h3>
+                <p itemprop="description">Identification précise des tâches répétitives et opportunités d'automatisation. Nous analysons vos workflows pour maximiser l'efficacité et réduire les coûts opérationnels.</p>
+            </article>
+
+            <!-- Carte de service 2 : Automatisation -->
+            <article class="service-card animate" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <span class="service-icon" aria-hidden="true">
+                    <img src="images/service-2.png" class="service-img" alt="Automatisation Icon" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="service-emoji">⚙️</span>
+                </span>
+               <h3 itemprop="name">Automatisation personnalisée</h3>
+                <p itemprop="description">Développement de solutions sur mesure adaptées à votre secteur. De l'automatisation simple aux systèmes complexes, nous créons l'outil parfait pour votre entreprise.</p>
+            </article>
+
+            <!-- Carte de service 3 : IA Générative -->
+            <article class="service-card animate" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <span class="service-icon" aria-hidden="true">
+                    <img src="images/service-3.png" class="service-img" alt="IA Agent Icon" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="service-emoji">🤖</span>
+               </span>
+                <h3 itemprop="name">Intégration d'agent IA</h3>
+                <p itemprop="description">Déploiement de systèmes d'intelligence artificielle générative intégrés à vos outils existants. Support d'intégration complet pour une transition en douceur.</p>
+            </article>
+
+            <!-- Carte de service 4 : Formation -->
+            <article class="service-card animate" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <span class="service-icon" aria-hidden="true">
+                    <img src="images/service-4.png" class="service-img" alt="Formation Icon" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="service-emoji">📚</span>
+                </span>
+                <h3 itemprop="name">Formation IA pour équipes</h3>
+               <p itemprop="description">Programmes de formation pratiques pour rendre vos équipes autonomes. Apprenez à exploiter pleinement les outils d'IA et à optimiser leur utilisation quotidienne.</p>
+            </article>
+            
+        </div>
+    </section>
+
+    <!-- Section Approche (méthodologie) -->
+    <section id="approche" class="approach">
+    <div class="section-header animate">
+        <div class="section-label">Notre Approche</div>
+        <h2>Technologie IA + expertise humaine</h2>
+        <p class="subtitle">Nous combinons l'intelligence artificielle de pointe avec une compréhension profonde de
+            vos enjeux métiers pour créer des solutions qui font vraiment la différence.</p>
+            
+        <div class="handshake-container">
+            <img src="images/ia-humain.png" alt="Poignée de main IA et Humain" class="handshake-anim">
+        </div>
+        </div>
+
+    <div class="approach-content">
+        </div>
+
+        <div class="approach-content">
+            <!-- Texte descriptif de l'approche -->
+            <div class="approach-text animate">
+                <p>Chez ZamanIA, nous croyons que la meilleure technologie est celle qui s'adapte à l'humain, pas
+                    l'inverse. Notre méthodologie éprouvée garantit une transformation digitale réussie et durable.</p>
+                <p>Chaque entreprise est unique. C'est pourquoi nous développons des solutions d'intelligence
+                    artificielle sur mesure qui respectent votre culture d'entreprise et s'intègrent naturellement dans
+                    vos processus existants.</p>
+            </div>
+
+            <!-- Étapes du processus (1 à 4) -->
+            <div class="approach-steps">
+                <!-- Étape 1 -->
+                <div class="step animate-scale">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Analyse & audit</h4>
+                        <p>Compréhension approfondie de vos processus et identification des opportunités d'optimisation.</p>
+                    </div>
+                </div>
+
+                <!-- Étape 2 -->
+                <div class="step animate-scale">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Conception sur mesure</h4>
+                        <p>Développement de solutions personnalisées alignées avec vos objectifs stratégiques.</p>
+                    </div>
+                </div>
+
+                <!-- Étape 3 -->
+                <div class="step animate-scale">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Déploiement & formation</h4>
+                        <p>Intégration fluide et accompagnement de vos équipes pour une adoption réussie.</p>
+                    </div>
+                </div>
+
+                <!-- Étape 4 -->
+                <div class="step animate-scale">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Optimisation continue</h4>
+                        <p>Suivi des performances et ajustements pour maximiser votre retour sur investissement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avantages -->
+    <section id="avantages">
+        <div class="section-header animate">
+            <div class="section-label">Avantages Clients</div>
+            <h2>Transformation digitale mesurable</h2>
+            <p class="subtitle">Nos clients constatent des résultats concrets dès les premières semaines : gain de
+                temps, réduction des erreurs, et équipes plus épanouies.</p>
+        </div>
+
+        <!-- Grille des avantages -->
+        <div class="benefits-grid">
+            <!-- Avantage 1 : Productivité -->
+            <div class="benefit-item animate-scale">
+                <div class="benefit-icon">📈</div>
+                <h3>Optimisation de productivité</h3>
+                <p>Augmentation moyenne de 40% de la productivité grâce à l'automatisation des tâches répétitives et
+                    chronophages.</p>
+            </div>
+
+            <!-- Avantage 2 : Innovation -->
+            <div class="benefit-item animate-scale">
+                <div class="benefit-icon">💡</div>
+                <h3>Innovation stratégique</h3>
+                <p>Libérez du temps pour l'innovation. Vos équipes se concentrent sur des missions à haute valeur
+                    ajoutée.</p>
+            </div>
+
+            <!-- Avantage 3 : Conseil -->
+            <div class="benefit-item animate-scale">
+                <div class="benefit-icon">🎯</div>
+                <h3>Conseil stratégique IA</h3>
+                <p>Accompagnement personnalisé pour définir et atteindre vos objectifs de transformation digitale avec
+                    des KPIs mesurables.</p>
+            </div>
+
+            <!-- Avantage 4 : Intégration -->
+            <div class="benefit-item animate-scale">
+                <div class="benefit-icon">🔄</div>
+                <h3>Intégration transparente</h3>
+                <p>Solutions conçues pour s'intégrer parfaitement à votre écosystème technologique existant sans
+                    perturbation.</p>
+            </div>
+
+            <!-- Avantage 5 : Sécurité -->
+            <div class="benefit-item animate-scale">
+                <div class="benefit-icon">🛡️</div>
+                <h3>Sécurité & conformité</h3>
+                <p>Respect des normes RGPD et sécurisation totale de vos données sensibles avec les meilleures pratiques
+                    du secteur.</p>
+            </div>
+
+            <!-- Avantage 6 : ROI -->
+            <div class="benefit-item animate-scale">
+                <div class="benefit-icon">💰</div>
+                <h3>ROI rapide</h3>
+                <p>Retour sur investissement constaté en moyenne sous 6 mois grâce à l'optimisation des coûts
+                    opérationnels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Cas d'usage -->
+    <section id="cas-usage" class="cas-usage-section">
+        <div class="section-header">
+            <div class="section-label">Cas d'usage concrets</div>
+            <h2>Des exemples d'automatisations IA</h2>
+            <p class="subtitle">Découvrez comment l'IA peut transformer vos processus métiers au quotidien.</p>
+        </div>
+
+        <!-- Grille des cas d'usage -->
+        <div class="use-cases-grid">
+
+            <!-- Cas d'usage 1 : Prospection -->
+            <div class="use-case">
+                <div class="use-case-icon">
+                   <span>🎯</span> <img src="images/use-case-1.png" alt="Illustration prospection" class="use-case-img">
+                </div>
+                <h4>Prospection automatisée</h4>
+                <p>Trouver des leads → les scraper → dédupliquer → enrichir (site, post, LinkedIn) → les ajouter au CRM
+                    → scorer → les contacter par e-mail personnalisé → suivre ouvertures/réponses</p>
+            </div>
+
+            <!-- Cas d'usage 2 : Social Media -->
+            <div class="use-case">
+                <div class="use-case-icon">
+                   <span>📱</span> <img src="images/use-case-2.png" alt="Illustration réseaux sociaux" class="use-case-img">
+                </div>
+                <h4>Publication social media</h4>
+                <p>Avoir une idée de post → générer le visuel avec l'IA → appliquer la charte (logo, couleurs) →
+                    programmer → publier → analyser clics/engagement → recycler les meilleurs</p>
+            </div>
+
+            <!-- Cas d'usage 3 : Commandes -->
+            <div class="use-case">
+                <div class="use-case-icon">
+                   <span>📦</span> <img src="images/use-case-3.png" alt="Illustration commandes" class="use-case-img">
+                </div>
+                <h4>Gestion des commandes</h4>
+                <p>Nouvelle commande → vérifier le stock → créer l'étiquette d'expédition → envoyer le suivi colis →
+                    demander un avis → taguer la note (NPS) dans le CRM</p>
+            </div>
+
+            <!-- Cas d'usage 4 : Veille -->
+            <div class="use-case">
+                <div class="use-case-icon">
+                   <span>📰</span> <img src="images/use-case-4.png" alt="Illustration veille" class="use-case-img">
+                </div>
+                <h4>Veille automatisée</h4>
+                <p>Surveiller 100 sites → scraper les nouveaux articles → extraire les points clés → résumer → générer
+                    un PDF propre → déposer dans Drive → envoyer le digest par e-mail</p>
+            </div>
+
+            <!-- Cas d'usage 5 : Support -->
+            <div class="use-case">
+                <div class="use-case-icon">
+                   <span>💬</span> <img src="images/use-case-5.png" alt="Illustration support" class="use-case-img">
+                </div>
+                <h4>Support client intelligent</h4>
+                <p>Recevoir un e-mail client → détecter l'intention (SAV, devis, info) → générer une réponse → faire
+                    valider si sensible → envoyer → créer ticket → demander la satisfaction</p>
+            </div>
+
+            <!-- Cas d'usage 6 : Qualification -->
+            <div class="use-case">
+                <div class="use-case-icon">
+                   <span>🤝</span> <img src="images/use-case-6.png" alt="Illustration qualification" class="use-case-img">
+                </div>
+                <h4>Qualification de leads</h4>
+                <p>Recevoir un formulaire → enrichir la fiche entreprise → attribuer au bon commercial → proposer un
+                    créneau auto → créer la visio → pousser le compte rendu dans le CRM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ (Foire Aux Questions) -->
+    <section id="faq" class="faq-section">
+        <div class="section-header animate">
+            <div class="section-label">F.A.Q.</div>
+            <h2>Questions fréquentes</h2>
+            <p class="subtitle">Vous avez des questions sur nos services d'automatisation IA ? Nous avons les réponses.</p>
+        </div>
+
+        <div class="faq-container">
+            <!-- Question 1 -->
+            <div class="faq-item animate">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-question-text">Comment l'automatisation IA peut-elle aider mon entreprise ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>L'automatisation par intelligence artificielle permet de libérer vos équipes des tâches répétitives et chronophages. Cela se traduit par une augmentation moyenne de 40% de la productivité, une réduction significative des erreurs humaines, et plus de temps pour se concentrer sur des activités à forte valeur ajoutée comme l'innovation et la stratégie.</p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq-item animate">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-question-text">Quels types de processus peuvent être automatisés ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Pratiquement tous les processus répétitifs peuvent être automatisés : prospection et enrichissement de leads, publication sur les réseaux sociaux, gestion des commandes, veille concurrentielle, support client, qualification de prospects, génération de rapports, et bien d'autres. Notre audit IA identifie précisément les opportunités dans votre entreprise.</p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq-item animate">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-question-text">Quel est le retour sur investissement d'une solution IA ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Nos clients constatent un retour sur investissement en moyenne sous 6 mois. Les économies proviennent de la réduction du temps passé sur les tâches manuelles, de l'amélioration de la précision, et de l'augmentation de la capacité de traitement. Par exemple, une automatisation de prospection peut faire économiser 15-20 heures par semaine à votre équipe commerciale.</p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="faq-item animate">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-question-text">Mes données sont-elles sécurisées ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolument. Nous respectons scrupuleusement le RGPD et toutes les normes de sécurité en vigueur. Vos données sont chiffrées, jamais partagées avec des tiers, et vous gardez un contrôle total sur leur utilisation. Nous pouvons également travailler en mode on-premise (sur vos serveurs) si votre activité le nécessite.</p>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="faq-item animate">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-question-text">Faut-il des compétences techniques dans mon équipe ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Non, aucune compétence technique n'est requise. Nous concevons des solutions intuitives et faciles à utiliser. De plus, nous proposons des formations complètes pour rendre vos équipes autonomes dans l'utilisation et l'optimisation des outils d'IA. Notre support vous accompagne également après le déploiement.</p>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="faq-item animate">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-question-text">Combien de temps prend la mise en place d'une solution IA ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Cela dépend de la complexité du projet. Un audit IA prend généralement 1-2 semaines. Une automatisation simple peut être déployée en 2-4 semaines, tandis qu'une solution complexe peut nécessiter 2-3 mois. Nous travaillons en mode agile avec des livraisons progressives pour que vous puissiez constater les bénéfices rapidement.</p>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="faq-item animate">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-question-text">L'IA va-t-elle remplacer mes employés ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Non, notre approche vise à augmenter les capacités humaines, pas à les remplacer. L'IA prend en charge les tâches répétitives et sans valeur ajoutée, permettant à vos collaborateurs de se concentrer sur ce qu'ils font de mieux : créativité, relations clients, prise de décision stratégique. C'est un outil d'augmentation, pas de substitution.</p>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="faq-item animate">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-question-text">Proposez-vous un accompagnement après la mise en place ?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Oui, nous offrons un suivi et une optimisation continue. Après le déploiement, nous restons disponibles pour ajuster les solutions, former de nouveaux utilisateurs, et identifier de nouvelles opportunités d'automatisation. Notre objectif est votre succès à long terme, pas seulement une livraison ponctuelle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Call-to-Action (Appel à l'action final) -->
+    <section id="contact" class="cta-section">
+        <canvas class="particle-network-canvas"></canvas>
+
+        <div class="cta-content-wrapper">
+            <div class="cta-punchline">
+                <p class="cta-intro">La bonne question en 2026 n'est plus :</p>
+                <h2 class="cta-question">Est-ce possible d'automatiser ça avec une IA ?</h2>
+                <p class="cta-transition">C'est :</p>
+                <h2 class="cta-answer">Combien ça vous coûte chaque jour de continuer à croire que ça ne l'est pas ?</h2>
+            </div>
+            <div class="cta-buttons">
+                <a href="mailto:contact@zamania.fr?subject=Demande%20de%20transformation%20IA&body=Bonjour,%0A%0AJe%20souhaite%20transformer%20mon%20entreprise%20gr%C3%A2ce%20%C3%A0%20l'intelligence%20artificielle.%0A%0AMerci%20de%20me%20recontacter%20pour%20discuter%20de%20mes%20besoins.%0A%0ACordialement"
+                    class="btn btn-light cta-primary">✨ Redonnez du temps à mon entreprise !</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <!-- À propos -->
+            <div class="footer-about">
+                <h3>Zaman<span class="highlight-ia">IA</span></h3>
+                <p>Solutions d'intelligence artificielle sur mesure pour TPE et PME. Nous redonnons du temps à votre
+                    entreprise grâce à l'automatisation intelligente.</p>
+                <!-- <p><strong>Solutions IA pour automatiser vos processus métier et gagner du temps</strong></p> -->
+            </div>
+
+            <!-- Liens Services -->
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Audit <span class="highlight-ia">IA</span></a></li>
+                    <li><a href="#services">Automatisation <span class="highlight-ia">IA</span></a></li>
+                    <li><a href="#services">Intégration <span class="highlight-ia">IA</span></a></li>
+                    <li><a href="#services">Formation <span class="highlight-ia">IA</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Liens Entreprise -->
+            <div class="footer-section">
+                <h4>Entreprise</h4>
+                <ul class="footer-links">
+                    <li><a href="#approche">Notre approche</a></li>                   
+                    <li><a href="#avantages">Avantages</a></li>
+                    <li><a href="#cas-usage">Cas d'usage</a></li>
+                    <li><a href="#faq">F.A.Q</a></li>
+                    <!-- <li><a href="#contact">Contact</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Informations de contact -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/ContactPoint">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:contact@zamania.fr" itemprop="email">contact@zamania.fr</a></li>
+                    <li><a href="tel:+33972118168" itemprop="telephone">+33 9 72 11 81 68</a></li>
+                    <li style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-top: 0.3rem;">(appel non surtaxé)</li>
+                    <li style="margin-top: 0.8rem;">Paris, France</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bas du pied de page avec copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zaman<span class="highlight-ia">IA</span>. Tous droits réservés. | <a href="/mentions-legales.html">Mentions légales</a> | <a href="/cgv.html">CGV</a> | <a href="/cgu.html">CGU</a> | <a href="/politique-de-confidentialite.html">Politique de confidentialité</a> | <a href="/charte-ia-ethique.html">Charte IA éthique</a></p>
+        </div>
+    </footer>
+
+    <!-- Bannière de consentement aux cookies -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>🍪 Nous utilisons des cookies pour améliorer votre expérience et mémoriser vos préférences (comme votre choix de thème). En continuant, vous acceptez notre <a href="/politique-de-confidentialite.html">politique de confidentialité</a>.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" id="acceptCookies">Accepter</button>
+                <button class="cookie-btn cookie-btn-decline" id="declineCookies">Refuser</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chargement des scripts JavaScript externes -->
+    
+    <!-- defer permet de charger le script en parallèle et de l'exécuter après le parsing du HTML -->
+    <script src="js/theme.js" defer></script>
+    <script src="js/cookies.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/scrolled-effect.js" defer></script>
+    <script src="js/faq.js" defer></script>
+    <script src="js/canvas-network.js" defer></script>
+    
+</body>
+
+</html>

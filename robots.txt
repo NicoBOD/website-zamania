@@ -1,0 +1,49 @@
+# robots.txt pour ZamanIA
+# Ce fichier indique aux robots d'indexation (Google, Bing, etc.)
+# quelles pages ils peuvent ou ne peuvent pas explorer
+
+# Autoriser tous les robots d'indexation
+User-agent: *
+Allow: /
+
+# Fichiers et dossiers à ne pas indexer
+Disallow: /test-verification.html
+Disallow: /css/
+Disallow: /js/
+
+# Autoriser l'exploration des fichiers CSS et JS pour le rendu (Google)
+User-agent: Googlebot
+Allow: /css/
+Allow: /js/
+
+# Sitemap (indique où trouver la liste de toutes les pages du site)
+Sitemap: https://zamania.fr/sitemap.xml
+
+# Délai entre les requêtes (en secondes) pour ne pas surcharger le serveur
+Crawl-delay: 1
+
+# Règles spécifiques pour les bots les plus courants
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 1
+
+# Bloquer les mauvais bots (spam, scraping abusif)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Note : Les bons robots respectent ce fichier, mais les robots malveillants
+# peuvent l'ignorer. Ce fichier n'est pas une mesure de sécurité.

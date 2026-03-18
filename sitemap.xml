@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Sitemap XML pour ZamanIA
+    Ce fichier aide les moteurs de recherche à découvrir et indexer
+    toutes les pages importantes du site.
+    
+    Format : https://www.sitemaps.org/protocol.html
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://zamania.fr/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/"/>
+    </url>
+    
+    <!-- Section Services -->
+    <url>
+        <loc>https://zamania.fr/#services</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Section Approche -->
+    <url>
+        <loc>https://zamania.fr/#approche</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Section Avantages -->
+    <url>
+        <loc>https://zamania.fr/#avantages</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Section Cas d'usage -->
+    <url>
+        <loc>https://zamania.fr/#cas-usage</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Section Contact -->
+    <url>
+        <loc>https://zamania.fr/#contact</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Images importantes pour le SEO d'images -->
+    <url>
+        <loc>https://zamania.fr/images/logo.png</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+        <image:image>
+            <image:loc>https://zamania.fr/images/logo.png</image:loc>
+            <image:title>Logo ZamanIA</image:title>
+            <image:caption>Logo de l'entreprise ZamanIA spécialisée en intelligence artificielle</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://zamania.fr/images/mascotte.png</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://zamania.fr/images/mascotte.png</image:loc>
+            <image:title>Mascotte ZamanIA</image:title>
+            <image:caption>Mascotte représentant les solutions d'intelligence artificielle de ZamanIA</image:caption>
+        </image:image>
+    </url>
+    
+</urlset>
+
+<!--
+    NOTES SUR LE SITEMAP :
+    
+    1. <loc> : URL complète de la page (obligatoire)
+    2. <lastmod> : Date de dernière modification (YYYY-MM-DD)
+    3. <changefreq> : Fréquence de mise à jour estimée
+       - always : change à chaque accès
+       - hourly : toutes les heures
+       - daily : quotidien
+       - weekly : hebdomadaire
+       - monthly : mensuel
+       - yearly : annuel
+       - never : archivé, ne change plus
+    4. <priority> : Importance relative (0.0 à 1.0)
+       - 1.0 = très important
+       - 0.5 = importance moyenne
+       - 0.0 = peu important
+    
+    MISE À JOUR :
+    - Mettez à jour lastmod quand vous modifiez une page
+    - Soumettez le sitemap à Google Search Console
+    - Ajoutez le sitemap dans robots.txt (déjà fait)
+    
+    VALIDATION :
+    - Testez votre sitemap sur : https://www.xml-sitemaps.com/validate-xml-sitemap.html
+    - Ou dans Google Search Console
+-->
