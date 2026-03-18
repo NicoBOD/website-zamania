@@ -269,7 +269,7 @@ header.scrolled {
 .cta-nav {
     background: linear-gradient(135deg, var(--accent) 0%, #d4a962 100%);
     color: #1a2332 !important; /* Texte foncé pour un contraste premium */
-    padding: 0.75rem 2.5rem;
+    padding: 0.75rem 2.5rem !important;
     border-radius: 50px; /* Forme de pilule */
     font-weight: 700;
     letter-spacing: 0.05em;
