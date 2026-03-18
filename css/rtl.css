@@ -95,6 +95,11 @@ html[dir="rtl"] .logo-img {
         left: -100%;
         box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
         transition: left 0.4s, background-color 0.3s ease;
+        padding: 6rem 2rem 2rem;
+    }
+
+    html[dir="rtl"] .nav-links a {
+        text-align: right;
     }
 
     html[dir="rtl"] .nav-links.active {
