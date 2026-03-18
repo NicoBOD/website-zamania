@@ -1572,7 +1572,7 @@ footer {
 }
 
 .faq-answer.active {
-    max-height: 500px;
+    max-height: 2000px;
     padding: 0 2rem 1.5rem 2rem;
 }
 
