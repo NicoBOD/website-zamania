@@ -75,3 +75,39 @@ html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4 {
 html[dir="rtl"] .visual-circle img {
     transform: scaleX(-1);
 }
+
+/* ==========================================
+   CORRECTION LOGO (MIROIR)
+   ========================================== */
+
+/* Retourne le logo pour qu'il regarde vers le centre de la page */
+html[dir="rtl"] .logo-img {
+    transform: scaleX(-1);
+}
+
+/* ==========================================
+   MENU MOBILE : VOLET DEPUIS LA GAUCHE
+   ========================================== */
+
+@media (max-width: 968px) {
+    html[dir="rtl"] .nav-links {
+        right: auto;
+        left: -100%;
+        box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+        transition: left 0.4s, background-color 0.3s ease;
+    }
+
+    html[dir="rtl"] .nav-links.active {
+        left: 0;
+        right: auto;
+    }
+}
+
+/* ==========================================
+   AVANTAGES : ICÔNES CENTRÉES
+   ========================================== */
+
+html[dir="rtl"] .benefit-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
