@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1a2332">
+    <title>{{TITLE}} - مدونة زمانيا</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/dark-mode.css">
+    <style>
+        .post-header { padding: 150px 20px 50px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .post-date { color: var(--accent); font-weight: 600; margin-bottom: 15px; display: block; font-size: 1.1rem; }
+        .post-title { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .post-image { width: 100%; max-width: 900px; height: auto; max-height: 500px; object-fit: cover; border-radius: 15px; margin: 0 auto 40px; display: block; border: 1px solid rgba(255,255,255,0.1); }
+        .post-content { max-width: 800px; margin: 0 auto 60px; padding: 0 20px; font-size: 1.1rem; line-height: 1.8; color: var(--text); }
+        .post-content h2 { color: var(--accent); margin-top: 40px; margin-bottom: 20px; font-size: 1.8rem; }
+        .post-content h3 { color: var(--text); margin-top: 30px; margin-bottom: 15px; font-size: 1.4rem; }
+        .post-content ul { margin-bottom: 20px; padding-left: 20px; }
+        .post-content li { margin-bottom: 10px; }
+        .post-content strong { color: var(--text); font-weight: 600; }
+        .post-sommaire { background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.2); padding: 25px; border-radius: 10px; margin-bottom: 40px; }
+        .post-sommaire h3 { margin-top: 0; color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; }
+        .post-sommaire ul { list-style-type: none; padding-left: 0; }
+        .post-sommaire li { margin-bottom: 10px; border-bottom: 1px dashed rgba(255,255,255,0.1); padding-bottom: 5px; }
+        .post-sommaire a { color: var(--text); text-decoration: none; transition: color 0.3s; }
+        .post-sommaire a:hover { color: var(--accent); }
+        .post-cta { background: linear-gradient(135deg, rgba(26, 35, 50, 0.9) 0%, rgba(10, 15, 25, 0.9) 100%); border: 2px solid var(--accent); padding: 40px; border-radius: 15px; text-align: center; margin-top: 60px; box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1); }
+        .post-cta h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--text); }
+        .post-cta p { font-size: 1.1rem; margin-bottom: 25px; color: var(--text-secondary); }
+        .btn-cta { display: inline-block; padding: 15px 30px; background: var(--accent); color: #000; font-weight: 600; font-size: 1.1rem; text-decoration: none; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s; }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 5px 20px rgba(0, 240, 255, 0.4); }
+        .post-author { display: flex; align-items: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .post-author-info { margin-left: 15px; }
+        .post-author-name { font-weight: 600; font-size: 1.1rem; color: var(--text); display: block; }
+        .post-author-role { font-size: 0.9rem; color: var(--accent); }
+    </style>
+</head>
+<body>
+    <header itemscope itemtype="https://schema.org/WPHeader">
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="../../ar/index.html" class="logo">
+                <img src="../../images/logo.png" alt="Logo ZamanIA" class="logo-img" onerror="this.style.display='none';">
+                ZAMAN<span class="highlight-ia">IA</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../ar/index.html#services">Services</a></li>
+                <li><a href="index.html" style="color: var(--accent);">Blog</a></li>
+                <li><a href="mailto:contact@zamania.fr" class="cta-nav">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section class="post-header">
+                <span class="post-date">{{DATE}}</span>
+                <h1 class="post-title">{{TITLE}}</h1>
+            </section>
+            
+            <img src="{{IMAGE_URL}}" alt="{{TITLE}}" class="post-image">
+            
+            <div class="post-content">
+                <div class="post-sommaire">
+                    <h3>جدول المحتويات</h3>
+                    <ul>
+                        {{SOMMAIRE}}
+                    </ul>
+                </div>
+                
+                {{CONTENT}}
+                
+                <div class="post-author">
+                    <div class="post-author-info">
+                        <span class="post-author-name">فريق زمانيا</span>
+                        <span class="post-author-role">خبراء أتمتة الذكاء الاصطناعي</span>
+                    </div>
+                </div>
+                
+                <div class="post-cta">
+                    <h3>توقف عن إهدار الوقت والمال</h3>
+                    <p>اكتشف مقدار الوقت الذي تهدره فرقك في المهام المتكررة التي يمكن أتمتتها اليوم باستخدام الذكاء الاصطناعي.</p>
+                    <a href="mailto:contact@zamania.fr?subject=Demande%20d'audit%20IA%20gratuit&body=Bonjour%20l'%C3%A9quipe%20ZamanIA,%0A%0AJe%20souhaite%20r%C3%A9server%20un%20audit%20gratuit%20pour%20d%C3%A9couvrir%20comment%20l'automatisation%20IA%20peut%20faire%20gagner%20du%20temps%20%C3%A0%20mon%20entreprise.%0A%0AMerci." class="btn-cta">اطلب تدقيق مجاني</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Zaman<span class="highlight-ia">IA</span></h3>
+                <p>حلول ذكاء اصطناعي مخصصة للشركات الصغيرة والمتوسطة.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zaman<span class="highlight-ia">IA</span>. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1a2332">
+    <title>Blog IA & Automatisation - ZamanIA</title>
+    <meta name="description" content="Découvrez les conseils, cas d'usage et actualités sur l'automatisation IA pour redonner du temps à votre entreprise.">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/dark-mode.css">
+    <style>
+        .blog-header { padding: 150px 20px 50px; text-align: center; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; padding: 20px; max-width: 1200px; margin: 0 auto 50px; }
+        .blog-card { background: var(--bg-card); border-radius: 10px; overflow: hidden; transition: transform 0.3s; border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .blog-card img { width: 100%; height: 200px; object-fit: cover; }
+        .blog-card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-card-date { font-size: 0.85rem; color: var(--accent); margin-bottom: 10px; font-weight: 600; }
+        .blog-card h3 { margin: 0 0 10px 0; font-size: 1.25rem; color: var(--text); }
+        .blog-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+        .blog-card a { display: inline-block; padding: 10px 20px; background: rgba(0, 240, 255, 0.1); color: var(--accent); border-radius: 5px; text-decoration: none; font-weight: 500; text-align: center; border: 1px solid var(--accent); transition: all 0.3s; }
+        .blog-card a:hover { background: var(--accent); color: #000; }
+    </style>
+</head>
+<body>
+    <header itemscope itemtype="https://schema.org/WPHeader">
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Navigation principale">
+            <a href="../../ar/index.html" class="logo" itemprop="url" aria-label="Retour à l'accueil ZamanIA">
+                <img src="../../images/logo.png" alt="Logo ZamanIA" class="logo-img" onerror="this.style.display='none';">
+                ZAMAN<span class="highlight-ia">IA</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../ar/index.html#services" itemprop="url"><span itemprop="name">Services</span></a></li>
+                <li><a href="../../ar/index.html#approche" itemprop="url"><span itemprop="name">Approche</span></a></li>
+                <li><a href="../../ar/index.html#cas-usage" itemprop="url"><span itemprop="name">Cas d'usage</span></a></li>
+                <li><a href="index.html" itemprop="url" style="color: var(--accent);"><span itemprop="name">Blog</span></a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                        <span class="theme-toggle-slider"><span class="theme-toggle-icon">🌙</span></span>
+                    </button>
+                </li>
+                <li><a href="mailto:contact@zamania.fr" class="cta-nav">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <h1 class="section-title">المدونة <span class="highlight-ia">ZamanIA</span></h1>
+            <p class="section-subtitle">نصائح، حالات استخدام، واستراتيجيات العائد على الاستثمار لأتمتة الذكاء الاصطناعي في الشركات.</p>
+        </section>
+
+        <div class="blog-grid" id="blog-container">
+            <!-- ARTICLES_LIST_START -->
+
+            <article class="blog-card">
+                <img src="../../images/blog/img-cout-saisie-manuelle.jpg" alt="Combien vous coûte réellement la saisie manuelle de vos données ? (Et comment l'IA la réduit à zéro)">
+                <div class="blog-card-content">
+                    <span class="blog-card-date">30 Mai 2026</span>
+                    <h3>Combien vous coûte réellement la saisie manuelle de vos données ? (Et comment l'IA la réduit à zéro)</h3>
+                    <p>Découvrez le coût financier caché de la paperasse et de la saisie manuelle, et comment l'automatisation IA offre un ROI en moins de 3 mois.</p>
+                    <a href="cout-saisie-manuelle.html">اقرأ المقال</a>
+                </div>
+            </article>
+            <!-- ARTICLES_LIST_END -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Zaman<span class="highlight-ia">IA</span></h3>
+                <p>حلول ذكاء اصطناعي مخصصة للشركات الصغيرة والمتوسطة.</p>
+            </div>
+            <div class="footer-section" itemscope itemtype="https://schema.org/ContactPoint">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:contact@zamania.fr" itemprop="email">contact@zamania.fr</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zaman<span class="highlight-ia">IA</span>. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
