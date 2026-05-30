@@ -21,6 +21,13 @@
         .blog-card a { display: inline-block; padding: 10px 20px; background: rgba(0, 240, 255, 0.1); color: var(--accent); border-radius: 5px; text-decoration: none; font-weight: 500; text-align: center; border: 1px solid var(--accent); transition: all 0.3s; }
         .blog-card a:hover { background: var(--accent); color: #000; }
     </style>
+
+    <!-- Préconnexion aux serveurs de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importation des polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header itemscope itemtype="https://schema.org/WPHeader">
@@ -30,16 +37,16 @@
                 ZAMAN<span class="highlight-ia">IA</span>
             </a>
             <ul class="nav-links">
-                <li><a href="../../ar/index.html#services" itemprop="url"><span itemprop="name">Services</span></a></li>
-                <li><a href="../../ar/index.html#approche" itemprop="url"><span itemprop="name">Approche</span></a></li>
-                <li><a href="../../ar/index.html#cas-usage" itemprop="url"><span itemprop="name">Cas d'usage</span></a></li>
-                <li><a href="index.html" itemprop="url" style="color: var(--accent);"><span itemprop="name">Blog</span></a></li>
+                <li><a href="../../ar/index.html#services" itemprop="url"><span itemprop="name">الخدمات</span></a></li>
+                <li><a href="../../ar/index.html#approche" itemprop="url"><span itemprop="name">نهجنا</span></a></li>
+                <li><a href="../../ar/index.html#cas-usage" itemprop="url"><span itemprop="name">حالات الاستخدام</span></a></li>
+                <li><a href="index.html" itemprop="url" style="color: var(--accent);"><span itemprop="name">المدونة</span></a></li>
                 <li>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <button class="theme-toggle" id="themeToggle" aria-label="تغيير المظهر">
                         <span class="theme-toggle-slider"><span class="theme-toggle-icon">🌙</span></span>
                     </button>
                 </li>
-                <li><a href="mailto:contact@zamania.fr" class="cta-nav">Contact</a></li>
+                <li><a href="mailto:contact@zamania.fr" class="cta-nav">اتصل بنا</a></li>
             </ul>
         </nav>
     </header>
@@ -54,11 +61,11 @@
             <!-- ARTICLES_LIST_START -->
 
             <article class="blog-card">
-                <img src="../../images/blog/img-cout-saisie-manuelle.jpg" alt="Combien vous coûte réellement la saisie manuelle de vos données ? (Et comment l'IA la réduit à zéro)">
+                <img src="../../images/blog/img-cout-saisie-manuelle.jpg" alt="كم تكلفك الإدخال اليدوي للبيانات حقًا؟">
                 <div class="blog-card-content">
-                    <span class="blog-card-date">30 Mai 2026</span>
-                    <h3>Combien vous coûte réellement la saisie manuelle de vos données ? (Et comment l'IA la réduit à zéro)</h3>
-                    <p>Découvrez le coût financier caché de la paperasse et de la saisie manuelle, et comment l'automatisation IA offre un ROI en moins de 3 mois.</p>
+                    <span class="blog-card-date">30 مايو 2026</span>
+                    <h3>كم تكلفك الإدخال اليدوي للبيانات حقًا؟</h3>
+                    <p>اكتشف التكلفة المالية الخفية للأعمال الورقية والإدخال اليدوي للبيانات، وكيف توفر أتمتة الذكاء الاصطناعي عائدًا على الاستثمار في أقل من 3 أشهر.</p>
                     <a href="cout-saisie-manuelle.html">اقرأ المقال</a>
                 </div>
             </article>
@@ -83,6 +90,7 @@
             <p>&copy; 2026 Zaman<span class="highlight-ia">IA</span>. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
-    <script src="../../js/main.js"></script>
+    <script src="../../js/theme.js" defer></script>
+    <script src="../../js/navigation.js" defer></script>
 </body>
 </html>
