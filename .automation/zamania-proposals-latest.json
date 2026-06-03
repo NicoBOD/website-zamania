@@ -1,0 +1,32 @@
+{
+  "proposal_date": "2026-06-03",
+  "proposals": [
+    {
+      "choice": 1,
+      "title_fr": "Service client sous tension ? Divisez par deux votre temps de réponse grâce au tri automatisé",
+      "angle": "Comment un système intelligent pré-catégorise, priorise et pré-rédige les réponses pour le support client, améliorant l'expérience sans surcharger l'équipe.",
+      "promise": "Améliorer la réactivité et la satisfaction client tout en allégeant la charge de travail des équipes.",
+      "business_positioning": "Fidélisation et optimisation des ressources (qualité de service comme avantage concurrentiel).",
+      "theme_family": "customer-support-triage",
+      "keywords": ["service client", "réactivité", "tri intelligent", "satisfaction client", "fidélisation", "automatisation"]
+    },
+    {
+      "choice": 2,
+      "title_fr": "Ne laissez plus dormir vos devis : sécurisez votre chiffre d'affaires par un suivi intelligent",
+      "angle": "L'impact critique de la réactivité commerciale sur les ventes. Un système automatisé identifie les leads chauds et systématise les suivis.",
+      "promise": "Augmenter le taux de transformation en assurant une présence continue et ciblée auprès de vos prospects.",
+      "business_positioning": "Accélération du cycle de vente et croissance des revenus commerciaux.",
+      "theme_family": "sales-lead-qualification",
+      "keywords": ["taux de conversion", "pipeline des ventes", "croissance", "qualification", "relance", "opportunité commerciale"]
+    },
+    {
+      "choice": 3,
+      "title_fr": "Dirigeants : passez de la collecte de données à la décision grâce aux synthèses instantanées",
+      "angle": "La difficulté de consolider les données d'entreprise pour piloter l'activité. Automatiser la création de rapports fiables et actionnables.",
+      "promise": "Fournir une vision claire et immédiate des performances pour décider vite et bien.",
+      "business_positioning": "Agilité stratégique et pilotage performant en temps réel.",
+      "theme_family": "executive-reporting",
+      "keywords": ["reporting", "prise de décision", "tableau de bord", "stratégie", "données", "synthèse"]
+    }
+  ]
+}

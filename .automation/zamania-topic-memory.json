@@ -1,0 +1,123 @@
+{
+  "project": "zamania-blog",
+  "version": 1,
+  "updated_at": "2026-06-03T12:05:06+02:00",
+  "rules": {
+    "recent_window": 2,
+    "history_window": 6,
+    "high_similarity_threshold": 0.72,
+    "warn_similarity_threshold": 0.55,
+    "intra_batch_threshold": 0.48
+  },
+  "articles": [
+    {
+      "slug": "cout-saisie-manuelle",
+      "published_at": "2026-05-30T12:00:00+02:00",
+      "title_fr": "Combien vous coûte réellement la saisie manuelle de vos données ? (Et comment l'IA la réduit à zéro)",
+      "summary_fr": "Découvrez le coût financier caché de la paperasse et de la saisie manuelle, et comment l'automatisation IA offre un ROI en moins de 3 mois.",
+      "angle": "Montrer le coût caché de la saisie manuelle et de la paperasse pour convaincre de prioriser l'automatisation.",
+      "business_positioning": "ROI rapide grâce à la réduction du travail administratif manuel.",
+      "theme_family": "manual-work-cost",
+      "keywords": [
+        "saisie manuelle",
+        "paperasse",
+        "tâches répétitives",
+        "ROI",
+        "automatisation IA"
+      ],
+      "links": {
+        "fr": "https://zamania.fr/blog/cout-saisie-manuelle.html",
+        "en": "https://zamania.fr/en/blog/cout-saisie-manuelle.html",
+        "ar": "https://zamania.fr/ar/blog/cout-saisie-manuelle.html"
+      }
+    },
+    {
+      "slug": "agents-ia-levier-productivite",
+      "published_at": "2026-05-31T10:22:58+02:00",
+      "title_fr": "Agents IA : le nouveau levier de productivité pour les entreprises qui veulent faire plus sans recruter plus",
+      "summary_fr": "Expliquer simplement ce qu’est un agent IA, ce qu’il peut faire aujourd’hui, et pourquoi ce n’est plus un sujet tech mais un sujet de rentabilité pour les décideurs.",
+      "angle": "Positionner les agents IA comme un levier de productivité et de croissance sans recrutement immédiat.",
+      "business_positioning": "Leadership stratégique orienté croissance, capacité et marge.",
+      "theme_family": "ai-agents-productivity",
+      "keywords": [
+        "agents IA",
+        "productivité",
+        "croissance",
+        "faire plus sans recruter",
+        "rentabilité"
+      ],
+      "links": {
+        "fr": "https://zamania.fr/blog/agents-ia-levier-productivite.html",
+        "en": "https://zamania.fr/en/blog/agents-ia-levier-productivite.html",
+        "ar": "https://zamania.fr/ar/blog/agents-ia-levier-productivite.html"
+      }
+    },
+    {
+      "slug": "cout-taches-repetitives-entreprise",
+      "published_at": "2026-05-31T12:00:00+02:00",
+      "title_fr": "Combien les tâches répétitives coûtent-elles réellement à votre entreprise ?",
+      "summary_fr": "Calculez le coût caché des tâches répétitives dans votre entreprise et identifiez les premiers leviers d'automatisation IA à plus fort ROI.",
+      "angle": "Montrer comment mesurer le coût des micro-tâches répétitives pour prioriser l'automatisation.",
+      "business_positioning": "Prise de conscience financière et arbitrage ROI.",
+      "theme_family": "manual-work-cost",
+      "keywords": [
+        "tâches répétitives",
+        "coût caché",
+        "temps perdu",
+        "ROI",
+        "automatisation IA"
+      ],
+      "links": {
+        "fr": "https://zamania.fr/blog/cout-taches-repetitives-entreprise.html",
+        "en": "https://zamania.fr/en/blog/cout-taches-repetitives-entreprise.html",
+        "ar": "https://zamania.fr/ar/blog/cout-taches-repetitives-entreprise.html"
+      }
+    },
+    {
+      "slug": "cout-cache-taches-repetitives-marge-entreprise",
+      "published_at": "2026-06-01T12:26:14+02:00",
+      "title_fr": "Le coût caché des tâches répétitives : la fuite silencieuse de marge dans votre entreprise",
+      "summary_fr": "Derrière les micro-tâches répétitives se cache une perte mensuelle de marge, de réactivité et de capacité. Voici comment la mesurer et où automatiser en priorité.",
+      "angle": "Relier les tâches répétitives à une fuite silencieuse de marge et à une baisse de réactivité opérationnelle.",
+      "business_positioning": "Argumentaire ROI axé sur la marge, la capacité et la vitesse d'exécution.",
+      "theme_family": "manual-work-cost",
+      "keywords": [
+        "coût caché",
+        "tâches répétitives",
+        "marge",
+        "réactivité",
+        "automatisation IA"
+      ],
+      "links": {
+        "fr": "https://zamania.fr/blog/cout-cache-taches-repetitives-marge-entreprise.html",
+        "en": "https://zamania.fr/en/blog/cout-cache-taches-repetitives-marge-entreprise.html",
+        "ar": "https://zamania.fr/ar/blog/cout-cache-taches-repetitives-marge-entreprise.html"
+      }
+    },
+    {
+      "slug": "service-client-tri-automatise",
+      "published_at": "2026-06-03T12:05:00+02:00",
+      "title_fr": "Service client sous tension ? Divisez par deux votre temps de réponse grâce au tri automatisé",
+      "summary_fr": "Améliorer la réactivité et la satisfaction client tout en allégeant la charge de travail des équipes.",
+      "angle": "Comment un système intelligent pré-catégorise, priorise et pré-rédige les réponses pour le support client, améliorant l'expérience sans surcharger l'équipe.",
+      "business_positioning": "Fidélisation et optimisation des ressources (qualité de service comme avantage concurrentiel).",
+      "theme_family": "customer-support-triage",
+      "angle_family": null,
+      "keywords": [
+        "service client",
+        "réactivité",
+        "tri intelligent",
+        "satisfaction client",
+        "fidélisation",
+        "automatisation"
+      ],
+      "proposal_date": "2026-06-03",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/service-client-tri-automatise.html",
+        "en": "https://zamania.fr/en/blog/service-client-tri-automatise.html",
+        "ar": "https://zamania.fr/ar/blog/service-client-tri-automatise.html"
+      }
+    }
+  ]
+}
