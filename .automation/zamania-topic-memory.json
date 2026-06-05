@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-03T12:05:06+02:00",
+  "updated_at": "2026-06-05T12:13:23+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -117,6 +117,30 @@
         "fr": "https://zamania.fr/blog/service-client-tri-automatise.html",
         "en": "https://zamania.fr/en/blog/service-client-tri-automatise.html",
         "ar": "https://zamania.fr/ar/blog/service-client-tri-automatise.html"
+      }
+    },
+    {
+      "slug": "automatiser-consolidation-indicateurs-cles",
+      "published_at": "2026-06-05T12:00:00+02:00",
+      "title_fr": "Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés",
+      "summary_fr": "Obtenir une vue claire et à jour de l'activité globale de l'entreprise chaque matin, sans aucune manipulation manuelle des données.",
+      "angle": "Le temps de direction passé à agréger et vérifier des tableaux de bord disparates est un manque à gagner. L'automatisation permet de générer des synthèses inter-outils fiables.",
+      "business_positioning": "Pilotage stratégique, fiabilité de l'information, optimisation du temps des décideurs.",
+      "theme_family": "management-reporting",
+      "angle_family": null,
+      "keywords": [
+        "pilotage d'entreprise",
+        "indicateurs",
+        "tableaux de bord",
+        "synthèse de données",
+        "décisionnel"
+      ],
+      "proposal_date": "2026-06-05",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/automatiser-consolidation-indicateurs-cles.html",
+        "en": "https://zamania.fr/en/blog/automatiser-consolidation-indicateurs-cles.html",
+        "ar": "https://zamania.fr/ar/blog/automatiser-consolidation-indicateurs-cles.html"
       }
     }
   ]
