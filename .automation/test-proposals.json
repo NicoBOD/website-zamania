@@ -1,0 +1,32 @@
+{
+  "proposal_date": "2026-06-01",
+  "proposals": [
+    {
+      "choice": "1",
+      "title_fr": "Agents IA en entreprise : combien vous coûtent encore vos tâches répétitives ?",
+      "angle": "Montrer que le vrai coût des tâches répétitives inclut aussi les erreurs, les délais, la saturation des équipes et les opportunités manquées.",
+      "promise": "Aider un dirigeant à identifier rapidement les postes où un agent IA peut réduire les coûts opérationnels et améliorer la vitesse d’exécution.",
+      "business_positioning": "Un sujet orienté rentabilité pour montrer qu’automatiser est un levier direct de marge.",
+      "theme_family": "manual-work-cost",
+      "keywords": ["agents IA", "tâches répétitives", "coûts opérationnels", "marge"]
+    },
+    {
+      "choice": "2",
+      "title_fr": "Automatisation intelligente : 5 processus où l’IA génère un ROI visible en moins de 90 jours",
+      "angle": "Partir d’exemples concrets de processus répétitifs à faible valeur ajoutée pour démontrer où le ROI apparaît le plus vite.",
+      "promise": "Donner aux décideurs une grille de lecture simple pour repérer les automatisations les plus rentables à lancer en priorité.",
+      "business_positioning": "Un contenu direction générale centré sur des résultats mesurables et des gains rapides.",
+      "theme_family": "automation-priorities",
+      "keywords": ["ROI", "90 jours", "processus", "priorisation", "automatisation IA"]
+    },
+    {
+      "choice": "3",
+      "title_fr": "Productivité, coûts, réactivité : pourquoi les entreprises les plus rentables intègrent déjà des agents IA",
+      "angle": "Expliquer que les agents IA transforment la performance globale : meilleure exécution, disponibilité et expérience client.",
+      "promise": "Faire comprendre comment l’IA devient un avantage compétitif concret pour les entreprises qui veulent croître sans augmenter leurs coûts au même rythme.",
+      "business_positioning": "Un article de leadership stratégique pour positionner ZamanIA comme partenaire de transformation orienté résultats.",
+      "theme_family": "ai-agents-productivity",
+      "keywords": ["agents IA", "productivité", "réactivité", "croissance", "avantage compétitif"]
+    }
+  ]
+}

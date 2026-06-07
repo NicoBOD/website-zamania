@@ -1,0 +1,32 @@
+{
+  "proposal_date": "2026-06-01",
+  "proposals": [
+    {
+      "choice": "1",
+      "title_fr": "Qualification de leads : comment l’IA aide vos équipes commerciales à répondre plus vite sans perdre les opportunités chaudes",
+      "angle": "Montrer comment automatiser le tri, le scoring et la priorisation des demandes entrantes pour réduire les délais de réponse commerciale.",
+      "promise": "Donner aux dirigeants une méthode concrète pour convertir plus vite sans alourdir l’équipe avant-vente.",
+      "business_positioning": "Un sujet orienté croissance et conversion, avec un ROI visible sur le pipe commercial.",
+      "theme_family": "lead-qualification",
+      "keywords": ["qualification de leads", "scoring", "réponse commerciale", "conversion", "croissance"]
+    },
+    {
+      "choice": "2",
+      "title_fr": "Support client : où l’IA fait gagner du temps sans dégrader la qualité de réponse",
+      "angle": "Expliquer comment trier, qualifier et pré-rédiger les réponses aux demandes récurrentes tout en gardant un contrôle humain sur les cas sensibles.",
+      "promise": "Aider un décideur à réduire la charge du support tout en améliorant la réactivité perçue par les clients.",
+      "business_positioning": "Un angle service client et efficacité opérationnelle, utile pour gagner en qualité sans recruter immédiatement.",
+      "theme_family": "customer-support",
+      "keywords": ["support client", "tri automatique", "qualité de service", "réactivité", "SAV"]
+    },
+    {
+      "choice": "3",
+      "title_fr": "Reporting automatisé : comment livrer plus vite des synthèses fiables aux dirigeants sans mobiliser vos managers chaque semaine",
+      "angle": "Montrer comment centraliser les données et générer des synthèses exécutives régulières sans passer des heures à consolider les informations manuellement.",
+      "promise": "Permettre à une direction de récupérer du temps managérial tout en améliorant la visibilité sur l’activité.",
+      "business_positioning": "Un sujet pilotage et gouvernance, très pertinent pour les entreprises qui veulent mieux décider sans alourdir les rituels de reporting.",
+      "theme_family": "reporting-analytics",
+      "keywords": ["reporting", "synthèse", "tableau de bord", "pilotage", "temps managérial"]
+    }
+  ]
+}

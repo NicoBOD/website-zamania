@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-05T12:13:23+02:00",
+  "updated_at": "2026-06-07T14:36:26+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -141,6 +141,31 @@
         "fr": "https://zamania.fr/blog/automatiser-consolidation-indicateurs-cles.html",
         "en": "https://zamania.fr/en/blog/automatiser-consolidation-indicateurs-cles.html",
         "ar": "https://zamania.fr/ar/blog/automatiser-consolidation-indicateurs-cles.html"
+      }
+    },
+    {
+      "slug": "ia-qualification-pipeline-commercial",
+      "published_at": "2026-06-07T14:36:26+02:00",
+      "title_fr": "Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir",
+      "summary_fr": "Réduire le temps de qualification de plusieurs heures à quelques secondes, doubler le taux de réponse aux leads entrants et augmenter mécaniquement le taux de conversion commerciale.",
+      "angle": "La qualification manuelle des leads entrants est lente, inégale et laisse passer des opportunités chaudes. Un agent IA connecté à votre CRM qualifie, priorise et répond en temps réel, 24/7, sans intervention humaine.",
+      "business_positioning": "Pour les directeurs commerciaux et DG de PME/ETI qui veulent transformer chaque lead entrant en opportunité traitée — sans recruter de SDR supplémentaire ni laisser de lead dormir dans la boîte mail.",
+      "theme_family": "lead-qualification",
+      "angle_family": null,
+      "keywords": [
+        "qualification de leads",
+        "pipeline commercial",
+        "CRM",
+        "conversion",
+        "SDR",
+        "réponse instantanée"
+      ],
+      "proposal_date": "2026-06-07",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/ia-qualification-pipeline-commercial.html",
+        "en": "https://zamania.fr/en/blog/ia-qualification-pipeline-commercial.html",
+        "ar": "https://zamania.fr/ar/blog/ia-qualification-pipeline-commercial.html"
       }
     }
   ]
