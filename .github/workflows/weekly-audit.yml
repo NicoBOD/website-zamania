@@ -1,0 +1,50 @@
+name: Audit hebdomadaire
+
+# Audit non bloquant : liens externes et qualité des pages (Lighthouse).
+# Un échec n'empêche rien — il signale qu'un lien externe est mort ou
+# qu'une page a régressé (performance, SEO, accessibilité).
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # tous les lundis à 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  liens-externes:
+    name: Liens externes
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Vérification des liens externes (lychee)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 2
+            --timeout 20
+            --exclude-path .automation
+            --exclude '^mailto:'
+            --exclude '(twitter|x)\.com'
+            --exclude 'linkedin\.com'
+            '**/*.html'
+          fail: true
+
+  lighthouse:
+    name: Lighthouse (performance, SEO, accessibilité)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Audit Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: .github/lighthouse/lighthouserc.json
+          uploadArtifacts: true
