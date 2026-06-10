@@ -38,6 +38,8 @@
         "dateModified": "{{DATE_ISO}}",
         "inLanguage": "en",
         "mainEntityOfPage": "https://zamania.fr/en/blog/{{SLUG}}.html",
+        "speakable": {"@type": "SpeakableSpecification",
+                      "cssSelector": [".post-title", ".post-content > p:first-of-type"]},
         "author": {"@type": "Organization", "name": "ZamanIA", "url": "https://zamania.fr"},
         "publisher": {"@type": "Organization", "name": "ZamanIA",
                       "logo": {"@type": "ImageObject", "url": "https://zamania.fr/images/logo.png"}}
@@ -45,39 +47,10 @@
     </script>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
-    <style>
-        .post-header { padding: 150px 20px 50px; text-align: center; max-width: 900px; margin: 0 auto; }
-        .post-date { color: var(--accent); font-weight: 600; margin-bottom: 15px; display: block; font-size: 1.1rem; }
-        .post-title { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
-        .post-image { width: 100%; max-width: 900px; height: auto; max-height: 500px; object-fit: cover; border-radius: 15px; margin: 0 auto 40px; display: block; border: 1px solid rgba(255,255,255,0.1); }
-        .post-content { max-width: 800px; margin: 0 auto 60px; padding: 0 20px; font-size: 1.1rem; line-height: 1.8; color: var(--text); }
-        .post-content h2 { color: var(--accent); margin-top: 40px; margin-bottom: 20px; font-size: 1.8rem; }
-        .post-content h3 { color: var(--text); margin-top: 30px; margin-bottom: 15px; font-size: 1.4rem; }
-        .post-content ul { margin-bottom: 20px; padding-left: 20px; }
-        .post-content li { margin-bottom: 10px; }
-        .post-content strong { color: var(--text); font-weight: 600; }
-        .post-sommaire { background: rgba(201, 160, 95, 0.05); border: 1px solid rgba(201, 160, 95, 0.2); padding: 25px; border-radius: 10px; margin-bottom: 40px; }
-        .post-sommaire h3 { margin-top: 0; color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; }
-        .post-sommaire ul { list-style-type: none; padding-left: 0; }
-        .post-sommaire li { margin-bottom: 10px; border-bottom: 1px dashed rgba(255,255,255,0.1); padding-bottom: 5px; }
-        .post-sommaire a { color: var(--text); text-decoration: none; transition: color 0.3s; }
-        .post-sommaire a:hover { color: var(--accent); }
-        .post-cta { background: linear-gradient(135deg, rgba(201, 160, 95, 0.12) 0%, rgba(201, 160, 95, 0.04) 100%); border: 2px solid var(--accent); padding: 40px; border-radius: 15px; text-align: center; margin-top: 60px; box-shadow: 0 10px 30px rgba(201, 160, 95, 0.1); }
-        .post-cta h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--text); }
-        .post-cta p { font-size: 1.1rem; margin-bottom: 25px; color: var(--text-secondary); }
-        .btn-cta { display: inline-block; padding: 15px 30px; background: var(--accent); color: #000; font-weight: 600; font-size: 1.1rem; text-decoration: none; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s; }
-        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 5px 20px rgba(201, 160, 95, 0.4); }
-        .post-author { display: flex; align-items: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-        .post-author-info { margin-left: 15px; }
-        .post-author-name { font-weight: 600; font-size: 1.1rem; color: var(--text); display: block; }
-        .post-author-role { font-size: 0.9rem; color: var(--accent); }
-    </style>
+    <link rel="stylesheet" href="../../css/blog.css">
 
-    <!-- Préconnexion aux serveurs de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Importation des polices Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="../../fonts/work-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../css/fonts.css">
 
 </head>
 <body>
@@ -101,7 +74,7 @@
                     <span style="color: var(--text-secondary); margin: 0 5px;">|</span>
                     <a href="../../ar/blog/index.html" title="Arabic version">AR</a>
                 </li>
-                <li><a href="mailto:contact@zamania.fr" class="cta-nav">Contact</a></li>
+                <li><a href="../contact.html" class="cta-nav">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
         </nav>
@@ -116,7 +89,10 @@
                 <h1 class="post-title">{{TITLE}}</h1>
             </section>
             
-            <img src="{{IMAGE_URL}}" alt="{{TITLE}}" class="post-image">
+            <picture>
+                <source type="image/webp" srcset="{{IMAGE_SRCSET}}" sizes="(max-width: 940px) 100vw, 900px">
+                <img src="{{IMAGE_URL}}" alt="{{TITLE}}" class="post-image" fetchpriority="high" decoding="async">
+            </picture>
             
             <div class="post-content">
                 <div class="post-sommaire">
@@ -138,7 +114,7 @@
                 <div class="post-cta">
                     <h3>Stop wasting time and money</h3>
                     <p>Discover how much time your teams are wasting on repetitive tasks that can be automated today with AI.</p>
-                    <a href="mailto:contact@zamania.fr?subject=Demande%20d'audit%20IA%20gratuit&body=Bonjour%20l'%C3%A9quipe%20ZamanIA,%0A%0AJe%20souhaite%20r%C3%A9server%20un%20audit%20gratuit%20pour%20d%C3%A9couvrir%20comment%20l'automatisation%20IA%20peut%20faire%20gagner%20du%20temps%20%C3%A0%20mon%20entreprise.%0A%0AMerci." class="btn-cta">Request my Free Audit</a>
+                    <a href="../contact.html" class="btn-cta">Request my Free Audit</a>
                 </div>
             </div>
         </article>
@@ -157,5 +133,8 @@
     </footer>
     <script src="../../js/theme.js" defer></script>
     <script src="../../js/navigation.js" defer></script>
+    <script src="../../js/share.js" defer></script>
+    <script src="../../js/reading-progress.js" defer></script>
+    <script src="../../js/analytics.js" defer></script>
 </body>
 </html>

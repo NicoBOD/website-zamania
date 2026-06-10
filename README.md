@@ -22,19 +22,28 @@ Le blog est alimenté **automatiquement tous les 2 jours** par un agent IA (« H
 ```
 .
 ├── index.html                  # Accueil FR (référence)
+├── contact.html                # Page contact FR (formulaire statique)
 ├── blog/
-│   ├── index.html              # Liste des articles FR
+│   ├── index.html              # Liste des articles FR, page 1 (générée)
+│   ├── page-2.html…            # Pages suivantes de l'index (générées, 9 articles/page)
+│   ├── index-template.html     # Gabarit des index (placeholders {{...}})
 │   ├── template.html           # Gabarit d'article FR (placeholders {{...}})
 │   └── <slug>.html             # Articles publiés
-├── en/                         # Miroir anglais (index.html + blog/ + feed.xml)
-├── ar/                         # Miroir arabe RTL (index.html + blog/ + feed.xml)
+├── en/                         # Miroir anglais (index.html + contact.html + blog/ + feed.xml)
+├── ar/                         # Miroir arabe RTL (idem)
 ├── css/
 │   ├── styles.css              # Styles principaux (thème sombre par défaut)
 │   ├── dark-mode.css           # Bascule clair/sombre
+│   ├── blog.css                # Styles partagés du blog (index + articles, responsive)
+│   ├── fonts.css               # @font-face des polices auto-hébergées
 │   └── rtl.css                 # Surcharges RTL pour la version arabe
-├── js/                         # Navigation, thème, carrousel, cookies, FAQ…
+├── fonts/                      # Woff2 auto-hébergés (licence OFL) : Cormorant
+│                               # Garamond, Work Sans, Tajawal — zéro appel Google
+├── js/                         # Navigation, thème, carrousel, cookies, FAQ,
+│                               # partage, barre de lecture, formulaire, stats…
 ├── images/
-│   └── blog/img-<slug>.jpg     # Une illustration par article (1600×900)
+│   └── blog/img-<slug>.jpg     # Illustration d'article (1600×900) + variantes
+│       img-<slug>-{480,800,1200}.webp   # WebP générées par publish.py (srcset)
 ├── feed.xml                    # Flux RSS FR (généré — ne pas éditer)
 ├── sitemap.xml                 # Sitemap complet (généré — ne pas éditer)
 ├── 404.html, cgu.html, cgv.html, mentions-legales.html,
@@ -43,6 +52,9 @@ Le blog est alimenté **automatiquement tous les 2 jours** par un agent IA (« H
 ├── .automation/                # Outillage du pipeline (non publié)
 │   ├── publish.py                   # ⭐ Point d'entrée : publie un article (3 langues)
 │   ├── article_index.py             # Bibliothèque : inventaire des articles publiés
+│   ├── update_article_blocks.py     # Blocs dérivés des articles (lecture, partage,
+│   │                                #   « à lire aussi », précédent/suivant)
+│   ├── generate_blog_indexes.py     # Index du blog + pagination (depuis les articles)
 │   ├── update_home_articles.py      # Synchro du carrousel d'accueil
 │   ├── generate_sitemap.py          # Régénère sitemap.xml
 │   ├── generate_feeds.py            # Régénère les 3 flux RSS
@@ -75,7 +87,9 @@ Un agent IA publie un article de blog **tous les 2 jours**, selon ce cycle :
    python3 .automation/publish.py article.json
    ```
 
-   Elle valide le contenu, rend les 3 pages depuis les templates, insère les cartes dans les 3 index, resynchronise le carrousel d'accueil, régénère `sitemap.xml` et les flux RSS, puis exécute les contrôles d'intégrité. Si quelque chose ne va pas, elle échoue **avant** tout commit.
+   Elle valide le contenu, génère les variantes WebP de l'illustration, rend les 3 pages depuis les templates, recalcule les blocs dérivés de **tous** les articles (temps de lecture, partage, « à lire aussi », précédent/suivant), reconstruit les index paginés, resynchronise le carrousel d'accueil, régénère `sitemap.xml` et les flux RSS, puis exécute les contrôles d'intégrité. Si quelque chose ne va pas, elle échoue **avant** tout commit.
+
+   > Seule dépendance : **Pillow** (`pip install Pillow`), utilisé à la publication pour produire les WebP. La CI, elle, reste sans dépendance.
 6. **Déploiement** — Commit + push sur `main` → GitHub Pages met le site en ligne, et l'agent enregistre la publication dans la mémoire des sujets (`zamania_topic_guard.py record-publication`).
 
 ### Contrat de l'article (`article.json`)
@@ -103,11 +117,14 @@ Règles appliquées par `publish.py` :
 ### Invariants du site (vérifiés par la CI)
 
 - **Parité trilingue** : chaque article existe dans `blog/`, `en/blog/` **et** `ar/blog/` (même nom de fichier).
-- **Placeholders** : aucun `{{TITLE}}`, `{{DATE}}`, `{{DATE_ISO}}`, `{{DESCRIPTION}}`, `{{SOMMAIRE}}`, `{{CONTENT}}`, `{{IMAGE_URL}}`, `{{SLUG}}` ne subsiste dans une page publiée (seuls les `template.html` en contiennent).
-- **Marqueurs intacts** : les index de blog conservent exactement un couple `<!-- ARTICLES_LIST_START -->` / `<!-- ARTICLES_LIST_END -->` (articles triés du plus récent au plus ancien) ; les pages d'accueil conservent `<!-- HOME_ARTICLES_START -->` / `<!-- HOME_ARTICLES_END -->`.
-- **Artefacts générés à jour** : carrousel d'accueil (5 derniers articles), `sitemap.xml` et flux RSS reflètent exactement l'état du blog — ils sont régénérés par `publish.py`, jamais édités à la main.
-- **SEO des articles** : chaque article porte canonical, hreflang FR/EN/AR, Open Graph, Twitter Card et un JSON-LD `Article` valide (le tout rempli par les templates).
-- **Liens valides** : tout `href`/`src` local (y compris les URL absolues `https://zamania.fr/...` et les ancres `#section`) pointe vers un fichier/id existant.
+- **Placeholders** : aucun `{{...}}` ne subsiste dans une page publiée (seuls `template.html` et `index-template.html` en contiennent).
+- **Marqueurs intacts** : les index de blog conservent exactement un couple `<!-- ARTICLES_LIST_START -->` / `<!-- ARTICLES_LIST_END -->` ; les pages d'accueil conservent `<!-- HOME_ARTICLES_START -->` / `<!-- HOME_ARTICLES_END -->`.
+- **Artefacts générés à jour** : blocs d'articles, index paginés, carrousel d'accueil, `sitemap.xml` et flux RSS reflètent exactement l'état du blog — ils sont régénérés par `publish.py`, jamais édités à la main. La source de vérité est l'ensemble des pages d'articles.
+- **Index paginés cohérents** : chaque article apparaît sur exactement une page d'index de sa langue ; première illustration en `fetchpriority="high"`, les suivantes en `loading="lazy"`.
+- **SEO des articles** : canonical, hreflang FR/EN/AR, Open Graph, Twitter Card, JSON-LD `Article` (avec `speakable`).
+- **JSON-LD FAQPage synchronisé** : les questions du balisage correspondent exactement à la FAQ visible de chaque accueil (exigence Google).
+- **Styles et polices** : pages du blog sur `css/blog.css` (aucun style dupliqué en inline), pages arabes sur `css/rtl.css`, toutes les pages sur les polices auto-hébergées (`css/fonts.css`, aucun appel à Google Fonts), toute variable CSS `var(--x)` définie.
+- **Liens valides** : tout `href`/`src`/`srcset` local (y compris les URL absolues `https://zamania.fr/...` et les ancres `#section`) pointe vers un fichier/id existant.
 
 ---
 
@@ -126,11 +143,14 @@ python3 .automation/checks/check_site.py
 | Parité trilingue FR/EN/AR | Article publié dans une seule langue |
 | Placeholders `{{...}}` | Gabarit mal rempli visible en production |
 | Marqueurs du pipeline | Prochaine publication automatique impossible |
-| Liens, ancres, images, CSS `url()` | Liens morts, images cassées |
-| Cartes des index de blog | Article publié mais absent de la liste |
-| Artefacts générés (carrousel, sitemap, RSS) | Accueil/SEO/flux en retard sur le blog |
+| Liens, ancres, images, `srcset`, CSS `url()` | Liens morts, images cassées |
+| Variables CSS définies | Style silencieusement invalide (ex. fond transparent) |
+| Feuilles du blog & RTL, polices auto-hébergées | Styles dupliqués, RTL cassé, fuite vers Google Fonts |
+| Cartes des index de blog (pagination) | Article absent des listes, doublon entre pages |
+| Artefacts générés (blocs, index, carrousel, sitemap, RSS) | Pages dérivées en retard sur le blog |
 | Attributs HTML (lang, RTL, title, description, h1) | Régressions SEO/accessibilité |
-| SEO des articles (canonical, OG, JSON-LD) | Partages sociaux et indexation dégradés |
+| SEO des articles (canonical, OG, JSON-LD, speakable) | Partages sociaux et indexation dégradés |
+| JSON-LD FAQPage synchronisé | Balisage FAQ non conforme (pénalité Google possible) |
 | `sitemap.xml`, flux RSS, `robots.txt`, `CNAME` | Désindexation, domaine cassé |
 | Icônes PWA (`manifest.json`, `browserconfig.xml`) | Manifest invalide |
 | Compilation des scripts Python | Pipeline de publication cassé |
@@ -139,6 +159,39 @@ python3 .automation/checks/check_site.py
 
 - **lychee** vérifie que les liens externes répondent encore ;
 - **Lighthouse** audite performance, SEO et accessibilité des pages principales (rapports en artefacts du workflow).
+
+---
+
+## ⚙️ Services à activer (une seule fois, optionnel)
+
+Deux fonctionnalités sont prêtes mais attendent un compte gratuit. Tant
+qu'elles ne sont pas configurées, le site reste 100 % fonctionnel (repli
+automatique) et **aucune requête externe n'est émise**.
+
+### Formulaire de contact (`contact.html`)
+
+Sans configuration, le bouton « Envoyer » compose un e-mail (repli `mailto:`).
+Pour recevoir les messages directement :
+
+1. Créer un formulaire sur [formspree.io](https://formspree.io) (gratuit jusqu'à 50 envois/mois) avec `contact@zamania.fr` ;
+2. Renseigner son URL dans [`js/contact-form.js`](js/contact-form.js) :
+   `const FORM_ENDPOINT = 'https://formspree.io/f/XXXXXXXX';`
+
+### Statistiques de visite (sans cookie, conformes RGPD)
+
+1. Créer un compte gratuit sur [goatcounter.com](https://www.goatcounter.com) avec le code `zamania` ;
+2. Renseigner dans [`js/analytics.js`](js/analytics.js) :
+   `const GOATCOUNTER = 'https://zamania.goatcounter.com/count';`
+
+Aucun cookie, aucune donnée personnelle : pas de bandeau de consentement à ajouter.
+
+### Polices auto-hébergées
+
+Les woff2 de `fonts/` (Cormorant Garamond, Work Sans, Tajawal — licence OFL)
+ont été téléchargés depuis l'API Google Fonts puis figés dans le dépôt :
+le navigateur ne contacte plus jamais Google. Pour ajouter une graisse ou
+une police, télécharger le woff2 correspondant dans `fonts/` et déclarer
+son `@font-face` dans [`css/fonts.css`](css/fonts.css).
 
 ---
 

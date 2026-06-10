@@ -333,6 +333,33 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://zamania.fr/blog/cout-saisie-manuelle.html"/>
     </url>
     <url>
+        <loc>https://zamania.fr/contact.html</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zamania.fr/en/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://zamania.fr/contact.html"/>
+    </url>
+    <url>
+        <loc>https://zamania.fr/en/contact.html</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zamania.fr/en/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://zamania.fr/contact.html"/>
+    </url>
+    <url>
+        <loc>https://zamania.fr/ar/contact.html</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zamania.fr/en/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://zamania.fr/contact.html"/>
+    </url>
+    <url>
         <loc>https://zamania.fr/cgu.html</loc>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>

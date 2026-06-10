@@ -5,12 +5,15 @@ Point d'entrée unique du pipeline de publication : à partir d'un fichier
 JSON décrivant l'article (voir examples/article.example.json), le script
 
   1. valide le contenu (slug, date, champs requis, ancres du sommaire) ;
-  2. vérifie que l'illustration images/blog/img-<slug>.jpg existe ;
+  2. vérifie que l'illustration images/blog/img-<slug>.jpg existe et génère
+     ses variantes WebP (480/800/1200 px) ;
   3. rend les trois pages depuis les templates blog/template.html ;
-  4. insère la carte de l'article en tête des trois index de blog ;
-  5. resynchronise le carrousel des pages d'accueil ;
-  6. régénère sitemap.xml et les flux RSS ;
-  7. exécute les contrôles d'intégrité (checks/check_site.py).
+  4. met à jour les blocs dérivés de tous les articles (temps de lecture,
+     partage, « À lire aussi », précédent/suivant) ;
+  5. régénère les index du blog avec leur pagination ;
+  6. resynchronise le carrousel des pages d'accueil ;
+  7. régénère sitemap.xml et les flux RSS ;
+  8. exécute les contrôles d'intégrité (checks/check_site.py).
 
 Le script est idempotent : republier un slug déjà publié est refusé sauf
 avec --force (qui réécrit les pages sans dupliquer les cartes).
@@ -48,19 +51,37 @@ from article_index import LANGS, date_label  # noqa: E402
 SLUG_RE = re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 H2_RE = re.compile(r'<h2\s+id="([^"]+)"\s*>\s*(.*?)\s*</h2>', re.DOTALL)
 H2_ANY_RE = re.compile(r'<h2[\s>]')
-ARTICLES_START = '<!-- ARTICLES_LIST_START -->'
 
-CARD_TEMPLATE = '''
-            <article class="blog-card">
-                <img src="{image}" alt="{title}">
-                <div class="blog-card-content">
-                    <span class="blog-card-date">{date}</span>
-                    <h3>{title}</h3>
-                    <p>{description}</p>
-                    <a href="{slug}.html">{cta}</a>
-                </div>
-            </article>
-'''.strip('\n')
+# Variantes WebP générées pour chaque illustration (srcset responsive).
+WEBP_WIDTHS = [480, 800, 1200]
+
+
+def webp_srcset(prefix: str, slug: str) -> str:
+    return ', '.join(f'{prefix}images/blog/img-{slug}-{w}.webp {w}w' for w in WEBP_WIDTHS)
+
+
+def generate_image_variants(image_path: Path) -> list[Path]:
+    """Décline l'illustration JPEG en WebP 480/800/1200 px de large.
+
+    Nécessite Pillow (uniquement à la publication, jamais en CI).
+    Les images plus étroites que la cible ne sont pas agrandies.
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        raise PublicationError(
+            'Pillow est requis pour générer les variantes WebP : pip install Pillow')
+    written = []
+    with Image.open(image_path) as img:
+        img = img.convert('RGB')
+        for width in WEBP_WIDTHS:
+            target = image_path.with_name(f'{image_path.stem}-{width}.webp')
+            scale = min(width, img.width) / img.width
+            resized = img.resize((round(img.width * scale), round(img.height * scale)),
+                                 Image.LANCZOS)
+            resized.save(target, 'WEBP', quality=80, method=6)
+            written.append(target)
+    return written
 
 
 class PublicationError(SystemExit):
@@ -126,33 +147,12 @@ def render_pages(base: Path, data: dict) -> list[Path]:
                 .replace('{{SOMMAIRE}}', data[lang]['sommaire'])
                 .replace('{{CONTENT}}', data[lang]['content_html'])
                 .replace('{{IMAGE_URL}}', f'{depth}images/blog/img-{slug}.jpg')
+                .replace('{{IMAGE_SRCSET}}', webp_srcset(depth, slug))
                 .replace('{{SLUG}}', slug))
         target = blog_dir / f'{slug}.html'
         target.write_text(page, encoding='utf-8')
         written.append(target)
     return written
-
-
-def insert_cards(base: Path, data: dict) -> None:
-    slug = data['slug']
-    for lang, conf in LANGS.items():
-        index = base / conf['blog'] / 'index.html'
-        html = index.read_text(encoding='utf-8')
-        if f'href="{slug}.html"' in html:
-            continue                      # déjà présent (mode --force)
-        if ARTICLES_START not in html:
-            raise PublicationError(f'marqueur {ARTICLES_START} introuvable dans {index}')
-        depth = '../' * (1 + conf['blog'].count('/'))
-        card = CARD_TEMPLATE.format(
-            image=f'{depth}images/blog/img-{slug}.jpg',
-            title=data[lang]['title'],
-            description=data[lang]['description'],
-            date=date_label(data['date_obj'], lang),
-            slug=slug,
-            cta=conf['cta'],
-        )
-        html = html.replace(ARTICLES_START, ARTICLES_START + '\n\n' + card + '\n', 1)
-        index.write_text(html, encoding='utf-8')
 
 
 def run_step(label: str, command: list[str]) -> None:
@@ -191,6 +191,8 @@ def main() -> int:
         raise PublicationError(
             f"l'illustration {image_path.relative_to(base)} n'existe pas. "
             f"Générer l'image d'abord (1600x900 JPEG), ou la passer via --image.")
+    variants = generate_image_variants(image_path)
+    print('--- variantes WebP\n' + '\n'.join(str(v.relative_to(base)) for v in variants))
 
     already = [p for conf in LANGS.values()
                if (p := base / conf['blog'] / f'{slug}.html').exists()]
@@ -200,10 +202,13 @@ def main() -> int:
             f'Utiliser --force pour le réécrire.')
 
     pages = render_pages(base, data)
-    insert_cards(base, data)
     print(f'--- pages écrites\n' + '\n'.join(str(p.relative_to(base)) for p in pages))
 
     python = sys.executable
+    run_step("blocs d'articles (lecture, partage, à lire aussi, précédent/suivant)",
+             [python, str(automation / 'update_article_blocks.py'), '--base', str(base)])
+    run_step('génération des index du blog (pagination)',
+             [python, str(automation / 'generate_blog_indexes.py'), '--base', str(base)])
     run_step('synchronisation du carrousel',
              [python, str(automation / 'update_home_articles.py'), '--base', str(base)])
     run_step('génération du sitemap',

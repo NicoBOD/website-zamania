@@ -94,15 +94,10 @@
     <meta name="geo.placename" content="Paris">
     <meta name="geo.position" content="48.856614;2.352222">
     
-    <!-- Préconnexion aux serveurs de Google Fonts pour améliorer les performances de chargement -->
     <!-- rel="preconnect" établit une connexion anticipée avec le serveur -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Importation des polices Google Fonts : Cormorant Garamond (pour les titres) et Work Sans (pour le texte) -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="fonts/work-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
 
     <!-- Lien vers la feuille de style CSS externe -->
     <link rel="stylesheet" href="css/styles.css">
@@ -217,26 +212,66 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "Qu'est-ce que l'automatisation IA ?",
+                "name": "Comment l'automatisation IA peut-elle aider mon entreprise ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "L'automatisation IA consiste à utiliser l'intelligence artificielle pour automatiser des tâches répétitives et chronophages, permettant à vos équipes de se concentrer sur des missions à haute valeur ajoutée."
+                    "text": "L'automatisation par intelligence artificielle permet de libérer vos équipes des tâches répétitives et chronophages. Cela se traduit par une augmentation moyenne de 40% de la productivité, une réduction significative des erreurs humaines, et plus de temps pour se concentrer sur des activités à forte valeur ajoutée comme l'innovation et la stratégie."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Quel est le ROI de l'IA ?",
+                "name": "Quels types de processus peuvent être automatisés ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Nos clients constatent un retour sur investissement en moyenne sous 6 mois grâce à l'optimisation des coûts opérationnels et une augmentation de 40% de la productivité."
+                    "text": "Pratiquement tous les processus répétitifs peuvent être automatisés : prospection et enrichissement de leads, publication sur les réseaux sociaux, gestion des commandes, veille concurrentielle, support client, qualification de prospects, génération de rapports, et bien d'autres. Notre audit IA identifie précisément les opportunités dans votre entreprise."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Pour quelles entreprises sont vos solutions ?",
+                "name": "Quel est le retour sur investissement d'une solution IA ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Nos solutions d'IA sur mesure sont conçues pour les TPE et PME souhaitant transformer leurs processus et gagner en efficacité sans investissement initial prohibitif."
+                    "text": "Nos clients constatent un retour sur investissement en moyenne sous 6 mois. Les économies proviennent de la réduction du temps passé sur les tâches manuelles, de l'amélioration de la précision, et de l'augmentation de la capacité de traitement. Par exemple, une automatisation de prospection peut faire économiser 15-20 heures par semaine à votre équipe commerciale."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mes données sont-elles sécurisées ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolument. Nous respectons scrupuleusement le RGPD et toutes les normes de sécurité en vigueur. Vos données sont chiffrées, jamais partagées avec des tiers, et vous gardez un contrôle total sur leur utilisation. Nous pouvons également travailler en mode on-premise (sur vos serveurs) si votre activité le nécessite."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Faut-il des compétences techniques dans mon équipe ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non, aucune compétence technique n'est requise. Nous concevons des solutions intuitives et faciles à utiliser. De plus, nous proposons des formations complètes pour rendre vos équipes autonomes dans l'utilisation et l'optimisation des outils d'IA. Notre support vous accompagne également après le déploiement."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Combien de temps prend la mise en place d'une solution IA ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cela dépend de la complexité du projet. Un audit IA prend généralement 1-2 semaines. Une automatisation simple peut être déployée en 2-4 semaines, tandis qu'une solution complexe peut nécessiter 2-3 mois. Nous travaillons en mode agile avec des livraisons progressives pour que vous puissiez constater les bénéfices rapidement."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "L'IA va-t-elle remplacer mes employés ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non, notre approche vise à augmenter les capacités humaines, pas à les remplacer. L'IA prend en charge les tâches répétitives et sans valeur ajoutée, permettant à vos collaborateurs de se concentrer sur ce qu'ils font de mieux : créativité, relations clients, prise de décision stratégique. C'est un outil d'augmentation, pas de substitution."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Proposez-vous un accompagnement après la mise en place ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, nous offrons un suivi et une optimisation continue. Après le déploiement, nous restons disponibles pour ajuster les solutions, former de nouveaux utilisateurs, et identifier de nouvelles opportunités d'automatisation. Notre objectif est votre succès à long terme, pas seulement une livraison ponctuelle."
                 }
             }
         ]
@@ -847,7 +882,7 @@
                 <h2 class="cta-answer">Combien ça vous coûte chaque jour de continuer à croire que ça ne l'est pas ?</h2>
             </div>
             <div class="cta-buttons">
-                <a href="mailto:contact@zamania.fr?subject=Demande%20de%20transformation%20IA&body=Bonjour,%0A%0AJe%20souhaite%20transformer%20mon%20entreprise%20gr%C3%A2ce%20%C3%A0%20l'intelligence%20artificielle.%0A%0AMerci%20de%20me%20recontacter%20pour%20discuter%20de%20mes%20besoins.%0A%0ACordialement"
+                <a href="contact.html"
                     class="btn btn-light cta-primary">✨ Redonnez du temps à mon entreprise !</a>
             </div>
         </div>
@@ -931,6 +966,7 @@
     <script src="js/canvas-network.js" defer></script>
     <script src="js/home-articles.js" defer></script>
     
+    <script src="js/analytics.js" defer></script>
 </body>
 
 </html>
