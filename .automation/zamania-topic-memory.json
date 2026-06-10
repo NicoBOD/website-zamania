@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-09T12:04:42+02:00",
+  "updated_at": "2026-06-10T15:41:39+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -190,6 +190,30 @@
         "fr": "https://zamania.fr/blog/fiabilisez-pipeline-ia-crm-echanges-clients.html",
         "en": "https://zamania.fr/en/blog/fiabilisez-pipeline-ia-crm-echanges-clients.html",
         "ar": "https://zamania.fr/ar/blog/fiabilisez-pipeline-ia-crm-echanges-clients.html"
+      }
+    },
+    {
+      "slug": "accelerez-signatures-propositions-commerciales",
+      "published_at": "2026-06-10T13:41:38.988443Z",
+      "title_fr": "Accélérez vos signatures : générez des propositions commerciales sur mesure le jour même",
+      "summary_fr": "Diviser le temps de réponse aux appels d'offres par dix.",
+      "angle": "Analyser les cahiers des charges entrants avec l'IA pour rédiger les propositions commerciales et les clauses contractuelles adaptées.",
+      "business_positioning": "Gagner des parts de marché par la réactivité.",
+      "theme_family": "document-processing-quotes",
+      "angle_family": null,
+      "keywords": [
+        "devis",
+        "propositions",
+        "réactivité",
+        "contrats",
+        "conversion"
+      ],
+      "proposal_date": "2026-06-09",
+      "choice": "2",
+      "links": {
+        "fr": "https://zamania.fr/blog/accelerez-signatures-propositions-commerciales.html",
+        "en": "https://zamania.fr/en/blog/accelerez-signatures-propositions-commerciales.html",
+        "ar": "https://zamania.fr/ar/blog/accelerez-signatures-propositions-commerciales.html"
       }
     }
   ]

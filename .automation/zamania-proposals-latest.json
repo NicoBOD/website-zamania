@@ -1,32 +1,32 @@
 {
-  "proposal_date": "2026-06-07",
+  "proposal_date": "2026-06-09",
   "proposals": [
     {
       "choice": 1,
-      "title_fr": "Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir",
-      "angle": "La qualification manuelle des leads entrants est lente, inégale et laisse passer des opportunités chaudes. Un agent IA connecté à votre CRM qualifie, priorise et répond en temps réel, 24/7, sans intervention humaine.",
-      "promise": "Réduire le temps de qualification de plusieurs heures à quelques secondes, doubler le taux de réponse aux leads entrants et augmenter mécaniquement le taux de conversion commerciale.",
-      "business_positioning": "Pour les directeurs commerciaux et DG de PME/ETI qui veulent transformer chaque lead entrant en opportunité traitée — sans recruter de SDR supplémentaire ni laisser de lead dormir dans la boîte mail.",
-      "theme_family": "lead-qualification",
-      "keywords": ["qualification de leads", "pipeline commercial", "CRM", "conversion", "SDR", "réponse instantanée"]
+      "title_fr": "Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients",
+      "angle": "Connecter un agent IA aux courriels et comptes rendus d'appels pour actualiser les statuts, détecter les signaux de perte et ajuster les prévisions commerciales.",
+      "promise": "Des données de pilotage exactes et des commerciaux focalisés sur la vente.",
+      "business_positioning": "Aligner la réalité terrain avec les tableaux de bord de la direction.",
+      "theme_family": "crm-data-sync",
+      "keywords": ["CRM", "synchronisation", "prévisions commerciales", "pipeline", "données"]
     },
     {
       "choice": 2,
-      "title_fr": "Devis, contrats, factures : et si vos documents se traitaient tout seuls ?",
-      "angle": "Chaque document entrant (devis fournisseur, contrat client, facture) mobilise un collaborateur pour une tâche de lecture-extraction-saisie. Un agent IA spécialisé lit, extrait les données structurées et alimente automatiquement vos outils métier, sans erreur de frappe ni retard.",
-      "promise": "Diviser par 5 le temps de traitement documentaire, éliminer les erreurs de saisie et accélérer les cycles de validation — de la réception d'un devis fournisseur à la clôture comptable.",
-      "business_positioning": "Pour les responsables administratifs, financiers et les dirigeants qui veulent fluidifier la chaîne documentaire tout en supprimant le goulot d'étranglement humain — sans projet d'ETL lourd ni refonte du SI.",
-      "theme_family": "document-processing",
-      "keywords": ["traitement documentaire", "devis", "contrats", "factures", "extraction de données", "workflow automatisé"]
+      "title_fr": "Accélérez vos signatures : générez des propositions commerciales sur mesure le jour même",
+      "angle": "Analyser les cahiers des charges entrants avec l'IA pour rédiger les propositions commerciales et les clauses contractuelles adaptées.",
+      "promise": "Diviser le temps de réponse aux appels d'offres par dix.",
+      "business_positioning": "Gagner des parts de marché par la réactivité.",
+      "theme_family": "document-processing-quotes",
+      "keywords": ["devis", "propositions", "réactivité", "contrats", "conversion"]
     },
     {
       "choice": 3,
-      "title_fr": "30 % des devis émis ne sont jamais relancés : récupérez ce chiffre d'affaires avec un agent IA",
-      "angle": "Après l'envoi d'un devis, la relance est souvent aléatoire : elle dépend de la mémoire et de la disponibilité du commercial. Un agent IA systématise les relances personnalisées, au bon moment et sur le bon canal, jusqu'à la décision du prospect.",
-      "promise": "Récupérer une part significative des devis sans réponse, raccourcir le cycle de vente de plusieurs jours et augmenter le chiffre d'affaires sans effort commercial supplémentaire.",
-      "business_positioning": "Pour les dirigeants et directeurs commerciaux qui constatent que des devis partent sans retour — et qui veulent transformer un suivi aléatoire en processus systématique, mesurable et rentable.",
-      "theme_family": "sales-followup",
-      "keywords": ["relance commerciale", "suivi de devis", "pipeline", "chiffre d'affaires", "cycle de vente", "automatisation commerciale"]
+      "title_fr": "Réussissez vos intégrations RH : orchestrez l'onboarding de vos recrues avec un agent IA",
+      "angle": "Déployer un assistant IA pour guider les nouveaux employés, collecter leurs pièces justificatives et déclencher la création de leurs accès informatiques.",
+      "promise": "Une première journée parfaite pour le collaborateur et un processus fluide pour les équipes.",
+      "business_positioning": "Fidéliser les talents dès l'embauche et sécuriser les opérations internes.",
+      "theme_family": "hr-onboarding-automation",
+      "keywords": ["onboarding RH", "collaborateur", "opérations", "intégration", "talents"]
     }
   ]
 }
