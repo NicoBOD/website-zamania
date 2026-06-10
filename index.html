@@ -677,15 +677,58 @@
                 <p class="section-subtitle">Conseils et stratégies ROI pour l'automatisation IA.</p>
             </div>
             
-            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 350px)); justify-content: center; gap: 30px; margin-bottom: 40px;">
-                <article class="blog-card" style="background: var(--bg-card); border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s; display: flex; flex-direction: column;">
-                    <img src="images/blog/img-cout-saisie-manuelle.jpg" alt="Combien vous coûte réellement la saisie manuelle de vos données ?" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div class="blog-card-content" style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
-                        <span class="blog-card-date" style="color: var(--accent); font-size: 0.85rem; margin-bottom: 10px; font-weight: 600;">30 Mai 2026</span>
-                        <h3 style="margin: 0 0 10px; font-size: 1.25rem;">Combien vous coûte réellement la saisie manuelle de vos données ?</h3>
-                        <a href="blog/cout-saisie-manuelle.html" style="display: inline-block; padding: 10px 20px; background: rgba(201, 160, 95, 0.1); color: var(--accent); border-radius: 5px; text-decoration: none; text-align: center; border: 1px solid var(--accent); margin-top: auto; transition: all 0.3s;">Lire l'article</a>
+            <div class="articles-carousel animate" data-blog-index="blog/index.html">
+                <button class="carousel-arrow carousel-prev" type="button" aria-label="Article précédent">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <div class="carousel-track" aria-label="Derniers articles du blog">
+                    <!-- HOME_ARTICLES_START -->
+                <article class="blog-card carousel-card">
+                    <img src="images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" alt="Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients" loading="lazy">
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">9 Juin 2026</span>
+                        <h3>Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients</h3>
+                        <a href="blog/fiabilisez-pipeline-ia-crm-echanges-clients.html" class="blog-card-link">Lire l'article</a>
                     </div>
                 </article>
+                <article class="blog-card carousel-card">
+                    <img src="images/blog/img-ia-qualification-pipeline-commercial.jpg" alt="Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir" loading="lazy">
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">7 Juin 2026</span>
+                        <h3>Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir</h3>
+                        <a href="blog/ia-qualification-pipeline-commercial.html" class="blog-card-link">Lire l'article</a>
+                    </div>
+                </article>
+                <article class="blog-card carousel-card">
+                    <img src="images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" alt="Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés" loading="lazy">
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">5 Juin 2026</span>
+                        <h3>Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés</h3>
+                        <a href="blog/automatiser-consolidation-indicateurs-cles.html" class="blog-card-link">Lire l'article</a>
+                    </div>
+                </article>
+                <article class="blog-card carousel-card">
+                    <img src="images/blog/img-service-client-tri-automatise.jpg" alt="Service client sous tension ? Divisez par deux votre temps de réponse grâce au tri automatisé" loading="lazy">
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">03 June 2026</span>
+                        <h3>Service client sous tension ? Divisez par deux votre temps de réponse grâce au tri automatisé</h3>
+                        <a href="blog/service-client-tri-automatise.html" class="blog-card-link">Lire l'article</a>
+                    </div>
+                </article>
+                <article class="blog-card carousel-card">
+                    <img src="images/blog/img-cout-cache-taches-repetitives-marge-entreprise.jpg" alt="Le coût caché des tâches répétitives : la fuite silencieuse de marge dans votre entreprise" loading="lazy">
+                    <div class="blog-card-content">
+                        <span class="blog-card-date">1 Juin 2026</span>
+                        <h3>Le coût caché des tâches répétitives : la fuite silencieuse de marge dans votre entreprise</h3>
+                        <a href="blog/cout-cache-taches-repetitives-marge-entreprise.html" class="blog-card-link">Lire l'article</a>
+                    </div>
+                </article>
+                <!-- HOME_ARTICLES_END -->
+                </div>
+                <button class="carousel-arrow carousel-next" type="button" aria-label="Article suivant">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+                <div class="carousel-dots"></div>
             </div>
             
             <div style="text-align: center; margin-top: 30px;">
@@ -886,6 +929,7 @@
     <script src="js/scrolled-effect.js" defer></script>
     <script src="js/faq.js" defer></script>
     <script src="js/canvas-network.js" defer></script>
+    <script src="js/home-articles.js" defer></script>
     
 </body>
 
