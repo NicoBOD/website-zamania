@@ -22,7 +22,8 @@
 (function () {
     'use strict';
 
-    var AUTOPLAY_DELAY = 4500;   // Délai entre deux avancées automatiques (ms)
+    var AUTOPLAY_DELAY = 3500;   // Délai entre deux avancées automatiques (ms)
+    var SCROLL_DURATION = 1100;  // Durée du glissement d'une carte à l'autre (ms)
     var MAX_ARTICLES = 5;        // Nombre d'articles affichés
 
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -46,6 +47,41 @@
 
     /* ---------- Navigation ---------- */
 
+    var animationId = null;
+
+    function cancelScrollAnimation() {
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+            animationId = null;
+            track.style.scrollSnapType = '';
+        }
+    }
+
+    // Glissement progressif avec accélération/décélération douces.
+    // Le défilement natif (scroll-behavior: smooth) est trop brusque et sa
+    // vitesse n'est pas réglable ; on anime donc scrollLeft à la main.
+    // Le scroll-snap est suspendu pendant l'animation pour que le navigateur
+    // ne "claque" pas sur un point d'accroche en cours de route.
+    function animateScrollBy(delta) {
+        cancelScrollAnimation();
+        var from = track.scrollLeft;
+        var startTime = null;
+        track.style.scrollSnapType = 'none';
+        function step(now) {
+            if (startTime === null) startTime = now;
+            var t = Math.min((now - startTime) / SCROLL_DURATION, 1);
+            var eased = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            track.scrollLeft = from + delta * eased;
+            if (t < 1) {
+                animationId = requestAnimationFrame(step);
+            } else {
+                animationId = null;
+                track.style.scrollSnapType = '';
+            }
+        }
+        animationId = requestAnimationFrame(step);
+    }
+
     // Centre la carte demandée dans la piste (fonctionne en LTR et RTL)
     function goTo(index, instant) {
         if (!cards.length) return;
@@ -53,7 +89,12 @@
         var trackRect = track.getBoundingClientRect();
         var cardRect = cards[currentIndex].getBoundingClientRect();
         var delta = (cardRect.left + cardRect.width / 2) - (trackRect.left + trackRect.width / 2);
-        track.scrollBy({ left: delta, behavior: (reducedMotion || instant) ? 'auto' : 'smooth' });
+        if (reducedMotion || instant) {
+            cancelScrollAnimation();
+            track.scrollBy({ left: delta, behavior: 'auto' });
+        } else {
+            animateScrollBy(delta);
+        }
     }
 
     // Détermine la carte la plus proche du centre de la piste
@@ -209,8 +250,11 @@
     carousel.addEventListener('pointerleave', function () { hovered = false; startAutoplay(); });
     carousel.addEventListener('focusin', function () { focused = true; stopAutoplay(); });
     carousel.addEventListener('focusout', function () { focused = false; startAutoplay(); });
-    track.addEventListener('touchstart', stopAutoplay, { passive: true });
+    track.addEventListener('touchstart', function () { cancelScrollAnimation(); stopAutoplay(); }, { passive: true });
     track.addEventListener('touchend', startAutoplay, { passive: true });
+    // Toute reprise en main par l'utilisateur interrompt le glissement en cours
+    track.addEventListener('pointerdown', cancelScrollAnimation, { passive: true });
+    track.addEventListener('wheel', cancelScrollAnimation, { passive: true });
 
     document.addEventListener('visibilitychange', startAutoplay);
 
