@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Généré par .automation/generate_feeds.py : ne pas éditer à la main. -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>مدونة زمانيا</title>
+        <link>https://zamania.fr/ar/blog/index.html</link>
+        <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
+        <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
+        <language>ar</language>
+        <lastBuildDate>Wed, 10 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>تسريع التوقيعات: صياغة عروض تجارية مخصصة في نفس اليوم</title>
+            <link>https://zamania.fr/ar/blog/accelerez-signatures-propositions-commerciales.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/accelerez-signatures-propositions-commerciales.html</guid>
+            <description>قسّم وقت الاستجابة للمناقصات على عشرة. اكتشف كيف يحلل الذكاء الاصطناعي المواصفات ويصوغ عروضك التجارية المخصصة في نفس اليوم.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-accelerez-signatures-propositions-commerciales.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 10 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>تأمين مسار المبيعات: دع الذكاء الاصطناعي يحدّث نظام إدارة علاقات العملاء بناءً على المراسلات</title>
+            <link>https://zamania.fr/ar/blog/fiabilisez-pipeline-ia-crm-echanges-clients.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/fiabilisez-pipeline-ia-crm-echanges-clients.html</guid>
+            <description>اربط وكيل الذكاء الاصطناعي برسائل البريد الإلكتروني وملخصات المكالمات لتحديث الحالات، واكتشاف إشارات الرفض، وتعديل توقعات المبيعات.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Tue, 09 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>كل عميل محتمل غير مؤهل يكلفك عميلاً: كيف يحول الذكاء الاصطناعي مسار مبيعاتك إلى آلة تحويل</title>
+            <link>https://zamania.fr/ar/blog/ia-qualification-pipeline-commercial.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/ia-qualification-pipeline-commercial.html</guid>
+            <description>اكتشف كيف يقوم وكيل الذكاء الاصطناعي بتأهيل العملاء المحتملين وتحديد أولوياتهم والرد عليهم على مدار الساعة، مما يزيد من معدلات التحويل.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-qualification-pipeline-commercial.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sun, 07 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>لا تضيعوا 4 ساعات كل يوم اثنين: أتمتوا تجميع مؤشرات الأداء الرئيسية</title>
+            <link>https://zamania.fr/ar/blog/automatiser-consolidation-indicateurs-cles.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/automatiser-consolidation-indicateurs-cles.html</guid>
+            <description>اكتشفوا كيف تتيح لكم أتمتة لوحات المعلومات الحصول على ملخص موثوق لنشاطكم العام دون أي تدخل يدوي.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Fri, 05 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>خدمة العملاء تحت الضغط؟ اخفض وقت الاستجابة للنصف بفضل الفرز الآلي</title>
+            <link>https://zamania.fr/ar/blog/service-client-tri-automatise.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/service-client-tri-automatise.html</guid>
+            <description>كيف يقوم نظام ذكي بتصنيف الردود مسبقاً وتحديد أولوياتها وصياغتها لدعم العملاء، مما يحسن التجربة دون إثقال كاهل الفريق.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-service-client-tri-automatise.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 03 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>التكلفة الخفية للمهام المتكررة: النزيف الصامت لهامش الربح في شركتك</title>
+            <link>https://zamania.fr/ar/blog/cout-cache-taches-repetitives-marge-entreprise.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/cout-cache-taches-repetitives-marge-entreprise.html</guid>
+            <description>خلف المهام الصغيرة المتكررة توجد خسارة شهرية في الهامش والسرعة والقدرة التشغيلية. إليك كيف تقيسها وأين تبدأ الأتمتة أولاً.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-cout-cache-taches-repetitives-marge-entreprise.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Mon, 01 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>كم تكلّف المهام المتكررة شركتك فعلاً؟</title>
+            <link>https://zamania.fr/ar/blog/cout-taches-repetitives-entreprise.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/cout-taches-repetitives-entreprise.html</guid>
+            <description>قدّر التكلفة الخفية للمهام المتكررة في شركتك وحدد أول فرص أتمتة الذكاء الاصطناعي ذات العائد الأسرع على الاستثمار.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-cout-taches-repetitives-entreprise.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sun, 31 May 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>وكلاء الذكاء الاصطناعي: رافعة الإنتاجية الجديدة للشركات التي تريد إنجاز المزيد من دون توظيف المزيد</title>
+            <link>https://zamania.fr/ar/blog/agents-ia-levier-productivite.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/agents-ia-levier-productivite.html</guid>
+            <description>اكتشف كيف تُمكّن وكلاء الذكاء الاصطناعي الشركات من استيعاب نشاط أكبر من دون توظيف فوري، عبر حالات استخدام عملية وعائد استثمار قابل للقياس.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-agents-ia-levier-productivite.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sun, 31 May 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>كم تكلفك الإدخال اليدوي للبيانات حقًا؟ (وكيف يقلل الذكاء الاصطناعي ذلك إلى الصفر)</title>
+            <link>https://zamania.fr/ar/blog/cout-saisie-manuelle.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/cout-saisie-manuelle.html</guid>
+            <description>اكتشف التكلفة المالية الخفية للأعمال الورقية والإدخال اليدوي للبيانات، وكيف توفر أتمتة الذكاء الاصطناعي عائدًا على الاستثمار في أقل من 3 أشهر.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-cout-saisie-manuelle.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sat, 30 May 2026 08:00:00 +0200</pubDate>
+        </item>
+    </channel>
+</rss>
