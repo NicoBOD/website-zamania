@@ -31,6 +31,7 @@ Le blog est alimenté **automatiquement tous les 2 jours** par un agent IA (« H
 ├── css/
 │   ├── styles.css              # Styles principaux (thème sombre par défaut)
 │   ├── dark-mode.css           # Bascule clair/sombre
+│   ├── blog.css                # Styles partagés du blog (index + articles, responsive)
 │   └── rtl.css                 # Surcharges RTL pour la version arabe
 ├── js/                         # Navigation, thème, carrousel, cookies, FAQ…
 ├── images/

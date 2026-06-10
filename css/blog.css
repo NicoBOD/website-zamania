@@ -1,0 +1,370 @@
+/* ==========================================
+   STYLES DU BLOG (index + articles)
+   ==========================================
+   Feuille partagée par /blog, /en/blog et /ar/blog : elle remplace les
+   blocs <style> autrefois dupliqués dans chaque page.
+
+   Conventions :
+   - tailles fluides via clamp() : aucune rupture entre 320px et 1400px ;
+   - propriétés logiques (inline-start/end) : le RTL arabe fonctionne
+     sans surcharge dans rtl.css ;
+   - couleurs via les variables de styles.css / dark-mode.css
+     (--surface, --text-primary, --border...) pour suivre les deux thèmes.
+   ========================================== */
+
+
+/* ==========================================
+   1. INDEX DU BLOG (liste des articles)
+   ========================================== */
+
+.blog-header {
+    padding: 150px 20px 50px;   /* dégage le header fixe */
+    text-align: center;
+}
+
+.blog-grid {
+    display: grid;
+    /* min(300px, 100%) : sur les écrans < 340px la colonne se replie sur
+       la largeur disponible au lieu de déborder horizontalement */
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.blog-card {
+    background: var(--surface);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;     /* hauteur fixe : aucun décalage de mise en page */
+    object-fit: cover;
+}
+
+.blog-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.blog-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    overflow-wrap: break-word;
+}
+
+.blog-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.blog-card a {
+    display: inline-block;
+    padding: 12px 20px;          /* zone tactile >= 44px de haut */
+    background: rgba(201, 160, 95, 0.1);
+    color: var(--accent);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid var(--accent);
+    transition: all 0.3s;
+}
+
+.blog-card a:hover,
+.blog-card a:focus-visible {
+    background: var(--accent);
+    color: #000;
+}
+
+
+/* ==========================================
+   2. PAGE ARTICLE
+   ========================================== */
+
+.post-header {
+    padding: 150px 20px 50px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.post-date {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.post-title {
+    /* 1.7rem sur un petit téléphone, 2.5rem sur grand écran */
+    font-size: clamp(1.7rem, 1.15rem + 2.5vw, 2.5rem);
+    margin-bottom: 20px;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+}
+
+.post-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;        /* espace réservé avant chargement : zéro CLS */
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0 auto 40px;
+    border: 1px solid var(--border);
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    overflow-wrap: break-word;   /* les mots/URL longs ne débordent jamais */
+}
+
+.post-content h2 {
+    color: var(--accent);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: clamp(1.45rem, 1.15rem + 1.3vw, 1.8rem);
+    /* le header est fixe : sans cette marge, suivre une ancre du sommaire
+       cacherait le titre sous la barre de navigation */
+    scroll-margin-top: 110px;
+}
+
+.post-content h3 {
+    color: var(--text-primary);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.4rem);
+}
+
+.post-content ul,
+.post-content ol {
+    margin-bottom: 20px;
+    padding-inline-start: 20px;
+}
+
+.post-content li {
+    margin-bottom: 10px;
+}
+
+.post-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Contenus riches éventuels (futurs articles) : jamais de débordement */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.post-content table {
+    display: block;              /* la table défile horizontalement... */
+    width: 100%;
+    overflow-x: auto;            /* ...au lieu d'élargir toute la page */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.post-content th,
+.post-content td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: start;
+}
+
+.post-content pre {
+    overflow-x: auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.post-content iframe,
+.post-content video {
+    max-width: 100%;
+}
+
+/* Sommaire */
+.post-sommaire {
+    background: rgba(201, 160, 95, 0.05);
+    border: 1px solid rgba(201, 160, 95, 0.2);
+    padding: clamp(18px, 4vw, 25px);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.post-sommaire h3 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.post-sommaire ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.post-sommaire li {
+    margin-bottom: 5px;
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 5px;
+}
+
+.post-sommaire a {
+    display: inline-block;
+    padding: 6px 0;              /* zone tactile confortable au doigt */
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.post-sommaire a:hover,
+.post-sommaire a:focus-visible {
+    color: var(--accent);
+}
+
+/* Encart d'appel à l'action */
+.post-cta {
+    background: linear-gradient(135deg, rgba(201, 160, 95, 0.12) 0%, rgba(201, 160, 95, 0.04) 100%);
+    border: 2px solid var(--accent);
+    padding: clamp(24px, 5vw, 40px);
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 0 10px 30px rgba(201, 160, 95, 0.1);
+}
+
+.post-cta h3 {
+    font-size: clamp(1.4rem, 1.2rem + 0.9vw, 1.8rem);
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.post-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: var(--text-secondary);
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--accent);
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(201, 160, 95, 0.4);
+}
+
+/* Signature */
+.post-author {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.post-author-info {
+    margin-inline-start: 15px;
+}
+
+.post-author-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    display: block;
+}
+
+.post-author-role {
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+
+/* ==========================================
+   3. ADAPTATIONS MOBILES
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* le header fixe est plus bas sur mobile : on resserre l'espace mort */
+    .blog-header,
+    .post-header {
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+
+    .blog-grid {
+        gap: 20px;
+    }
+
+    /* l'illustration reprend les marges du texte au lieu du bord à bord */
+    .post-image {
+        width: calc(100% - 40px);
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+    .post-content {
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+
+    .post-content h2 {
+        margin-top: 32px;
+        scroll-margin-top: 90px;  /* header replié plus compact */
+    }
+
+    .post-cta {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    /* bouton d'action pleine largeur, comme les .btn du reste du site */
+    .btn-cta {
+        display: block;
+        width: 100%;
+    }
+}

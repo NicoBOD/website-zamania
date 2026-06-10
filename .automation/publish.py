@@ -49,6 +49,8 @@ SLUG_RE = re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 H2_RE = re.compile(r'<h2\s+id="([^"]+)"\s*>\s*(.*?)\s*</h2>', re.DOTALL)
 H2_ANY_RE = re.compile(r'<h2[\s>]')
 ARTICLES_START = '<!-- ARTICLES_LIST_START -->'
+ARTICLES_END = '<!-- ARTICLES_LIST_END -->'
+CARD_IMG_RE = re.compile(r'<img\s+src="([^"]+)"\s+alt="([^"]*)"[^>]*>')
 
 CARD_TEMPLATE = '''
             <article class="blog-card">
@@ -133,6 +135,27 @@ def render_pages(base: Path, data: dict) -> list[Path]:
     return written
 
 
+def normalize_card_images(html: str) -> str:
+    """Attributs de chargement des illustrations entre les marqueurs d'index.
+
+    La première carte est le LCP probable de la page : chargement prioritaire.
+    Les suivantes, sous la ligne de flottaison, passent en lazy loading.
+    """
+    start, end = html.find(ARTICLES_START), html.find(ARTICLES_END)
+    if start == -1 or end == -1:
+        return html
+    section = html[start:end]
+    counter = 0
+
+    def attrs(match: re.Match) -> str:
+        nonlocal counter
+        counter += 1
+        extra = 'fetchpriority="high"' if counter == 1 else 'loading="lazy"'
+        return f'<img src="{match.group(1)}" alt="{match.group(2)}" {extra} decoding="async">'
+
+    return html[:start] + CARD_IMG_RE.sub(attrs, section) + html[end:]
+
+
 def insert_cards(base: Path, data: dict) -> None:
     slug = data['slug']
     for lang, conf in LANGS.items():
@@ -152,7 +175,7 @@ def insert_cards(base: Path, data: dict) -> None:
             cta=conf['cta'],
         )
         html = html.replace(ARTICLES_START, ARTICLES_START + '\n\n' + card + '\n', 1)
-        index.write_text(html, encoding='utf-8')
+        index.write_text(normalize_card_images(html), encoding='utf-8')
 
 
 def run_step(label: str, command: list[str]) -> None:

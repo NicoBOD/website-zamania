@@ -8,19 +8,8 @@
     <meta name="description" content="Découvrez les conseils, cas d'usage et actualités sur l'automatisation IA pour redonner du temps à votre entreprise.">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dark-mode.css">
-    <style>
-        .blog-header { padding: 150px 20px 50px; text-align: center; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; padding: 20px; max-width: 1200px; margin: 0 auto 50px; }
-        .blog-card { background: var(--bg-card); border-radius: 10px; overflow: hidden; transition: transform 0.3s; border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; }
-        .blog-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .blog-card img { width: 100%; height: 200px; object-fit: cover; }
-        .blog-card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
-        .blog-card-date { font-size: 0.85rem; color: var(--accent); margin-bottom: 10px; font-weight: 600; }
-        .blog-card h3 { margin: 0 0 10px 0; font-size: 1.25rem; color: var(--text); }
-        .blog-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
-        .blog-card a { display: inline-block; padding: 10px 20px; background: rgba(201, 160, 95, 0.1); color: var(--accent); border-radius: 5px; text-decoration: none; font-weight: 500; text-align: center; border: 1px solid var(--accent); transition: all 0.3s; }
-        .blog-card a:hover { background: var(--accent); color: #000; }
-    </style>
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/rtl.css">
 
     <!-- Préconnexion aux serveurs de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +58,7 @@
             <!-- ARTICLES_LIST_START -->
 
             <article class="blog-card">
-                <img src="../../images/blog/img-accelerez-signatures-propositions-commerciales.jpg" alt="تسريع التوقيعات: صياغة عروض تجارية مخصصة في نفس اليوم">
+                <img src="../../images/blog/img-accelerez-signatures-propositions-commerciales.jpg" alt="تسريع التوقيعات: صياغة عروض تجارية مخصصة في نفس اليوم" fetchpriority="high" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">10 يونيو 2026</span>
                     <h3>تسريع التوقيعات: صياغة عروض تجارية مخصصة في نفس اليوم</h3>
@@ -79,7 +68,7 @@
             </article>
 
             <article class="blog-card">
-                <img src="../../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" alt="تأمين مسار المبيعات: دع الذكاء الاصطناعي يحدّث نظام إدارة علاقات العملاء بناءً على المراسلات">
+                <img src="../../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" alt="تأمين مسار المبيعات: دع الذكاء الاصطناعي يحدّث نظام إدارة علاقات العملاء بناءً على المراسلات" loading="lazy" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">9 يونيو 2026</span>
                     <h3>تأمين مسار المبيعات: دع الذكاء الاصطناعي يحدّث نظام إدارة علاقات العملاء بناءً على المراسلات</h3>
@@ -90,7 +79,7 @@
 
 
             <article class="blog-card">
-                <img src="../../images/blog/img-ia-qualification-pipeline-commercial.jpg" alt="كل عميل محتمل غير مؤهل يكلفك عميلاً: كيف يحول الذكاء الاصطناعي مسار مبيعاتك إلى آلة تحويل">
+                <img src="../../images/blog/img-ia-qualification-pipeline-commercial.jpg" alt="كل عميل محتمل غير مؤهل يكلفك عميلاً: كيف يحول الذكاء الاصطناعي مسار مبيعاتك إلى آلة تحويل" loading="lazy" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">7 يونيو 2026</span>
                     <h3>كل عميل محتمل غير مؤهل يكلفك عميلاً: كيف يحول الذكاء الاصطناعي مسار مبيعاتك إلى آلة تحويل</h3>
@@ -101,7 +90,7 @@
 
 
             <article class="blog-card">
-                <img src="../../images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" alt="لا تضيعوا 4 ساعات كل يوم اثنين: أتمتوا تجميع مؤشرات الأداء الرئيسية">
+                <img src="../../images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" alt="لا تضيعوا 4 ساعات كل يوم اثنين: أتمتوا تجميع مؤشرات الأداء الرئيسية" loading="lazy" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">5 يونيو 2026</span>
                     <h3>لا تضيعوا 4 ساعات كل يوم اثنين: أتمتوا تجميع مؤشرات الأداء الرئيسية</h3>
@@ -111,7 +100,7 @@
             </article>
 
             <article class="blog-card">
-                <img src="../../images/blog/img-service-client-tri-automatise.jpg" alt="خدمة العملاء تحت الضغط؟ اخفض وقت الاستجابة للنصف بفضل الفرز الآلي">
+                <img src="../../images/blog/img-service-client-tri-automatise.jpg" alt="خدمة العملاء تحت الضغط؟ اخفض وقت الاستجابة للنصف بفضل الفرز الآلي" loading="lazy" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">3 يونيو 2026</span>
                     <h3>خدمة العملاء تحت الضغط؟ اخفض وقت الاستجابة للنصف بفضل الفرز الآلي</h3>
@@ -122,7 +111,7 @@
 
 
             <article class="blog-card">
-                <img src="../../images/blog/img-cout-cache-taches-repetitives-marge-entreprise.jpg" alt="التكلفة الخفية للمهام المتكررة: النزيف الصامت لهامش الربح في شركتك">
+                <img src="../../images/blog/img-cout-cache-taches-repetitives-marge-entreprise.jpg" alt="التكلفة الخفية للمهام المتكررة: النزيف الصامت لهامش الربح في شركتك" loading="lazy" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">1 يونيو 2026</span>
                     <h3>التكلفة الخفية للمهام المتكررة: النزيف الصامت لهامش الربح في شركتك</h3>
@@ -133,7 +122,7 @@
 
 
             <article class="blog-card">
-                <img src="../../images/blog/img-cout-taches-repetitives-entreprise.jpg" alt="كم تكلّف المهام المتكررة شركتك فعلاً؟">
+                <img src="../../images/blog/img-cout-taches-repetitives-entreprise.jpg" alt="كم تكلّف المهام المتكررة شركتك فعلاً؟" loading="lazy" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">31 مايو 2026</span>
                     <h3>كم تكلّف المهام المتكررة شركتك فعلاً؟</h3>
@@ -144,7 +133,7 @@
 
 
             <article class="blog-card">
-                <img src="../../images/blog/img-agents-ia-levier-productivite.jpg" alt="وكلاء الذكاء الاصطناعي: رافعة الإنتاجية الجديدة للشركات التي تريد إنجاز المزيد من دون توظيف المزيد">
+                <img src="../../images/blog/img-agents-ia-levier-productivite.jpg" alt="وكلاء الذكاء الاصطناعي: رافعة الإنتاجية الجديدة للشركات التي تريد إنجاز المزيد من دون توظيف المزيد" loading="lazy" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">31 مايو 2026</span>
                     <h3>وكلاء الذكاء الاصطناعي: رافعة الإنتاجية الجديدة للشركات التي تريد إنجاز المزيد من دون توظيف المزيد</h3>
@@ -155,7 +144,7 @@
 
 
             <article class="blog-card">
-                <img src="../../images/blog/img-cout-saisie-manuelle.jpg" alt="كم تكلفك الإدخال اليدوي للبيانات حقًا؟">
+                <img src="../../images/blog/img-cout-saisie-manuelle.jpg" alt="كم تكلفك الإدخال اليدوي للبيانات حقًا؟" loading="lazy" decoding="async">
                 <div class="blog-card-content">
                     <span class="blog-card-date">30 مايو 2026</span>
                     <h3>كم تكلفك الإدخال اليدوي للبيانات حقًا؟</h3>

@@ -1544,7 +1544,7 @@ footer {
 .faq-question-text {
     font-size: 1.15rem;
     font-weight: 500;
-    color: var(--text);
+    color: var(--text-primary);
     flex: 1;
     padding-right: 1rem;
 }

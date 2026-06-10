@@ -35,7 +35,7 @@ REQUIRED_FILES = [
     'index.html', '404.html', 'CNAME', 'robots.txt', 'sitemap.xml',
     'manifest.json', 'browserconfig.xml',
     'feed.xml', 'en/feed.xml', 'ar/feed.xml',
-    'css/styles.css', 'css/dark-mode.css', 'css/rtl.css',
+    'css/styles.css', 'css/dark-mode.css', 'css/rtl.css', 'css/blog.css',
     'js/navigation.js', 'js/theme.js', 'js/home-articles.js',
     'blog/index.html', 'blog/template.html',
     'en/index.html', 'en/blog/index.html', 'en/blog/template.html',
@@ -397,6 +397,48 @@ def check_manifest_icons(base: Path) -> list[str]:
     return errors
 
 
+CSS_VAR_DEF_RE = re.compile(r'--([a-zA-Z0-9_-]+)\s*:')
+CSS_VAR_USE_RE = re.compile(r'var\(\s*--([a-zA-Z0-9_-]+)')
+
+
+def check_css_variables(base: Path) -> list[str]:
+    """Toute variable var(--x) utilisée (CSS ou HTML) doit être définie dans css/*.css.
+
+    Une variable inconnue rend la déclaration invalide sans aucun message
+    d'erreur dans le navigateur (ex. : fond de carte transparent).
+    """
+    defined = set()
+    for css in (base / 'css').glob('*.css'):
+        defined |= set(CSS_VAR_DEF_RE.findall(read(css)))
+    errors = []
+    for css in sorted((base / 'css').glob('*.css')):
+        for name in sorted(set(CSS_VAR_USE_RE.findall(read(css))) - defined):
+            errors.append(f'css/{css.name} : variable inconnue var(--{name})')
+    for page in html_pages(base):
+        for name in sorted(set(CSS_VAR_USE_RE.findall(read(page))) - defined):
+            errors.append(f'{page.relative_to(base)} : variable inconnue var(--{name})')
+    return errors
+
+
+def check_blog_styles(base: Path) -> list[str]:
+    """Pages et templates du blog : css/blog.css requise (plus de <style> dupliqué),
+    css/rtl.css requise sur toutes les pages arabes."""
+    errors = []
+    pages = [p for p in base.rglob('*.html') if '.git' not in p.parts]
+    for page in sorted(pages):
+        rel = str(page.relative_to(base))
+        text = read(page)
+        if page.parent.name == 'blog':
+            if 'css/blog.css' not in text:
+                errors.append(f'{rel} : css/blog.css non référencée')
+            if re.search(r'\.(?:post-content|blog-grid)\s*\{', text):
+                errors.append(f'{rel} : styles du blog dupliqués en inline '
+                              f'(à maintenir dans css/blog.css)')
+        if rel.startswith('ar/') and 'css/rtl.css' not in text:
+            errors.append(f'{rel} : css/rtl.css non référencée (page RTL)')
+    return errors
+
+
 def check_python_scripts(base: Path) -> list[str]:
     """Tous les scripts Python du dépôt doivent au moins compiler."""
     errors = []
@@ -433,6 +475,8 @@ CHECKS = [
     ('Liens et ressources internes', check_internal_links),
     ('Ancres (#fragments)', check_anchors),
     ('Ressources des feuilles de style', check_css_assets),
+    ('Variables CSS définies', check_css_variables),
+    ('Feuilles de style du blog et RTL', check_blog_styles),
     ('Cartes des index de blog', check_blog_indexes),
     ('Artefacts générés (carrousel, sitemap, flux RSS)', check_generated_artifacts),
     ('Attributs HTML essentiels', check_html_basics),
