@@ -14,7 +14,7 @@
         const GOATCOUNTER = 'https://zamania.goatcounter.com/count';
    ========================================== */
 
-const GOATCOUNTER = '';
+const GOATCOUNTER = 'https://zamania.goatcounter.com/count';
 
 (function () {
     'use strict';
