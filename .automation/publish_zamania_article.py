@@ -504,6 +504,12 @@ def main() -> None:
     insert_card(BASE / 'en' / 'blog' / 'index.html', build_card(ARTICLE['card_en']))
     insert_card(BASE / 'ar' / 'blog' / 'index.html', build_card(ARTICLE['card_ar']))
 
+    # Répercute les 5 derniers articles sur le carrousel des pages d'accueil
+    subprocess.run(
+        ['python3', str(BASE / '.automation' / 'update_home_articles.py'), '--base', str(BASE)],
+        check=True,
+    )
+
     create_image(IMAGE_PATH)
 
     links = {
