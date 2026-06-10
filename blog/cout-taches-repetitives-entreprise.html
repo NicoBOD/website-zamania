@@ -19,17 +19,17 @@
         .post-content ul { margin-bottom: 20px; padding-left: 20px; }
         .post-content li { margin-bottom: 10px; }
         .post-content strong { color: var(--text); font-weight: 600; }
-        .post-sommaire { background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.2); padding: 25px; border-radius: 10px; margin-bottom: 40px; }
+        .post-sommaire { background: rgba(201, 160, 95, 0.05); border: 1px solid rgba(201, 160, 95, 0.2); padding: 25px; border-radius: 10px; margin-bottom: 40px; }
         .post-sommaire h3 { margin-top: 0; color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; }
         .post-sommaire ul { list-style-type: none; padding-left: 0; }
         .post-sommaire li { margin-bottom: 10px; border-bottom: 1px dashed rgba(255,255,255,0.1); padding-bottom: 5px; }
         .post-sommaire a { color: var(--text); text-decoration: none; transition: color 0.3s; }
         .post-sommaire a:hover { color: var(--accent); }
-        .post-cta { background: linear-gradient(135deg, rgba(26, 35, 50, 0.9) 0%, rgba(10, 15, 25, 0.9) 100%); border: 2px solid var(--accent); padding: 40px; border-radius: 15px; text-align: center; margin-top: 60px; box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1); }
+        .post-cta { background: linear-gradient(135deg, rgba(201, 160, 95, 0.12) 0%, rgba(201, 160, 95, 0.04) 100%); border: 2px solid var(--accent); padding: 40px; border-radius: 15px; text-align: center; margin-top: 60px; box-shadow: 0 10px 30px rgba(201, 160, 95, 0.1); }
         .post-cta h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--text); }
         .post-cta p { font-size: 1.1rem; margin-bottom: 25px; color: var(--text-secondary); }
         .btn-cta { display: inline-block; padding: 15px 30px; background: var(--accent); color: #000; font-weight: 600; font-size: 1.1rem; text-decoration: none; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s; }
-        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 5px 20px rgba(0, 240, 255, 0.4); }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 5px 20px rgba(201, 160, 95, 0.4); }
         .post-author { display: flex; align-items: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
         .post-author-info { margin-left: 15px; }
         .post-author-name { font-weight: 600; font-size: 1.1rem; color: var(--text); display: block; }
@@ -45,25 +45,32 @@
 </head>
 <body>
     <header itemscope itemtype="https://schema.org/WPHeader">
-        <nav itemscope itemtype="https://schema.org/SiteNavigationElement">
-            <a href="../index.html" class="logo">
+        <nav itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Navigation principale">
+            <a href="../index.html" class="logo" itemprop="url" aria-label="Retour à l'accueil ZamanIA">
                 <img src="../images/logo.png" alt="Logo ZamanIA" class="logo-img" onerror="this.style.display='none';">
                 ZAMAN<span class="highlight-ia">IA</span>
             </a>
             <ul class="nav-links">
-                <li><a href="../index.html#services" itemprop="url"><span itemprop="name">Services</span></a></li>
-                <li><a href="../index.html#approche" itemprop="url"><span itemprop="name">Approche</span></a></li>
-                <li><a href="../index.html#cas-usage" itemprop="url"><span itemprop="name">Cas d'usage</span></a></li>
-                <li><a href="index.html" itemprop="url" style="color: var(--accent);"><span itemprop="name">Blog</span></a></li>
+                <li><a href="../index.html" itemprop="url"><span itemprop="name">Site web</span></a></li>
                 <li>
                     <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
                         <span class="theme-toggle-slider"><span class="theme-toggle-icon">🌙</span></span>
                     </button>
                 </li>
+                <li class="lang-switch">
+                    <a href="index.html" style="font-weight: bold; color: var(--accent);" title="Version française">FR</a>
+                    <span style="color: var(--text-secondary); margin: 0 5px;">|</span>
+                    <a href="../en/blog/index.html" title="English version">EN</a>
+                    <span style="color: var(--text-secondary); margin: 0 5px;">|</span>
+                    <a href="../ar/blog/index.html" title="Arabic version">AR</a>
+                </li>
                 <li><a href="mailto:contact@zamania.fr" class="cta-nav">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false">☰</button>
         </nav>
     </header>
+
+    <div class="nav-backdrop"></div>
 
     <main>
         <article>
