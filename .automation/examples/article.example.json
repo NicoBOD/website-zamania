@@ -1,0 +1,19 @@
+{
+  "slug": "exemple-automatisation-relances-clients",
+  "date": "2026-06-12",
+  "fr": {
+    "title": "Exemple : automatisez vos relances clients sans y penser",
+    "description": "Découvrez comment un agent IA prend en charge les relances clients de bout en bout, sans alourdir la charge de vos équipes.",
+    "content_html": "<h2 id=\"le-probleme\">Le problème</h2>\n<p>Premier paragraphe du constat métier...</p>\n<h2 id=\"la-solution\">La solution</h2>\n<p>Description de la solution IA...</p>\n<h2 id=\"les-benefices\">Les bénéfices</h2>\n<p>Bénéfices concrets chiffrés...</p>"
+  },
+  "en": {
+    "title": "Example: Automate Your Client Follow-ups Without Thinking About It",
+    "description": "Discover how an AI agent handles client follow-ups end to end, without adding to your team's workload.",
+    "content_html": "<h2 id=\"the-problem\">The Problem</h2>\n<p>First paragraph...</p>\n<h2 id=\"the-solution\">The Solution</h2>\n<p>Solution description...</p>\n<h2 id=\"the-benefits\">The Benefits</h2>\n<p>Concrete benefits...</p>"
+  },
+  "ar": {
+    "title": "مثال: أتمتة متابعة العملاء دون عناء",
+    "description": "اكتشف كيف يتولى وكيل الذكاء الاصطناعي متابعة العملاء من البداية إلى النهاية دون إثقال كاهل فريقك.",
+    "content_html": "<h2 id=\"the-problem\">المشكلة</h2>\n<p>الفقرة الأولى...</p>\n<h2 id=\"the-solution\">الحل</h2>\n<p>وصف الحل...</p>\n<h2 id=\"the-benefits\">الفوائد</h2>\n<p>فوائد ملموسة...</p>"
+  }
+}

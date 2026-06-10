@@ -34,6 +34,7 @@ BLOG_INDEXES = ['blog/index.html', 'en/blog/index.html', 'ar/blog/index.html']
 REQUIRED_FILES = [
     'index.html', '404.html', 'CNAME', 'robots.txt', 'sitemap.xml',
     'manifest.json', 'browserconfig.xml',
+    'feed.xml', 'en/feed.xml', 'ar/feed.xml',
     'css/styles.css', 'css/dark-mode.css', 'css/rtl.css',
     'js/navigation.js', 'js/theme.js', 'js/home-articles.js',
     'blog/index.html', 'blog/template.html',
@@ -215,29 +216,38 @@ def check_css_assets(base: Path) -> list[str]:
     return errors
 
 
-def check_home_carousel_sync(base: Path) -> list[str]:
-    """Le carrousel des pages d'accueil doit refléter les 5 derniers articles.
+def check_generated_artifacts(base: Path) -> list[str]:
+    """Carrousel d'accueil, sitemap.xml et flux RSS doivent être à jour.
 
-    On rejoue update_home_articles.py sur une copie temporaire du site : s'il
-    modifie une page d'accueil, c'est que le carrousel n'était pas synchronisé.
+    On rejoue les trois générateurs sur une copie temporaire du site : s'ils
+    modifient un fichier, c'est que l'artefact commité n'était pas synchronisé.
     """
-    script = base / '.automation' / 'update_home_articles.py'
-    if not script.is_file():
-        return ['.automation/update_home_articles.py introuvable']
+    generators = [
+        ('update_home_articles.py', HOME_PAGES,
+         'carrousel désynchronisé du blog (relancer .automation/update_home_articles.py)'),
+        ('generate_sitemap.py', ['sitemap.xml'],
+         'sitemap obsolète (relancer .automation/generate_sitemap.py)'),
+        ('generate_feeds.py', ['feed.xml', 'en/feed.xml', 'ar/feed.xml'],
+         'flux RSS obsolète (relancer .automation/generate_feeds.py)'),
+    ]
     errors = []
     with tempfile.TemporaryDirectory() as tmp:
         work = Path(tmp) / 'site'
         shutil.copytree(base, work, ignore=shutil.ignore_patterns('.git'))
-        proc = subprocess.run(
-            [sys.executable, str(work / '.automation' / 'update_home_articles.py'),
-             '--base', str(work)],
-            capture_output=True, text=True)
-        if proc.returncode != 0:
-            return [f'update_home_articles.py a échoué : {proc.stderr.strip()}']
-        for rel in HOME_PAGES:
-            if read(base / rel) != read(work / rel):
-                errors.append(f'{rel} : carrousel désynchronisé du blog '
-                              f'(relancer .automation/update_home_articles.py)')
+        for script, outputs, message in generators:
+            script_path = work / '.automation' / script
+            if not script_path.is_file():
+                errors.append(f'.automation/{script} introuvable')
+                continue
+            proc = subprocess.run(
+                [sys.executable, str(script_path), '--base', str(work)],
+                capture_output=True, text=True)
+            if proc.returncode != 0:
+                errors.append(f'{script} a échoué : {proc.stderr.strip()}')
+                continue
+            for rel in outputs:
+                if read(base / rel) != read(work / rel):
+                    errors.append(f'{rel} : {message}')
     return errors
 
 
@@ -296,6 +306,46 @@ def check_blog_indexes(base: Path) -> list[str]:
     return errors
 
 
+JSONLD_RE = re.compile(r'<script type="application/ld\+json">\s*(\{.*?\})\s*</script>',
+                       re.DOTALL)
+
+
+def check_article_seo(base: Path) -> list[str]:
+    """Chaque article doit porter canonical, hreflang, Open Graph, Twitter Card
+    et un JSON-LD Article valide."""
+    errors = []
+    required_snippets = [
+        'rel="canonical"', 'hreflang="fr"', 'hreflang="en"', 'hreflang="ar"',
+        'property="og:title"', 'property="og:image"', 'property="og:url"',
+        'name="twitter:card"', 'property="article:published_time"',
+    ]
+    for page in html_pages(base):
+        if page.parent.name != 'blog' or page.name == 'index.html':
+            continue
+        rel = page.relative_to(base)
+        text = read(page)
+        for snippet in required_snippets:
+            if snippet not in text:
+                errors.append(f'{rel} : balise SEO manquante ({snippet})')
+        articles_ld = []
+        for blob in JSONLD_RE.findall(text):
+            try:
+                parsed = json.loads(blob)
+            except json.JSONDecodeError as exc:
+                errors.append(f'{rel} : JSON-LD invalide ({exc})')
+                continue
+            if parsed.get('@type') == 'Article':
+                articles_ld.append(parsed)
+        if len(articles_ld) != 1:
+            errors.append(f'{rel} : {len(articles_ld)} bloc(s) JSON-LD Article (attendu : 1)')
+            continue
+        for field in ('headline', 'description', 'image', 'datePublished',
+                      'mainEntityOfPage', 'inLanguage'):
+            if not articles_ld[0].get(field):
+                errors.append(f'{rel} : champ JSON-LD manquant ou vide ({field})')
+    return errors
+
+
 def check_sitemap_and_seo_files(base: Path) -> list[str]:
     """sitemap.xml bien formé, robots.txt déclarant le sitemap, CNAME correct."""
     errors = []
@@ -314,6 +364,12 @@ def check_sitemap_and_seo_files(base: Path) -> list[str]:
                     errors.append(f'sitemap.xml : page inexistante "{loc}"')
     except ET.ParseError as exc:
         errors.append(f'sitemap.xml : XML invalide ({exc})')
+
+    for feed in ('feed.xml', 'en/feed.xml', 'ar/feed.xml'):
+        try:
+            ET.parse(base / feed)
+        except ET.ParseError as exc:
+            errors.append(f'{feed} : XML invalide ({exc})')
 
     robots = read(base / 'robots.txt')
     if f'Sitemap: https://{SITE_DOMAIN}/sitemap.xml' not in robots:
@@ -378,9 +434,10 @@ CHECKS = [
     ('Ancres (#fragments)', check_anchors),
     ('Ressources des feuilles de style', check_css_assets),
     ('Cartes des index de blog', check_blog_indexes),
-    ('Synchronisation du carrousel d\'accueil', check_home_carousel_sync),
+    ('Artefacts générés (carrousel, sitemap, flux RSS)', check_generated_artifacts),
     ('Attributs HTML essentiels', check_html_basics),
-    ('Sitemap, robots.txt et CNAME', check_sitemap_and_seo_files),
+    ('SEO des articles (canonical, Open Graph, JSON-LD)', check_article_seo),
+    ('Sitemap, flux RSS, robots.txt et CNAME', check_sitemap_and_seo_files),
     ('Icônes PWA (manifest, browserconfig)', check_manifest_icons),
     ('Compilation des scripts Python', check_python_scripts),
 ]
