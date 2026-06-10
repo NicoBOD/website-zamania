@@ -12,7 +12,7 @@
      2. coller son URL ici, ex. : 'https://formspree.io/f/abcdwxyz'.
    ========================================== */
 
-const FORM_ENDPOINT = '';
+const FORM_ENDPOINT = 'https://formspree.io/f/xeewlejp';
 
 (function () {
     'use strict';
