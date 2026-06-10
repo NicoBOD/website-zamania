@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Généré par .automation/generate_feeds.py : ne pas éditer à la main. -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ZamanIA Blog</title>
+        <link>https://zamania.fr/en/blog/index.html</link>
+        <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
+        <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
+        <language>en</language>
+        <lastBuildDate>Wed, 10 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Accelerate Your Signatures: Generate Custom Proposals on the Same Day</title>
+            <link>https://zamania.fr/en/blog/accelerez-signatures-propositions-commerciales.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/accelerez-signatures-propositions-commerciales.html</guid>
+            <description>Cut your response time to tenders by ten. Discover how AI analyzes specifications and drafts custom proposals on the same day.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-accelerez-signatures-propositions-commerciales.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 10 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Secure Your Pipeline: Let AI Update Your CRM from Client Communications</title>
+            <link>https://zamania.fr/en/blog/fiabilisez-pipeline-ia-crm-echanges-clients.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/fiabilisez-pipeline-ia-crm-echanges-clients.html</guid>
+            <description>Connect an AI agent to emails and call summaries to update statuses, detect loss signals, and adjust sales forecasts.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Tue, 09 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Every Unqualified Lead Costs You a Client: How AI Transforms Your Sales Pipeline into a Conversion Machine</title>
+            <link>https://zamania.fr/en/blog/ia-qualification-pipeline-commercial.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/ia-qualification-pipeline-commercial.html</guid>
+            <description>Discover how an AI agent qualifies, prioritizes, and responds to your leads 24/7, increasing conversion rates without hiring.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-qualification-pipeline-commercial.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sun, 07 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Stop Losing 4 Hours Every Monday: Automate Your Key Metrics Consolidation</title>
+            <link>https://zamania.fr/en/blog/automatiser-consolidation-indicateurs-cles.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/automatiser-consolidation-indicateurs-cles.html</guid>
+            <description>Discover how automating your dashboards provides a reliable summary of your overall activity without any manual data manipulation.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Fri, 05 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>Customer Service Under Pressure? Halve Your Response Time with Automated Triage</title>
+            <link>https://zamania.fr/en/blog/service-client-tri-automatise.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/service-client-tri-automatise.html</guid>
+            <description>How an intelligent system pre-categorizes, prioritizes, and drafts responses for customer support, improving the experience without overloading the team.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-service-client-tri-automatise.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 03 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>The Hidden Cost of Repetitive Tasks: The Silent Margin Drain in Your Business</title>
+            <link>https://zamania.fr/en/blog/cout-cache-taches-repetitives-marge-entreprise.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/cout-cache-taches-repetitives-marge-entreprise.html</guid>
+            <description>Behind repetitive micro-tasks lies a monthly loss of margin, responsiveness, and capacity. Here is how to measure it and where to automate first.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-cout-cache-taches-repetitives-marge-entreprise.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Mon, 01 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>How much are repetitive tasks really costing your business?</title>
+            <link>https://zamania.fr/en/blog/cout-taches-repetitives-entreprise.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/cout-taches-repetitives-entreprise.html</guid>
+            <description>Estimate the hidden cost of repetitive tasks across your business and identify the first AI automation opportunities with the fastest ROI.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-cout-taches-repetitives-entreprise.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sun, 31 May 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>AI Agents: The New Productivity Lever for Companies That Want to Do More Without Hiring More</title>
+            <link>https://zamania.fr/en/blog/agents-ia-levier-productivite.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/agents-ia-levier-productivite.html</guid>
+            <description>Discover how AI agents let companies handle more activity without hiring immediately, with concrete use cases and measurable ROI.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-agents-ia-levier-productivite.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sun, 31 May 2026 08:00:00 +0200</pubDate>
+        </item>
+        <item>
+            <title>How much does manual data entry really cost you? (And how AI reduces it to zero)</title>
+            <link>https://zamania.fr/en/blog/cout-saisie-manuelle.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/cout-saisie-manuelle.html</guid>
+            <description>Discover the hidden financial cost of paperwork and manual data entry, and how AI automation offers an ROI in less than 3 months.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-cout-saisie-manuelle.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sat, 30 May 2026 08:00:00 +0200</pubDate>
+        </item>
+    </channel>
+</rss>
