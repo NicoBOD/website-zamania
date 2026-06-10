@@ -150,13 +150,13 @@ def update_index(lang, title, date, desc, slug):
         html = f.read()
         
     card = f'''
-            <article class="article-card">
-                <img src="{img}" alt="{title}" class="article-image">
-                <div class="article-content">
-                    <span class="article-date">{date}</span>
-                    <h2 class="article-title">{title}</h2>
-                    <p class="article-excerpt">{desc}</p>
-                    <a href="{link}" class="article-link">{read_more}</a>
+            <article class="blog-card">
+                <img src="{img}" alt="{title}">
+                <div class="blog-card-content">
+                    <span class="blog-card-date">{date}</span>
+                    <h3>{title}</h3>
+                    <p>{desc}</p>
+                    <a href="{link}">{read_more}</a>
                 </div>
             </article>'''
             

@@ -37,19 +37,27 @@
                 ZAMAN<span class="highlight-ia">IA</span>
             </a>
             <ul class="nav-links">
-                <li><a href="../index.html#services" itemprop="url"><span itemprop="name">Services</span></a></li>
-                <li><a href="../index.html#approche" itemprop="url"><span itemprop="name">Approche</span></a></li>
-                <li><a href="../index.html#cas-usage" itemprop="url"><span itemprop="name">Cas d'usage</span></a></li>
+                <li><a href="../index.html" itemprop="url"><span itemprop="name">Site web</span></a></li>
                 <li><a href="index.html" itemprop="url" style="color: var(--accent);"><span itemprop="name">Blog</span></a></li>
                 <li>
                     <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
                         <span class="theme-toggle-slider"><span class="theme-toggle-icon">🌙</span></span>
                     </button>
                 </li>
+                <li class="lang-switch">
+                    <a href="index.html" style="font-weight: bold; color: var(--accent);" title="Version française">FR</a>
+                    <span style="color: var(--text-secondary); margin: 0 5px;">|</span>
+                    <a href="../en/blog/index.html" title="English version">EN</a>
+                    <span style="color: var(--text-secondary); margin: 0 5px;">|</span>
+                    <a href="../ar/blog/index.html" title="Arabic version">AR</a>
+                </li>
                 <li><a href="mailto:contact@zamania.fr" class="cta-nav">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false">☰</button>
         </nav>
     </header>
+
+    <div class="nav-backdrop"></div>
 
     <main>
         <section class="blog-header">
@@ -59,35 +67,37 @@
 
         <div class="blog-grid" id="blog-container">
             <!-- ARTICLES_LIST_START -->
-                <article class="blog-card">
-                    <img src="../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" alt="Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients" class="blog-card-img">
-                    <div class="blog-card-content">
-                        <span class="blog-card-date">9 Juin 2026</span>
-                        <h3><a href="fiabilisez-pipeline-ia-crm-echanges-clients.html">Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients</a></h3>
-                        <p>Connectez un agent IA aux courriels et comptes rendus d'appels pour actualiser les statuts, détecter les signaux de perte et ajuster les prévisions commerciales.</p>
-                        <a href="fiabilisez-pipeline-ia-crm-echanges-clients.html" class="read-more">Lire l'article →</a>
-                    </div>
-                </article>
-
-
-            <article class="article-card">
-                <img src="../images/blog/img-ia-qualification-pipeline-commercial.jpg" alt="Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir" class="article-image">
-                <div class="article-content">
-                    <span class="article-date">7 Juin 2026</span>
-                    <h2 class="article-title">Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir</h2>
-                    <p class="article-excerpt">Découvrez comment un agent IA qualifie, priorise et répond à vos leads 24/7, augmentant vos taux de conversion sans recruter.</p>
-                    <a href="ia-qualification-pipeline-commercial.html" class="article-link">Lire l'article</a>
+            <article class="blog-card">
+                <img src="../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" alt="Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients">
+                <div class="blog-card-content">
+                    <span class="blog-card-date">9 Juin 2026</span>
+                    <h3>Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients</h3>
+                    <p>Connectez un agent IA aux courriels et comptes rendus d'appels pour actualiser les statuts, détecter les signaux de perte et ajuster les prévisions commerciales.</p>
+                    <a href="fiabilisez-pipeline-ia-crm-echanges-clients.html">Lire l'article</a>
                 </div>
             </article>
-                <div class="article-card">
-                    <img src="../images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" alt="Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés" class="article-image">
-                    <div class="article-content">
-                        <span class="article-date">5 Juin 2026</span>
-                        <h3 class="article-title">Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés</h3>
-                        <p class="article-excerpt">Découvrez comment l'automatisation de vos tableaux de bord vous permet d'obtenir une synthèse fiable de votre activité globale sans aucune manipulation manuelle.</p>
-                        <a href="automatiser-consolidation-indicateurs-cles.html" class="btn-read-more">Lire l'article</a>
-                    </div>
+
+
+            <article class="blog-card">
+                <img src="../images/blog/img-ia-qualification-pipeline-commercial.jpg" alt="Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir">
+                <div class="blog-card-content">
+                    <span class="blog-card-date">7 Juin 2026</span>
+                    <h3>Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir</h3>
+                    <p>Découvrez comment un agent IA qualifie, priorise et répond à vos leads 24/7, augmentant vos taux de conversion sans recruter.</p>
+                    <a href="ia-qualification-pipeline-commercial.html">Lire l'article</a>
                 </div>
+            </article>
+
+
+            <article class="blog-card">
+                <img src="../images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" alt="Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés">
+                <div class="blog-card-content">
+                    <span class="blog-card-date">5 Juin 2026</span>
+                    <h3>Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés</h3>
+                    <p>Découvrez comment l'automatisation de vos tableaux de bord vous permet d'obtenir une synthèse fiable de votre activité globale sans aucune manipulation manuelle.</p>
+                    <a href="automatiser-consolidation-indicateurs-cles.html">Lire l'article</a>
+                </div>
+            </article>
 
             <article class="blog-card">
                 <img src="../images/blog/img-service-client-tri-automatise.jpg" alt="Service client sous tension ? Divisez par deux votre temps de réponse grâce au tri automatisé">
