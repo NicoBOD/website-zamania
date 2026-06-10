@@ -67,9 +67,8 @@
     <meta name="geo.placename" content="Paris">
     <meta name="geo.position" content="48.856614;2.352222">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="../fonts/work-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/fonts.css">
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/dark-mode.css">
@@ -99,6 +98,79 @@
         "sameAs": [
             "https://www.linkedin.com/company/zamania",
             "https://twitter.com/zamania"
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How can AI automation help my business?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI automation frees your teams from repetitive and time-consuming tasks. This results in an average 40% increase in productivity, a significant reduction in human errors, and more time to focus on high-value activities like innovation and strategy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of processes can be automated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Virtually all repetitive processes can be automated: lead prospecting and enrichment, social media publishing, order management, competitive intelligence, customer support, lead qualification, report generation, and many more. Our AI audit identifies precise opportunities within your company."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the ROI of an AI solution?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our clients typically see a return on investment within 6 months. Savings come from reduced time spent on manual tasks, improved accuracy, and increased processing capacity. For example, a prospecting automation can save your sales team 15-20 hours per week."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data secure?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. We strictly adhere to GDPR and all current security standards. Your data is encrypted, never shared with third parties, and you retain full control over its use. We can also work in on-premise mode (on your servers) if your activity requires it."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does my team need technical skills?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, no technical skills are required. We design intuitive and easy-to-use solutions. Additionally, we offer comprehensive training to make your teams autonomous in using and optimizing AI tools. Our support also accompanies you after deployment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to implement an AI solution?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It depends on the complexity of the project. An AI audit typically takes 1-2 weeks. A simple automation can be deployed in 2-4 weeks, while a complex solution may require 2-3 months. We work in agile mode with progressive deliveries so you can see benefits quickly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will AI replace my employees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, our approach aims to augment human capabilities, not replace them. AI takes over repetitive, non-value-added tasks, allowing your employees to focus on what they do best: creativity, customer relations, and strategic decision-making. It is an augmentation tool, not a substitution one."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer support after implementation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we offer continuous monitoring and optimization. After deployment, we remain available to adjust solutions, train new users, and identify new automation opportunities. Our goal is your long-term success, not just a one-time delivery."
+                }
+            }
         ]
     }
     </script>
@@ -571,7 +643,7 @@
                 <h2 class="cta-answer">How much does it cost you every day to keep believing it's not?</h2>
             </div>
             <div class="cta-buttons">
-                <a href="mailto:contact@zamania.fr?subject=AI%20Transformation%20Request&body=Hello,%0A%0AI%20wish%20to%20transform%20my%20business%20using%20artificial%20intelligence.%0A%0APlease%20contact%20me%20to%20discuss%20my%20needs.%0A%0ABest%20regards"
+                <a href="contact.html"
                     class="btn btn-light cta-primary">✨ Give time back to my business!</a>
             </div>
         </div>
@@ -641,6 +713,7 @@
     <script src="../js/faq.js" defer></script>
     <script src="../js/canvas-network.js" defer></script>
     <script src="../js/home-articles.js" defer></script>
+    <script src="../js/analytics.js" defer></script>
 </body>
 
 </html>

@@ -38,6 +38,8 @@
         "dateModified": "{{DATE_ISO}}",
         "inLanguage": "ar",
         "mainEntityOfPage": "https://zamania.fr/ar/blog/{{SLUG}}.html",
+        "speakable": {"@type": "SpeakableSpecification",
+                      "cssSelector": [".post-title", ".post-content > p:first-of-type"]},
         "author": {"@type": "Organization", "name": "ZamanIA", "url": "https://zamania.fr"},
         "publisher": {"@type": "Organization", "name": "ZamanIA",
                       "logo": {"@type": "ImageObject", "url": "https://zamania.fr/images/logo.png"}}
@@ -48,11 +50,8 @@
     <link rel="stylesheet" href="../../css/blog.css">
     <link rel="stylesheet" href="../../css/rtl.css">
 
-    <!-- Préconnexion aux serveurs de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Importation des polices Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="../../fonts/tajawal-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../css/fonts.css">
 
 </head>
 <body>
@@ -76,7 +75,7 @@
                     <span style="color: var(--text-secondary); margin: 0 5px;">|</span>
                     <a href="index.html" style="font-weight: bold; color: var(--accent);" title="Arabic version">AR</a>
                 </li>
-                <li><a href="mailto:contact@zamania.fr" class="cta-nav">اتصل بنا</a></li>
+                <li><a href="../contact.html" class="cta-nav">اتصل بنا</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="فتح قائمة التنقل" aria-expanded="false">☰</button>
         </nav>
@@ -91,7 +90,10 @@
                 <h1 class="post-title">{{TITLE}}</h1>
             </section>
             
-            <img src="{{IMAGE_URL}}" alt="{{TITLE}}" class="post-image" fetchpriority="high" decoding="async">
+            <picture>
+                <source type="image/webp" srcset="{{IMAGE_SRCSET}}" sizes="(max-width: 940px) 100vw, 900px">
+                <img src="{{IMAGE_URL}}" alt="{{TITLE}}" class="post-image" fetchpriority="high" decoding="async">
+            </picture>
             
             <div class="post-content">
                 <div class="post-sommaire">
@@ -113,7 +115,7 @@
                 <div class="post-cta">
                     <h3>توقف عن إهدار الوقت والمال</h3>
                     <p>اكتشف مقدار الوقت الذي تهدره فرقك في المهام المتكررة التي يمكن أتمتتها اليوم باستخدام الذكاء الاصطناعي.</p>
-                    <a href="mailto:contact@zamania.fr?subject=Demande%20d'audit%20IA%20gratuit&body=Bonjour%20l'%C3%A9quipe%20ZamanIA,%0A%0AJe%20souhaite%20r%C3%A9server%20un%20audit%20gratuit%20pour%20d%C3%A9couvrir%20comment%20l'automatisation%20IA%20peut%20faire%20gagner%20du%20temps%20%C3%A0%20mon%20entreprise.%0A%0AMerci." class="btn-cta">اطلب تدقيق مجاني</a>
+                    <a href="../contact.html" class="btn-cta">اطلب تدقيق مجاني</a>
                 </div>
             </div>
         </article>
@@ -132,5 +134,8 @@
     </footer>
     <script src="../../js/theme.js" defer></script>
     <script src="../../js/navigation.js" defer></script>
+    <script src="../../js/share.js" defer></script>
+    <script src="../../js/reading-progress.js" defer></script>
+    <script src="../../js/analytics.js" defer></script>
 </body>
 </html>

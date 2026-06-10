@@ -13,6 +13,7 @@ Usage :
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -22,6 +23,9 @@ from article_index import LANGS, SITE_URL, all_articles  # noqa: E402
 
 LEGAL_PAGES = ['cgu.html', 'cgv.html', 'mentions-legales.html',
                'politique-de-confidentialite.html', 'charte-ia-ethique.html']
+
+# Pages trilingues hors blog : chemin par langue.
+CONTACT_PAGES = {'fr': 'contact.html', 'en': 'en/contact.html', 'ar': 'ar/contact.html'}
 
 HEADER = f'''<?xml version="1.0" encoding="UTF-8"?>
 <!-- Généré par .automation/generate_sitemap.py : ne pas éditer à la main. -->
@@ -64,6 +68,17 @@ def build_sitemap(base: Path) -> str:
     for lang in LANGS:
         entries.append(url_entry(blog_alts[lang], lastmod=newest, changefreq='weekly',
                                  priority='0.8', alternates=blog_alts))
+    # Pages de pagination des index (page-2.html, page-3.html...)
+    page_numbers = sorted(int(m.group(1)) for p in (base / 'blog').glob('page-*.html')
+                          if (m := re.match(r'page-(\d+)\.html$', p.name)))
+    for number in page_numbers:
+        page_alts = {lang: f'{SITE_URL}/{conf["blog"]}/page-{number}.html'
+                     for lang, conf in LANGS.items()}
+        page_alts['x-default'] = page_alts['fr']
+        for lang in LANGS:
+            entries.append(url_entry(page_alts[lang], lastmod=newest,
+                                     changefreq='weekly', priority='0.5',
+                                     alternates=page_alts))
     for article in articles:
         alts = {lang: article[lang]['url'] for lang in LANGS}
         alts['x-default'] = article['fr']['url']
@@ -72,6 +87,11 @@ def build_sitemap(base: Path) -> str:
                                      lastmod=article['date'].isoformat(),
                                      changefreq='monthly', priority='0.7',
                                      alternates=alts))
+    contact_alts = {lang: f'{SITE_URL}/{path}' for lang, path in CONTACT_PAGES.items()}
+    contact_alts['x-default'] = contact_alts['fr']
+    for lang in LANGS:
+        entries.append(url_entry(contact_alts[lang], changefreq='yearly',
+                                 priority='0.6', alternates=contact_alts))
     for page in LEGAL_PAGES:
         entries.append(url_entry(f'{SITE_URL}/{page}', changefreq='yearly',
                                  priority='0.3'))

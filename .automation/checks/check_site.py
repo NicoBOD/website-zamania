@@ -36,10 +36,15 @@ REQUIRED_FILES = [
     'manifest.json', 'browserconfig.xml',
     'feed.xml', 'en/feed.xml', 'ar/feed.xml',
     'css/styles.css', 'css/dark-mode.css', 'css/rtl.css', 'css/blog.css',
+    'css/fonts.css',
     'js/navigation.js', 'js/theme.js', 'js/home-articles.js',
-    'blog/index.html', 'blog/template.html',
+    'js/share.js', 'js/reading-progress.js', 'js/contact-form.js', 'js/analytics.js',
+    'contact.html', 'en/contact.html', 'ar/contact.html',
+    'blog/index.html', 'blog/template.html', 'blog/index-template.html',
     'en/index.html', 'en/blog/index.html', 'en/blog/template.html',
+    'en/blog/index-template.html',
     'ar/index.html', 'ar/blog/index.html', 'ar/blog/template.html',
+    'ar/blog/index-template.html',
 ]
 ARTICLES_START = '<!-- ARTICLES_LIST_START -->'
 ARTICLES_END = '<!-- ARTICLES_LIST_END -->'
@@ -48,6 +53,7 @@ HOME_END = '<!-- HOME_ARTICLES_END -->'
 
 PLACEHOLDER_RE = re.compile(r'\{\{\s*[A-Z_]+\s*\}\}')
 LINK_RE = re.compile(r'(?:href|src)\s*=\s*["\']([^"\']+)["\']', re.IGNORECASE)
+SRCSET_RE = re.compile(r'srcset\s*=\s*["\']([^"\']+)["\']', re.IGNORECASE)
 SOCIAL_IMG_RE = re.compile(
     r'<meta\s+(?:property|name)=["\'](?:og:image|twitter:image)["\']\s+content=["\']([^"\']+)["\']',
     re.IGNORECASE)
@@ -69,7 +75,7 @@ SITE_PREFIXES = tuple(f'{scheme}://{host}' for scheme in ('https', 'http')
 
 
 def is_template(path: Path) -> bool:
-    return path.name == 'template.html'
+    return path.name in ('template.html', 'index-template.html')
 
 
 def site_url_to_local(base: Path, url: str) -> Path | None:
@@ -150,7 +156,10 @@ def iter_local_targets(page: Path, base: Path):
     domaine du site sont rapportées à leur fichier local.
     """
     text = COMMENT_RE.sub('', read(page))
-    for raw in LINK_RE.findall(text) + SOCIAL_IMG_RE.findall(text):
+    srcset_urls = [part.strip().split()[0]
+                   for srcset in SRCSET_RE.findall(text)
+                   for part in srcset.split(',') if part.strip()]
+    for raw in LINK_RE.findall(text) + SOCIAL_IMG_RE.findall(text) + srcset_urls:
         raw = raw.strip()
         if not raw:
             continue
@@ -217,12 +226,22 @@ def check_css_assets(base: Path) -> list[str]:
 
 
 def check_generated_artifacts(base: Path) -> list[str]:
-    """Carrousel d'accueil, sitemap.xml et flux RSS doivent être à jour.
+    """Tous les artefacts générés doivent être à jour : blocs d'articles,
+    index paginés du blog, carrousel d'accueil, sitemap.xml et flux RSS.
 
-    On rejoue les trois générateurs sur une copie temporaire du site : s'ils
-    modifient un fichier, c'est que l'artefact commité n'était pas synchronisé.
+    On rejoue les générateurs sur une copie temporaire du site : si un
+    fichier diffère (ou apparaît/disparaît), l'artefact commité n'était pas
+    synchronisé. Les sorties sont décrites par motifs glob.
     """
     generators = [
+        ('update_article_blocks.py',
+         ['blog/*.html', 'en/blog/*.html', 'ar/blog/*.html'],
+         "blocs d'articles désynchronisés (relancer .automation/update_article_blocks.py)"),
+        ('generate_blog_indexes.py',
+         ['blog/index.html', 'blog/page-*.html',
+          'en/blog/index.html', 'en/blog/page-*.html',
+          'ar/blog/index.html', 'ar/blog/page-*.html'],
+         'index du blog obsolète (relancer .automation/generate_blog_indexes.py)'),
         ('update_home_articles.py', HOME_PAGES,
          'carrousel désynchronisé du blog (relancer .automation/update_home_articles.py)'),
         ('generate_sitemap.py', ['sitemap.xml'],
@@ -234,7 +253,7 @@ def check_generated_artifacts(base: Path) -> list[str]:
     with tempfile.TemporaryDirectory() as tmp:
         work = Path(tmp) / 'site'
         shutil.copytree(base, work, ignore=shutil.ignore_patterns('.git'))
-        for script, outputs, message in generators:
+        for script, patterns, message in generators:
             script_path = work / '.automation' / script
             if not script_path.is_file():
                 errors.append(f'.automation/{script} introuvable')
@@ -245,8 +264,17 @@ def check_generated_artifacts(base: Path) -> list[str]:
             if proc.returncode != 0:
                 errors.append(f'{script} a échoué : {proc.stderr.strip()}')
                 continue
-            for rel in outputs:
-                if read(base / rel) != read(work / rel):
+            outputs = set()
+            for pattern in patterns:
+                outputs |= {str(p.relative_to(base)) for p in base.glob(pattern)}
+                outputs |= {str(p.relative_to(work)) for p in work.glob(pattern)}
+            for rel in sorted(outputs):
+                committed, regenerated = base / rel, work / rel
+                if not regenerated.is_file():
+                    errors.append(f'{rel} : fichier en trop ({message})')
+                elif not committed.is_file():
+                    errors.append(f'{rel} : fichier manquant ({message})')
+                elif read(committed) != read(regenerated):
                     errors.append(f'{rel} : {message}')
     return errors
 
@@ -283,26 +311,49 @@ def check_html_basics(base: Path) -> list[str]:
     return errors
 
 
+NON_ARTICLE_RE = re.compile(r'^(index|page-\d+|template|index-template)\.html$')
+
+
 def check_blog_indexes(base: Path) -> list[str]:
-    """Chaque carte du blog doit pointer vers un article et une image existants."""
+    """Index paginés : chaque article publié doit apparaître sur exactement une
+    page de l'index de sa langue, et les attributs de chargement des
+    illustrations doivent suivre la règle « première en priorité, suite en lazy »."""
     errors = []
     card_re = re.compile(r'<article class="blog-card[^"]*">.*?</article>', re.DOTALL)
-    for rel in BLOG_INDEXES:
-        index = base / rel
-        text = read(index)
-        start, end = text.find(ARTICLES_START), text.find(ARTICLES_END)
-        section = text[start:end] if start != -1 and end != -1 else ''
-        cards = card_re.findall(section)
-        if not cards:
-            errors.append(f'{rel} : aucune carte d\'article entre les marqueurs')
-        articles = {p.name for p in (index.parent).glob('*.html')} - {'index.html', 'template.html'}
-        linked = set()
-        for card in cards:
-            for href in re.findall(r'href="([^"]+)"', card):
-                linked.add(unquote(urlsplit(href).path))
-        missing = articles - linked
+    img_re = re.compile(r'<img\s[^>]*>')
+    for blog_dir in BLOG_DIRS:
+        index_pages = [base / blog_dir / 'index.html']
+        index_pages += sorted((base / blog_dir).glob('page-*.html'))
+        articles = {p.name for p in (base / blog_dir).glob('*.html')
+                    if not NON_ARTICLE_RE.match(p.name)}
+        linked: list[str] = []
+        for index in index_pages:
+            rel = index.relative_to(base)
+            text = read(index)
+            start, end = text.find(ARTICLES_START), text.find(ARTICLES_END)
+            section = text[start:end] if start != -1 and end != -1 else ''
+            cards = card_re.findall(section)
+            if not cards:
+                errors.append(f'{rel} : aucune carte d\'article entre les marqueurs')
+            for position, card in enumerate(cards):
+                for href in re.findall(r'<a href="([^"]+)"', card):
+                    linked.append(unquote(urlsplit(href).path))
+                img = img_re.search(card)
+                if not img:
+                    errors.append(f'{rel} : carte sans illustration ({card[:60]}...)')
+                    continue
+                expected = 'fetchpriority="high"' if position == 0 else 'loading="lazy"'
+                if expected not in img.group(0):
+                    errors.append(f'{rel} : carte {position + 1}, attribut {expected} '
+                                  f'attendu sur l\'illustration')
+        missing = articles - set(linked)
         if missing:
-            errors.append(f'{rel} : articles publiés absents de l\'index : {sorted(missing)}')
+            errors.append(f'{blog_dir} : articles publiés absents des index : '
+                          f'{sorted(missing)}')
+        duplicates = sorted({name for name in linked if linked.count(name) > 1})
+        if duplicates:
+            errors.append(f'{blog_dir} : articles présents sur plusieurs pages '
+                          f'd\'index : {duplicates}')
     return errors
 
 
@@ -318,9 +369,10 @@ def check_article_seo(base: Path) -> list[str]:
         'rel="canonical"', 'hreflang="fr"', 'hreflang="en"', 'hreflang="ar"',
         'property="og:title"', 'property="og:image"', 'property="og:url"',
         'name="twitter:card"', 'property="article:published_time"',
+        '"speakable"',
     ]
     for page in html_pages(base):
-        if page.parent.name != 'blog' or page.name == 'index.html':
+        if page.parent.name != 'blog' or NON_ARTICLE_RE.match(page.name):
             continue
         rel = page.relative_to(base)
         text = read(page)
@@ -439,6 +491,61 @@ def check_blog_styles(base: Path) -> list[str]:
     return errors
 
 
+def check_fonts(base: Path) -> list[str]:
+    """Polices auto-hébergées : chaque page charge css/fonts.css et plus
+    aucune ressource ne pointe vers Google Fonts (RGPD, performance)."""
+    errors = []
+    pages = [p for p in base.rglob('*.html') if '.git' not in p.parts]
+    for page in sorted(pages):
+        rel = page.relative_to(base)
+        text = read(page)
+        if 'css/fonts.css' not in text:
+            errors.append(f'{rel} : css/fonts.css non référencée')
+        if 'fonts.googleapis.com' in text or 'fonts.gstatic.com' in text:
+            errors.append(f'{rel} : référence à Google Fonts (polices auto-hébergées '
+                          f'dans /fonts)')
+    for css in sorted((base / 'css').glob('*.css')):
+        if 'fonts.googleapis.com' in read(css):
+            errors.append(f'css/{css.name} : @import Google Fonts '
+                          f'(polices auto-hébergées dans /fonts)')
+    return errors
+
+
+FAQ_QUESTION_RE = re.compile(r'<span class="faq-question-text">(.*?)</span>', re.DOTALL)
+
+
+def check_faq_schema(base: Path) -> list[str]:
+    """Le JSON-LD FAQPage de chaque accueil doit refléter exactement les
+    questions visibles sur la page (exigence Google sur ce balisage)."""
+    errors = []
+    for rel in HOME_PAGES:
+        text = read(base / rel)
+        visible = {re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', q)).strip()
+                   for q in FAQ_QUESTION_RE.findall(text)}
+        schema_questions: set[str] = set()
+        faq_blocks = 0
+        for blob in JSONLD_RE.findall(text):
+            try:
+                parsed = json.loads(blob)
+            except json.JSONDecodeError:
+                continue        # les JSON-LD invalides sont signalés ailleurs
+            if parsed.get('@type') == 'FAQPage':
+                faq_blocks += 1
+                schema_questions = {item.get('name', '').strip()
+                                    for item in parsed.get('mainEntity', [])}
+        if not visible:
+            continue            # pas de FAQ sur cette page : rien à exiger
+        if faq_blocks != 1:
+            errors.append(f'{rel} : {faq_blocks} bloc(s) JSON-LD FAQPage '
+                          f'(attendu : 1)')
+            continue
+        for q in sorted(visible - schema_questions):
+            errors.append(f'{rel} : question absente du JSON-LD FAQPage « {q} »')
+        for q in sorted(schema_questions - visible):
+            errors.append(f'{rel} : question du JSON-LD absente de la page « {q} »')
+    return errors
+
+
 def check_python_scripts(base: Path) -> list[str]:
     """Tous les scripts Python du dépôt doivent au moins compiler."""
     errors = []
@@ -477,10 +584,13 @@ CHECKS = [
     ('Ressources des feuilles de style', check_css_assets),
     ('Variables CSS définies', check_css_variables),
     ('Feuilles de style du blog et RTL', check_blog_styles),
-    ('Cartes des index de blog', check_blog_indexes),
-    ('Artefacts générés (carrousel, sitemap, flux RSS)', check_generated_artifacts),
+    ('Polices auto-hébergées', check_fonts),
+    ('Cartes des index de blog (pagination)', check_blog_indexes),
+    ('Artefacts générés (blocs, index, carrousel, sitemap, flux RSS)',
+     check_generated_artifacts),
     ('Attributs HTML essentiels', check_html_basics),
     ('SEO des articles (canonical, Open Graph, JSON-LD)', check_article_seo),
+    ('JSON-LD FAQPage synchronisé', check_faq_schema),
     ('Sitemap, flux RSS, robots.txt et CNAME', check_sitemap_and_seo_files),
     ('Icônes PWA (manifest, browserconfig)', check_manifest_icons),
     ('Compilation des scripts Python', check_python_scripts),

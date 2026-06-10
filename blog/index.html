@@ -6,15 +6,17 @@
     <meta name="theme-color" content="#1a2332">
     <title>Blog IA & Automatisation - ZamanIA</title>
     <meta name="description" content="Découvrez les conseils, cas d'usage et actualités sur l'automatisation IA pour redonner du temps à votre entreprise.">
+    <link rel="canonical" href="https://zamania.fr/blog/index.html">
+    <link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/index.html">
+    <link rel="alternate" hreflang="en" href="https://zamania.fr/en/blog/index.html">
+    <link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/blog/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://zamania.fr/blog/index.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/dark-mode.css">
     <link rel="stylesheet" href="../css/blog.css">
 
-    <!-- Préconnexion aux serveurs de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Importation des polices Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="../fonts/work-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/fonts.css">
 
     <link rel="alternate" type="application/rss+xml" title="Blog ZamanIA" href="https://zamania.fr/feed.xml">
 </head>
@@ -39,7 +41,7 @@
                     <span style="color: var(--text-secondary); margin: 0 5px;">|</span>
                     <a href="../ar/blog/index.html" title="Arabic version">AR</a>
                 </li>
-                <li><a href="mailto:contact@zamania.fr" class="cta-nav">Contact</a></li>
+                <li><a href="../contact.html" class="cta-nav">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false">☰</button>
         </nav>
@@ -55,9 +57,11 @@
 
         <div class="blog-grid" id="blog-container">
             <!-- ARTICLES_LIST_START -->
-
             <article class="blog-card">
-                <img src="../images/blog/img-accelerez-signatures-propositions-commerciales.jpg" alt="Accélérez vos signatures : générez des propositions commerciales sur mesure le jour même" fetchpriority="high" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-accelerez-signatures-propositions-commerciales-480.webp 480w, ../images/blog/img-accelerez-signatures-propositions-commerciales-800.webp 800w, ../images/blog/img-accelerez-signatures-propositions-commerciales-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-accelerez-signatures-propositions-commerciales.jpg" alt="Accélérez vos signatures : générez des propositions commerciales sur mesure le jour même" fetchpriority="high" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">10 Juin 2026</span>
                     <h3>Accélérez vos signatures : générez des propositions commerciales sur mesure le jour même</h3>
@@ -67,7 +71,10 @@
             </article>
 
             <article class="blog-card">
-                <img src="../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" alt="Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients" loading="lazy" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients-480.webp 480w, ../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients-800.webp 800w, ../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-fiabilisez-pipeline-ia-crm-echanges-clients.jpg" alt="Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients" loading="lazy" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">9 Juin 2026</span>
                     <h3>Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients</h3>
@@ -76,9 +83,11 @@
                 </div>
             </article>
 
-
             <article class="blog-card">
-                <img src="../images/blog/img-ia-qualification-pipeline-commercial.jpg" alt="Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir" loading="lazy" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-ia-qualification-pipeline-commercial-480.webp 480w, ../images/blog/img-ia-qualification-pipeline-commercial-800.webp 800w, ../images/blog/img-ia-qualification-pipeline-commercial-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-ia-qualification-pipeline-commercial.jpg" alt="Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir" loading="lazy" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">7 Juin 2026</span>
                     <h3>Chaque lead non qualifié vous coûte un client : comment l'IA transforme votre pipeline commercial en machine à convertir</h3>
@@ -87,9 +96,11 @@
                 </div>
             </article>
 
-
             <article class="blog-card">
-                <img src="../images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" alt="Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés" loading="lazy" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-automatiser-consolidation-indicateurs-cles-480.webp 480w, ../images/blog/img-automatiser-consolidation-indicateurs-cles-800.webp 800w, ../images/blog/img-automatiser-consolidation-indicateurs-cles-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-automatiser-consolidation-indicateurs-cles.jpg" alt="Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés" loading="lazy" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">5 Juin 2026</span>
                     <h3>Ne perdez plus 4 heures chaque lundi : automatisez la consolidation de vos indicateurs clés</h3>
@@ -99,7 +110,10 @@
             </article>
 
             <article class="blog-card">
-                <img src="../images/blog/img-service-client-tri-automatise.jpg" alt="Service client sous tension ? Divisez par deux votre temps de réponse grâce au tri automatisé" loading="lazy" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-service-client-tri-automatise-480.webp 480w, ../images/blog/img-service-client-tri-automatise-800.webp 800w, ../images/blog/img-service-client-tri-automatise-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-service-client-tri-automatise.jpg" alt="Service client sous tension ? Divisez par deux votre temps de réponse grâce au tri automatisé" loading="lazy" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">3 Juin 2026</span>
                     <h3>Service client sous tension ? Divisez par deux votre temps de réponse grâce au tri automatisé</h3>
@@ -108,42 +122,50 @@
                 </div>
             </article>
 
-
             <article class="blog-card">
-                <img src="../images/blog/img-cout-cache-taches-repetitives-marge-entreprise.jpg" alt="Le coût caché des tâches répétitives : la fuite silencieuse de marge dans votre entreprise" loading="lazy" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-cout-cache-taches-repetitives-marge-entreprise-480.webp 480w, ../images/blog/img-cout-cache-taches-repetitives-marge-entreprise-800.webp 800w, ../images/blog/img-cout-cache-taches-repetitives-marge-entreprise-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-cout-cache-taches-repetitives-marge-entreprise.jpg" alt="Le coût caché des tâches répétitives : la fuite silencieuse de marge dans votre entreprise" loading="lazy" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">1 Juin 2026</span>
                     <h3>Le coût caché des tâches répétitives : la fuite silencieuse de marge dans votre entreprise</h3>
-                    <p>Calculez la fuite silencieuse de marge créée par les micro-tâches répétitives et découvrez où l'automatisation IA peut avoir l'impact le plus rapide.</p>
+                    <p>Derrière les micro-tâches répétitives se cache une perte mensuelle de marge, de réactivité et de capacité. Voici comment la mesurer et où automatiser en priorité.</p>
                     <a href="cout-cache-taches-repetitives-marge-entreprise.html">Lire l'article</a>
                 </div>
             </article>
 
-
             <article class="blog-card">
-                <img src="../images/blog/img-cout-taches-repetitives-entreprise.jpg" alt="Combien les tâches répétitives coûtent-elles réellement à votre entreprise ?" loading="lazy" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-cout-taches-repetitives-entreprise-480.webp 480w, ../images/blog/img-cout-taches-repetitives-entreprise-800.webp 800w, ../images/blog/img-cout-taches-repetitives-entreprise-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-cout-taches-repetitives-entreprise.jpg" alt="Combien les tâches répétitives coûtent-elles réellement à votre entreprise ?" loading="lazy" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">31 Mai 2026</span>
                     <h3>Combien les tâches répétitives coûtent-elles réellement à votre entreprise ?</h3>
-                    <p>Calculez le coût caché des micro-tâches répétitives et découvrez où l’automatisation IA peut libérer de la marge dès les premières semaines.</p>
+                    <p>Calculez le coût caché des tâches répétitives dans votre entreprise et identifiez les premiers leviers d'automatisation IA à plus fort ROI.</p>
                     <a href="cout-taches-repetitives-entreprise.html">Lire l'article</a>
                 </div>
             </article>
 
-
             <article class="blog-card">
-                <img src="../images/blog/img-agents-ia-levier-productivite.jpg" alt="Agents IA : le nouveau levier de productivité pour les entreprises qui veulent faire plus sans recruter plus" loading="lazy" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-agents-ia-levier-productivite-480.webp 480w, ../images/blog/img-agents-ia-levier-productivite-800.webp 800w, ../images/blog/img-agents-ia-levier-productivite-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-agents-ia-levier-productivite.jpg" alt="Agents IA : le nouveau levier de productivité pour les entreprises qui veulent faire plus sans recruter plus" loading="lazy" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">31 Mai 2026</span>
                     <h3>Agents IA : le nouveau levier de productivité pour les entreprises qui veulent faire plus sans recruter plus</h3>
-                    <p>Découvrez comment les agents IA permettent d’absorber plus d’activité sans recruter immédiatement, avec des cas d’usage concrets et un ROI mesurable.</p>
+                    <p>Découvrez comment les agents IA permettent d’absorber plus d’activité sans recruter immédiatement, grâce à des cas d’usage concrets et un ROI mesurable.</p>
                     <a href="agents-ia-levier-productivite.html">Lire l'article</a>
                 </div>
             </article>
 
-
             <article class="blog-card">
-                <img src="../images/blog/img-cout-saisie-manuelle.jpg" alt="Combien vous coûte réellement la saisie manuelle de vos données ? (Et comment l'IA la réduit à zéro)" loading="lazy" decoding="async">
+                <picture>
+                    <source type="image/webp" srcset="../images/blog/img-cout-saisie-manuelle-480.webp 480w, ../images/blog/img-cout-saisie-manuelle-800.webp 800w, ../images/blog/img-cout-saisie-manuelle-1200.webp 1200w" sizes="(max-width: 968px) 94vw, 370px">
+                    <img src="../images/blog/img-cout-saisie-manuelle.jpg" alt="Combien vous coûte réellement la saisie manuelle de vos données ? (Et comment l'IA la réduit à zéro)" loading="lazy" decoding="async">
+                </picture>
                 <div class="blog-card-content">
                     <span class="blog-card-date">30 Mai 2026</span>
                     <h3>Combien vous coûte réellement la saisie manuelle de vos données ? (Et comment l'IA la réduit à zéro)</h3>
@@ -174,5 +196,6 @@
     </footer>
     <script src="../js/theme.js" defer></script>
     <script src="../js/navigation.js" defer></script>
+    <script src="../js/analytics.js" defer></script>
 </body>
 </html>

@@ -59,9 +59,7 @@ html[dir="rtl"] .theme-toggle {
     direction: ltr; 
 }
 
-/* Police spécifique pour l'arabe (Optionnel mais recommandé) */
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
-
+/* Police spécifique pour l'arabe (déclarée dans css/fonts.css, auto-hébergée) */
 html[dir="rtl"] body,
 html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4 {
     font-family: 'Tajawal', 'Work Sans', sans-serif;

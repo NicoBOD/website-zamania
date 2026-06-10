@@ -65,9 +65,8 @@
     
     <meta name="contact" content="contact@zamania.fr">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="../fonts/tajawal-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/fonts.css">
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/dark-mode.css">
@@ -91,6 +90,63 @@
             "email": "contact@zamania.fr",
             "availableLanguage": ["French", "English", "Arabic"]
         }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "كيف يمكن للأتمتة بالذكاء الاصطناعي مساعدة شركتي؟",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "تسمح الأتمتة بتحرير فرقك من المهام المتكررة. يُترجم ذلك إلى زيادة متوسطة بنسبة 40% في الإنتاجية، وتقليل كبير في الأخطاء البشرية، والمزيد من الوقت للتركيز على الأنشطة ذات القيمة العالية مثل الابتكار والاستراتيجية."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ما نوع العمليات التي يمكن أتمتتها؟",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "تقريبًا جميع العمليات المتكررة: التنقيب عن العملاء، النشر على الشبكات الاجتماعية، إدارة الطلبات، الرصد التنافسي، دعم العملاء، تأهيل العملاء، إنشاء التقارير، وغيرها الكثير. يحدد تدقيقنا الفرص بدقة في شركتك."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ما هو العائد على الاستثمار ؟",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "يلاحظ عملاؤنا عائدًا على الاستثمار في المتوسط خلال أقل من 6 أشهر. تأتي الوفورات من تقليل الوقت المستغرق في المهام اليدوية، وتحسين الدقة، وزيادة قدرة المعالجة. على سبيل المثال، يمكن لأتمتة التنقيب توفير 15-20 ساعة أسبوعيًا لفريق المبيعات لديك."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "هل بياناتي آمنة؟",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "بالتأكيد. نحن نحترم بدقة RGPD وجميع معايير الأمان السارية. بياناتك مشفرة، ولا تتم مشاركتها أبدًا مع أطراف ثالثة، وتحتفظ بالسيطرة الكاملة على استخدامها. يمكننا أيضًا العمل بنظام الاستضافة المحلية (on-premise) إذا تطلب نشاطك ذلك."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "هل تحتاج فرقي لمهارات تقنية؟",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "لا، لا تتطلب أي مهارات تقنية. نحن نصمم حلولًا بديهية وسهلة الاستخدام. بالإضافة إلى ذلك، نقدم دورات تدريبية كاملة لجعل فرقك مستقلة في استخدام وتحسين أدوات الذكاء الاصطناعي."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "هل سيستبدل الذكاء الاصطناعي موظفيي؟",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "لا، يهدف نهجنا إلى تعزيز القدرات البشرية، وليس استبدالها. يتولى الذكاء الاصطناعي المهام المتكررة وبدون قيمة مضافة، مما يسمح لموظفيك بالتركيز على ما يفعلونه بشكل أفضل: الإبداع، العلاقات مع العملاء، واتخاذ القرارات الاستراتيجية."
+                }
+            }
+        ]
     }
     </script>
 
@@ -547,7 +603,7 @@
                 <h2 class="cta-answer">كم يكلفك كل يوم الاستمرار في الاعتقاد بأنه غير ممكن؟</h2>
             </div>
             <div class="cta-buttons">
-                <a href="mailto:contact@zamania.fr?subject=طلب%20تحول%20بالذكاء%20الاصطناعي&body=مرحبًا،%0A%0Aأرغب%20في%20تحويل%20شركتي%20بفضل%20الذكاء%20الاصطناعي.%0A%0Aشكرًا%20لإعادة%20الاتصال%20بي%20لمناقشة%20احتياجاتي."
+                <a href="contact.html"
                     class="btn btn-light cta-primary">✨ أعد الوقت لشركتي!</a>
             </div>
         </div>
@@ -617,6 +673,7 @@
     <script src="../js/faq.js" defer></script>
     <script src="../js/canvas-network.js" defer></script>
     <script src="../js/home-articles.js" defer></script>
+    <script src="../js/analytics.js" defer></script>
 </body>
 
 </html>
