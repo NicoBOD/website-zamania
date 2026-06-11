@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Wed, 10 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 11 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Sécurisez l'intégration de vos recrues : fiabilisez la collecte des documents RH</title>
+            <link>https://zamania.fr/blog/securisez-integration-recrues-collecte-documents-rh.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/securisez-integration-recrues-collecte-documents-rh.html</guid>
+            <description>L'intégration manuelle retarde vos recrues. Automatisez la collecte et le contrôle des documents RH pour accélérer la prise de poste dès le premier jour.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-securisez-integration-recrues-collecte-documents-rh.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Thu, 11 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Accélérez vos signatures : générez des propositions commerciales sur mesure le jour même</title>
             <link>https://zamania.fr/blog/accelerez-signatures-propositions-commerciales.html</link>

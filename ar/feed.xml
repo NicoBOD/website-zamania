@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
         <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
         <language>ar</language>
-        <lastBuildDate>Wed, 10 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 11 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>تأمين دمج الموظفين الجدد: موثوقية جمع مستندات الموارد البشرية</title>
+            <link>https://zamania.fr/ar/blog/securisez-integration-recrues-collecte-documents-rh.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/securisez-integration-recrues-collecte-documents-rh.html</guid>
+            <description>تؤدي الإجراءات اليدوية إلى تأخير انطلاق المواهب. قم بأتمتة جمع والتحقق من مستندات الموارد البشرية لضمان الامتثال القانوني وتسريع الإنتاجية منذ اليوم الأول.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-securisez-integration-recrues-collecte-documents-rh.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Thu, 11 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>تسريع التوقيعات: صياغة عروض تجارية مخصصة في نفس اليوم</title>
             <link>https://zamania.fr/ar/blog/accelerez-signatures-propositions-commerciales.html</link>

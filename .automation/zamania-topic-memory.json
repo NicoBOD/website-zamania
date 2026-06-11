@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-10T15:41:39+02:00",
+  "updated_at": "2026-06-11T12:08:34+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -214,6 +214,30 @@
         "fr": "https://zamania.fr/blog/accelerez-signatures-propositions-commerciales.html",
         "en": "https://zamania.fr/en/blog/accelerez-signatures-propositions-commerciales.html",
         "ar": "https://zamania.fr/ar/blog/accelerez-signatures-propositions-commerciales.html"
+      }
+    },
+    {
+      "slug": "securisez-integration-recrues-collecte-documents-rh",
+      "published_at": "2026-06-11T12:08:24+02:00",
+      "title_fr": "Sécurisez l'intégration de vos recrues : fiabilisez la collecte des documents RH",
+      "summary_fr": "Garantir des dossiers complets avant le premier jour tout en réduisant la charge de travail.",
+      "angle": "L'intégration administrative retarde l'opérationnalité des nouveaux collaborateurs. Automatiser la relance et la vérification des pièces justificatives libère l'équipe RH.",
+      "business_positioning": "Les équipes RH apportent de la valeur sur la culture d'entreprise, pas sur le pointage de documents. L'automatisation protège la conformité légale.",
+      "theme_family": "hr-onboarding-automation",
+      "angle_family": null,
+      "keywords": [
+        "onboarding RH",
+        "automatisation administrative",
+        "collecte documentaire",
+        "conformité",
+        "expérience collaborateur"
+      ],
+      "proposal_date": "2026-06-11",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/securisez-integration-recrues-collecte-documents-rh.html",
+        "en": "https://zamania.fr/en/blog/securisez-integration-recrues-collecte-documents-rh.html",
+        "ar": "https://zamania.fr/ar/blog/securisez-integration-recrues-collecte-documents-rh.html"
       }
     }
   ]

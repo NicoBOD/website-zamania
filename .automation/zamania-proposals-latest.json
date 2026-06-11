@@ -1,32 +1,32 @@
 {
-  "proposal_date": "2026-06-09",
+  "proposal_date": "2026-06-11",
   "proposals": [
     {
       "choice": 1,
-      "title_fr": "Fiabilisez votre pipeline : laissez l'IA mettre à jour votre CRM à partir des échanges clients",
-      "angle": "Connecter un agent IA aux courriels et comptes rendus d'appels pour actualiser les statuts, détecter les signaux de perte et ajuster les prévisions commerciales.",
-      "promise": "Des données de pilotage exactes et des commerciaux focalisés sur la vente.",
-      "business_positioning": "Aligner la réalité terrain avec les tableaux de bord de la direction.",
-      "theme_family": "crm-data-sync",
-      "keywords": ["CRM", "synchronisation", "prévisions commerciales", "pipeline", "données"]
+      "title_fr": "Sécurisez l'intégration de vos recrues : fiabilisez la collecte des documents RH",
+      "angle": "L'intégration administrative retarde l'opérationnalité des nouveaux collaborateurs. Automatiser la relance et la vérification des pièces justificatives libère l'équipe RH.",
+      "promise": "Garantir des dossiers complets avant le premier jour tout en réduisant la charge de travail.",
+      "business_positioning": "Les équipes RH apportent de la valeur sur la culture d'entreprise, pas sur le pointage de documents. L'automatisation protège la conformité légale.",
+      "theme_family": "hr-onboarding-automation",
+      "keywords": ["onboarding RH", "automatisation administrative", "collecte documentaire", "conformité", "expérience collaborateur"]
     },
     {
       "choice": 2,
-      "title_fr": "Accélérez vos signatures : générez des propositions commerciales sur mesure le jour même",
-      "angle": "Analyser les cahiers des charges entrants avec l'IA pour rédiger les propositions commerciales et les clauses contractuelles adaptées.",
-      "promise": "Diviser le temps de réponse aux appels d'offres par dix.",
-      "business_positioning": "Gagner des parts de marché par la réactivité.",
-      "theme_family": "document-processing-quotes",
-      "keywords": ["devis", "propositions", "réactivité", "contrats", "conversion"]
+      "title_fr": "Ne laissez plus vos devis s'endormir : l'automatisation des relances commerciales",
+      "angle": "Les commerciaux envoient des propositions mais ratent le créneau idéal pour la relance. Un agent IA assure un suivi régulier et alerte le vendeur au pic d'engagement du prospect.",
+      "promise": "Augmenter le taux de transformation du pipeline existant sans prospecter davantage.",
+      "business_positioning": "Le chiffre d'affaires se perd dans l'attente post-devis. Un suivi systématique maximise le retour sur l'effort commercial déjà fourni.",
+      "theme_family": "sales-post-quote-followup",
+      "keywords": ["relance commerciale", "suivi de devis", "taux de transformation", "pipeline des ventes", "automatisation commerciale"]
     },
     {
       "choice": 3,
-      "title_fr": "Réussissez vos intégrations RH : orchestrez l'onboarding de vos recrues avec un agent IA",
-      "angle": "Déployer un assistant IA pour guider les nouveaux employés, collecter leurs pièces justificatives et déclencher la création de leurs accès informatiques.",
-      "promise": "Une première journée parfaite pour le collaborateur et un processus fluide pour les équipes.",
-      "business_positioning": "Fidéliser les talents dès l'embauche et sécuriser les opérations internes.",
-      "theme_family": "hr-onboarding-automation",
-      "keywords": ["onboarding RH", "collaborateur", "opérations", "intégration", "talents"]
+      "title_fr": "Accélérez vos clôtures comptables : l'extraction IA des factures fournisseurs",
+      "angle": "La saisie manuelle des factures crée un goulet d'étranglement en fin de mois. Un outil d'IA extrait les données clés et les intègre à l'ERP.",
+      "promise": "Accélérer le traitement des factures et éliminer les erreurs de saisie pour fluidifier les clôtures.",
+      "business_positioning": "Vos experts financiers coûtent cher. L'automatisation de la saisie fiabilise les données financières et raccourcit les délais comptables.",
+      "theme_family": "supplier-invoice-processing",
+      "keywords": ["factures fournisseurs", "clôture comptable", "extraction de données", "intégration ERP", "automatisation financière"]
     }
   ]
 }
