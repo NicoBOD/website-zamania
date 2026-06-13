@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
         <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
         <language>ar</language>
-        <lastBuildDate>Thu, 11 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Sat, 13 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>احم تدفقاتك النقدية: الذكاء الاصطناعي لتسوية فواتير الموردين تلقائيا</title>
+            <link>https://zamania.fr/ar/blog/automatisation-rapprochement-factures-fournisseurs.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/automatisation-rapprochement-factures-fournisseurs.html</guid>
+            <description>يقضي الذكاء الاصطناعي على الاختناقات المالية عبر التحقق التلقائي من الفواتير. قسم دورة الموافقة على ثلاثة وأمن متطلبات رأس المال العامل.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-automatisation-rapprochement-factures-fournisseurs.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sat, 13 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>تأمين دمج الموظفين الجدد: موثوقية جمع مستندات الموارد البشرية</title>
             <link>https://zamania.fr/ar/blog/securisez-integration-recrues-collecte-documents-rh.html</link>

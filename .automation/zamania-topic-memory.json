@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-11T12:08:34+02:00",
+  "updated_at": "2026-06-13T12:07:31+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -238,6 +238,30 @@
         "fr": "https://zamania.fr/blog/securisez-integration-recrues-collecte-documents-rh.html",
         "en": "https://zamania.fr/en/blog/securisez-integration-recrues-collecte-documents-rh.html",
         "ar": "https://zamania.fr/ar/blog/securisez-integration-recrues-collecte-documents-rh.html"
+      }
+    },
+    {
+      "slug": "automatisation-rapprochement-factures-fournisseurs",
+      "published_at": "2026-06-13T12:07:31+02:00",
+      "title_fr": "Protégez votre trésorerie : l'IA pour automatiser le rapprochement des factures fournisseurs",
+      "summary_fr": "Un cycle d'approbation divisé par 3, aucune pénalité de retard, et une visibilité en temps réel sur les sorties de cash.",
+      "angle": "Comment l'IA élimine les goulots d'étranglement financiers en validant automatiquement les factures par rapport aux bons de commande.",
+      "business_positioning": "Finance / Trésorerie - Sécurisation du BFR et réduction des risques d'erreurs comptables.",
+      "theme_family": "finance-invoice-reconciliation",
+      "angle_family": null,
+      "keywords": [
+        "trésorerie",
+        "facturation",
+        "rapprochement",
+        "achats",
+        "BFR"
+      ],
+      "proposal_date": "2026-06-13",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/automatisation-rapprochement-factures-fournisseurs.html",
+        "en": "https://zamania.fr/en/blog/automatisation-rapprochement-factures-fournisseurs.html",
+        "ar": "https://zamania.fr/ar/blog/automatisation-rapprochement-factures-fournisseurs.html"
       }
     }
   ]

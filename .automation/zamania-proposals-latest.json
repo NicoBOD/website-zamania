@@ -1,32 +1,32 @@
 {
-  "proposal_date": "2026-06-11",
+  "proposal_date": "2026-06-13",
   "proposals": [
     {
       "choice": 1,
-      "title_fr": "Sécurisez l'intégration de vos recrues : fiabilisez la collecte des documents RH",
-      "angle": "L'intégration administrative retarde l'opérationnalité des nouveaux collaborateurs. Automatiser la relance et la vérification des pièces justificatives libère l'équipe RH.",
-      "promise": "Garantir des dossiers complets avant le premier jour tout en réduisant la charge de travail.",
-      "business_positioning": "Les équipes RH apportent de la valeur sur la culture d'entreprise, pas sur le pointage de documents. L'automatisation protège la conformité légale.",
-      "theme_family": "hr-onboarding-automation",
-      "keywords": ["onboarding RH", "automatisation administrative", "collecte documentaire", "conformité", "expérience collaborateur"]
+      "title_fr": "Protégez votre trésorerie : l'IA pour automatiser le rapprochement des factures fournisseurs",
+      "angle": "Comment l'IA élimine les goulots d'étranglement financiers en validant automatiquement les factures par rapport aux bons de commande.",
+      "promise": "Un cycle d'approbation divisé par 3, aucune pénalité de retard, et une visibilité en temps réel sur les sorties de cash.",
+      "business_positioning": "Finance / Trésorerie - Sécurisation du BFR et réduction des risques d'erreurs comptables.",
+      "theme_family": "finance-invoice-reconciliation",
+      "keywords": ["trésorerie", "facturation", "rapprochement", "achats", "BFR"]
     },
     {
       "choice": 2,
-      "title_fr": "Ne laissez plus vos devis s'endormir : l'automatisation des relances commerciales",
-      "angle": "Les commerciaux envoient des propositions mais ratent le créneau idéal pour la relance. Un agent IA assure un suivi régulier et alerte le vendeur au pic d'engagement du prospect.",
-      "promise": "Augmenter le taux de transformation du pipeline existant sans prospecter davantage.",
-      "business_positioning": "Le chiffre d'affaires se perd dans l'attente post-devis. Un suivi systématique maximise le retour sur l'effort commercial déjà fourni.",
+      "title_fr": "Ne laissez plus vos devis sans réponse : l'automatisation intelligente des relances commerciales",
+      "angle": "Transformer la corvée de la relance en un processus systématique et personnalisé grâce à l'IA, déclenché au moment optimal.",
+      "promise": "Augmentez votre taux de closing de 15% tout en libérant le temps d'esprit de vos commerciaux pour la négociation.",
+      "business_positioning": "Ventes / Chiffre d'affaires - Maximisation du taux de conversion et productivité de l'équipe de vente.",
       "theme_family": "sales-post-quote-followup",
-      "keywords": ["relance commerciale", "suivi de devis", "taux de transformation", "pipeline des ventes", "automatisation commerciale"]
+      "keywords": ["closing", "relance commerciale", "conversion", "suivi", "ventes"]
     },
     {
       "choice": 3,
-      "title_fr": "Accélérez vos clôtures comptables : l'extraction IA des factures fournisseurs",
-      "angle": "La saisie manuelle des factures crée un goulet d'étranglement en fin de mois. Un outil d'IA extrait les données clés et les intègre à l'ERP.",
-      "promise": "Accélérer le traitement des factures et éliminer les erreurs de saisie pour fluidifier les clôtures.",
-      "business_positioning": "Vos experts financiers coûtent cher. L'automatisation de la saisie fiabilise les données financières et raccourcit les délais comptables.",
-      "theme_family": "supplier-invoice-processing",
-      "keywords": ["factures fournisseurs", "clôture comptable", "extraction de données", "intégration ERP", "automatisation financière"]
+      "title_fr": "De l'accord au lancement en 10 minutes : cadrez vos projets instantanément depuis le brief client",
+      "angle": "L'utilisation de l'IA pour traduire un contrat ou un brief en plan d'action concret, avec jalons et allocation des ressources.",
+      "promise": "Une réactivité qui bluffera vos nouveaux clients et une rentabilité préservée sur toutes vos phases d'avant-projet.",
+      "business_positioning": "Opérations / Delivery - Accélération du time-to-value et protection des marges opérationnelles.",
+      "theme_family": "operations-project-kickoff",
+      "keywords": ["gestion de projet", "delivery", "réactivité", "marge", "kickoff"]
     }
   ]
 }

@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Thu, 11 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Sat, 13 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Protect Your Cash Flow: AI for Automated Supplier Invoice Reconciliation</title>
+            <link>https://zamania.fr/en/blog/automatisation-rapprochement-factures-fournisseurs.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/automatisation-rapprochement-factures-fournisseurs.html</guid>
+            <description>AI eliminates financial bottlenecks by automatically validating invoices. Cut approval cycles by three and secure your working capital requirement.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-automatisation-rapprochement-factures-fournisseurs.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sat, 13 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Secure new hire onboarding: reliable HR document collection</title>
             <link>https://zamania.fr/en/blog/securisez-integration-recrues-collecte-documents-rh.html</link>

@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Thu, 11 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Sat, 13 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Protégez votre trésorerie : l'IA pour automatiser le rapprochement des factures fournisseurs</title>
+            <link>https://zamania.fr/blog/automatisation-rapprochement-factures-fournisseurs.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/automatisation-rapprochement-factures-fournisseurs.html</guid>
+            <description>L'IA élimine les goulots d'étranglement financiers en validant automatiquement les factures. Un cycle d'approbation divisé par 3 et un BFR sécurisé.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-automatisation-rapprochement-factures-fournisseurs.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sat, 13 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Sécurisez l'intégration de vos recrues : fiabilisez la collecte des documents RH</title>
             <link>https://zamania.fr/blog/securisez-integration-recrues-collecte-documents-rh.html</link>
