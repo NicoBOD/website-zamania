@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-13T12:07:31+02:00",
+  "updated_at": "2026-06-15T12:31:20+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -262,6 +262,30 @@
         "fr": "https://zamania.fr/blog/automatisation-rapprochement-factures-fournisseurs.html",
         "en": "https://zamania.fr/en/blog/automatisation-rapprochement-factures-fournisseurs.html",
         "ar": "https://zamania.fr/ar/blog/automatisation-rapprochement-factures-fournisseurs.html"
+      }
+    },
+    {
+      "slug": "ia-tri-automatique-priorisation-demandes-clients",
+      "published_at": "2026-06-15T12:31:20+02:00",
+      "title_fr": "Divisez par trois vos temps de réponse : l'IA pour trier et prioriser vos demandes clients",
+      "summary_fr": "Une résolution plus rapide, aucun message ignoré et une satisfaction client en hausse continue.",
+      "angle": "L'intelligence artificielle analyse, catégorise et route instantanément chaque email ou ticket vers le bon interlocuteur avec le contexte nécessaire.",
+      "business_positioning": "Fidélisation et qualité de service : la réactivité comme avantage concurrentiel.",
+      "theme_family": "support-ticket-routing",
+      "angle_family": null,
+      "keywords": [
+        "Support client",
+        "SLA",
+        "Tri automatique",
+        "Expérience client",
+        "Réactivité"
+      ],
+      "proposal_date": "2026-06-15",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/ia-tri-automatique-priorisation-demandes-clients.html",
+        "en": "https://zamania.fr/en/blog/ia-tri-automatique-priorisation-demandes-clients.html",
+        "ar": "https://zamania.fr/ar/blog/ia-tri-automatique-priorisation-demandes-clients.html"
       }
     }
   ]

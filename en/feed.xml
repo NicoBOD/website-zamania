@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Sat, 13 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 15 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Cut response times by three: AI to sort and prioritize customer requests</title>
+            <link>https://zamania.fr/en/blog/ia-tri-automatique-priorisation-demandes-clients.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/ia-tri-automatique-priorisation-demandes-clients.html</guid>
+            <description>Learn how AI analyzes and routes every customer ticket instantly. Boost responsiveness, build loyalty, and free your teams from manual triage entirely.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-tri-automatique-priorisation-demandes-clients.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Mon, 15 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Protect Your Cash Flow: AI for Automated Supplier Invoice Reconciliation</title>
             <link>https://zamania.fr/en/blog/automatisation-rapprochement-factures-fournisseurs.html</link>

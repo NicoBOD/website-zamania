@@ -1,32 +1,32 @@
 {
-  "proposal_date": "2026-06-13",
+  "proposal_date": "2026-06-15",
   "proposals": [
     {
       "choice": 1,
-      "title_fr": "Protégez votre trésorerie : l'IA pour automatiser le rapprochement des factures fournisseurs",
-      "angle": "Comment l'IA élimine les goulots d'étranglement financiers en validant automatiquement les factures par rapport aux bons de commande.",
-      "promise": "Un cycle d'approbation divisé par 3, aucune pénalité de retard, et une visibilité en temps réel sur les sorties de cash.",
-      "business_positioning": "Finance / Trésorerie - Sécurisation du BFR et réduction des risques d'erreurs comptables.",
-      "theme_family": "finance-invoice-reconciliation",
-      "keywords": ["trésorerie", "facturation", "rapprochement", "achats", "BFR"]
+      "title_fr": "Divisez par trois vos temps de réponse : l'IA pour trier et prioriser vos demandes clients",
+      "angle": "L'intelligence artificielle analyse, catégorise et route instantanément chaque email ou ticket vers le bon interlocuteur avec le contexte nécessaire.",
+      "promise": "Une résolution plus rapide, aucun message ignoré et une satisfaction client en hausse continue.",
+      "business_positioning": "Fidélisation et qualité de service : la réactivité comme avantage concurrentiel.",
+      "theme_family": "support-ticket-routing",
+      "keywords": ["Support client", "SLA", "Tri automatique", "Expérience client", "Réactivité"]
     },
     {
       "choice": 2,
-      "title_fr": "Ne laissez plus vos devis sans réponse : l'automatisation intelligente des relances commerciales",
-      "angle": "Transformer la corvée de la relance en un processus systématique et personnalisé grâce à l'IA, déclenché au moment optimal.",
-      "promise": "Augmentez votre taux de closing de 15% tout en libérant le temps d'esprit de vos commerciaux pour la négociation.",
-      "business_positioning": "Ventes / Chiffre d'affaires - Maximisation du taux de conversion et productivité de l'équipe de vente.",
-      "theme_family": "sales-post-quote-followup",
-      "keywords": ["closing", "relance commerciale", "conversion", "suivi", "ventes"]
+      "title_fr": "Ne laissez plus vos devis dormir : automatisez les relances commerciales au bon moment",
+      "angle": "Au lieu de dépendre de la mémoire des commerciaux, l'IA détecte les devis en attente et déclenche des relances personnalisées selon le profil du prospect.",
+      "promise": "Augmentation du taux de concrétisation et raccourcissement du cycle de vente.",
+      "business_positioning": "Croissance des revenus et vélocité commerciale : maximiser la conversion du pipeline.",
+      "theme_family": "sales-followup-automation",
+      "keywords": ["Ventes", "Relances", "Taux de conversion", "Cycle de vente", "Pipeline"]
     },
     {
       "choice": 3,
-      "title_fr": "De l'accord au lancement en 10 minutes : cadrez vos projets instantanément depuis le brief client",
-      "angle": "L'utilisation de l'IA pour traduire un contrat ou un brief en plan d'action concret, avec jalons et allocation des ressources.",
-      "promise": "Une réactivité qui bluffera vos nouveaux clients et une rentabilité préservée sur toutes vos phases d'avant-projet.",
-      "business_positioning": "Opérations / Delivery - Accélération du time-to-value et protection des marges opérationnelles.",
-      "theme_family": "operations-project-kickoff",
-      "keywords": ["gestion de projet", "delivery", "réactivité", "marge", "kickoff"]
+      "title_fr": "De l'oral à l'action : l'IA pour transformer vos réunions stratégiques en exécution immédiate",
+      "angle": "L'IA ne se contente pas de retranscrire les échanges : elle extrait les décisions, crée les tâches dans vos outils de gestion et assigne les responsabilités.",
+      "promise": "Fin de la confusion post-réunion, un alignement parfait de l'équipe et une exécution sans faille.",
+      "business_positioning": "Gouvernance et excellence opérationnelle : s'assurer que les décisions se transforment en résultats.",
+      "theme_family": "management-meeting-tracking",
+      "keywords": ["Gouvernance", "Plan d'action", "Exécution", "Direction", "Alignement"]
     }
   ]
 }

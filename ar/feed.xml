@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
         <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
         <language>ar</language>
-        <lastBuildDate>Sat, 13 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 15 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>خفض أوقات الاستجابة إلى الثلث: الذكاء الاصطناعي لفرز طلبات عملائك</title>
+            <link>https://zamania.fr/ar/blog/ia-tri-automatique-priorisation-demandes-clients.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/ia-tri-automatique-priorisation-demandes-clients.html</guid>
+            <description>اكتشف كيف يحلل الذكاء الاصطناعي كل تذكرة للعملاء ويوجهها فورا. قم بزيادة الاستجابة، وبناء الولاء، وتحرير فرقك بالكامل من الفرز اليدوي.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-tri-automatique-priorisation-demandes-clients.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Mon, 15 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>احم تدفقاتك النقدية: الذكاء الاصطناعي لتسوية فواتير الموردين تلقائيا</title>
             <link>https://zamania.fr/ar/blog/automatisation-rapprochement-factures-fournisseurs.html</link>

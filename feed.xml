@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Sat, 13 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 15 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Divisez par trois vos temps de réponse : l'IA pour trier et prioriser vos demandes clients</title>
+            <link>https://zamania.fr/blog/ia-tri-automatique-priorisation-demandes-clients.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/ia-tri-automatique-priorisation-demandes-clients.html</guid>
+            <description>L'IA analyse et route chaque ticket client instantanément. Gagnez en réactivité, fidélisez vos clients et libérez vos équipes du tri manuel.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-tri-automatique-priorisation-demandes-clients.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Mon, 15 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Protégez votre trésorerie : l'IA pour automatiser le rapprochement des factures fournisseurs</title>
             <link>https://zamania.fr/blog/automatisation-rapprochement-factures-fournisseurs.html</link>
