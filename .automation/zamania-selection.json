@@ -1,19 +1,13 @@
 {
-  "project": "zamania-blog",
   "status": "published",
-  "selected_at": "2026-05-31T10:06:55+02:00",
-  "source_session_id": "20260531_100159_ac80cb41",
-  "proposal_job_id": "d02ae2aeb3ac",
-  "publish_job_id": "aa8eec75d6f0",
   "choice": "2",
-  "title_fr": "Agents IA : le nouveau levier de productivit\u00e9 pour les entreprises qui veulent faire plus sans recruter plus",
-  "summary_fr": "Expliquer simplement ce qu\u2019est un agent IA, ce qu\u2019il peut faire aujourd\u2019hui, et pourquoi ce n\u2019est plus un sujet tech mais un sujet de rentabilit\u00e9 pour les d\u00e9cideurs.",
-  "published_at": "2026-06-10T15:41:24.529222+02:00",
-  "slug": "accelerez-signatures-propositions-commerciales",
+  "proposal_date": "2026-06-17",
+  "selected_at": "2026-06-17",
+  "published_at": "2026-06-17T12:04:57Z",
+  "slug": "systematiser-relances-post-devis-agent-ia",
   "links": {
-    "fr": "https://zamania.fr/blog/accelerez-signatures-propositions-commerciales.html",
-    "en": "https://zamania.fr/en/blog/accelerez-signatures-propositions-commerciales.html",
-    "ar": "https://zamania.fr/ar/blog/accelerez-signatures-propositions-commerciales.html"
-  },
-  "proposal_date": "2026-06-09"
+    "fr": "https://zamania.fr/blog/systematiser-relances-post-devis-agent-ia.html",
+    "en": "https://zamania.fr/en/blog/systematiser-relances-post-devis-agent-ia.html",
+    "ar": "https://zamania.fr/ar/blog/systematiser-relances-post-devis-agent-ia.html"
+  }
 }

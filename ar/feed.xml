@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
         <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
         <language>ar</language>
-        <lastBuildDate>Mon, 15 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>لا تدع إيراداتك تتبخر: نظّم متابعة عروض الأسعار بشكل منهجي</title>
+            <link>https://zamania.fr/ar/blog/systematiser-relances-post-devis-agent-ia.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/systematiser-relances-post-devis-agent-ia.html</guid>
+            <description>غياب المتابعة يضر بمبيعاتك. اكتشف كيف يقوم وكيل الذكاء الاصطناعي بأتمتة متابعة عروض الأسعار لتعزيز معدلات التحويل بشكل ملحوظ دون أي جهد يدوي إضافي من فريقك.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-systematiser-relances-post-devis-agent-ia.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 17 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>خفض أوقات الاستجابة إلى الثلث: الذكاء الاصطناعي لفرز طلبات عملائك</title>
             <link>https://zamania.fr/ar/blog/ia-tri-automatique-priorisation-demandes-clients.html</link>

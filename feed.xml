@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Mon, 15 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Ne laissez plus de chiffre d'affaires s'évaporer : systématisez vos relances post-devis</title>
+            <link>https://zamania.fr/blog/systematiser-relances-post-devis-agent-ia.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/systematiser-relances-post-devis-agent-ia.html</guid>
+            <description>Le manque de suivi tue vos ventes. Découvrez comment un agent IA automatise vos relances post-devis pour booster votre taux de conversion sans effort manuel.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-systematiser-relances-post-devis-agent-ia.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 17 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Divisez par trois vos temps de réponse : l'IA pour trier et prioriser vos demandes clients</title>
             <link>https://zamania.fr/blog/ia-tri-automatique-priorisation-demandes-clients.html</link>

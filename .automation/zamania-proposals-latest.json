@@ -1,32 +1,32 @@
 {
-  "proposal_date": "2026-06-15",
+  "proposal_date": "2026-06-17",
   "proposals": [
     {
-      "choice": 1,
-      "title_fr": "Divisez par trois vos temps de réponse : l'IA pour trier et prioriser vos demandes clients",
-      "angle": "L'intelligence artificielle analyse, catégorise et route instantanément chaque email ou ticket vers le bon interlocuteur avec le contexte nécessaire.",
-      "promise": "Une résolution plus rapide, aucun message ignoré et une satisfaction client en hausse continue.",
-      "business_positioning": "Fidélisation et qualité de service : la réactivité comme avantage concurrentiel.",
-      "theme_family": "support-ticket-routing",
-      "keywords": ["Support client", "SLA", "Tri automatique", "Expérience client", "Réactivité"]
+      "choice": "1",
+      "title_fr": "Pilotez avec une vision claire : l'IA pour générer vos synthèses dirigeant en temps réel",
+      "angle": "Comment centraliser et synthétiser les données dispersées (ventes, ops, finance) sans passer des heures sur Excel.",
+      "promise": "Obtenir une synthèse stratégique fiable chaque semaine pour des décisions rapides.",
+      "business_positioning": "ROI par le temps gagné sur le reporting et l'anticipation des risques business.",
+      "theme_family": "executive-reporting-automation",
+      "keywords": ["reporting", "synthèse", "pilotage", "décision", "comité de direction", "gain de temps"]
     },
     {
-      "choice": 2,
-      "title_fr": "Ne laissez plus vos devis dormir : automatisez les relances commerciales au bon moment",
-      "angle": "Au lieu de dépendre de la mémoire des commerciaux, l'IA détecte les devis en attente et déclenche des relances personnalisées selon le profil du prospect.",
-      "promise": "Augmentation du taux de concrétisation et raccourcissement du cycle de vente.",
-      "business_positioning": "Croissance des revenus et vélocité commerciale : maximiser la conversion du pipeline.",
+      "choice": "2",
+      "title_fr": "Ne laissez plus de chiffre d'affaires s'évaporer : systématisez vos relances post-devis",
+      "angle": "Le manque de relances tue la conversion. Un agent IA s'assure que chaque devis est suivi avec le bon message.",
+      "promise": "Augmenter le taux de conversion des propositions commerciales sans surcharger vos équipes.",
+      "business_positioning": "Hausse directe du CA et optimisation du temps effectif de vente.",
       "theme_family": "sales-followup-automation",
-      "keywords": ["Ventes", "Relances", "Taux de conversion", "Cycle de vente", "Pipeline"]
+      "keywords": ["relance commerciale", "devis", "conversion", "chiffre d'affaires", "suivi client", "agent IA"]
     },
     {
-      "choice": 3,
-      "title_fr": "De l'oral à l'action : l'IA pour transformer vos réunions stratégiques en exécution immédiate",
-      "angle": "L'IA ne se contente pas de retranscrire les échanges : elle extrait les décisions, crée les tâches dans vos outils de gestion et assigne les responsabilités.",
-      "promise": "Fin de la confusion post-réunion, un alignement parfait de l'équipe et une exécution sans faille.",
-      "business_positioning": "Gouvernance et excellence opérationnelle : s'assurer que les décisions se transforment en résultats.",
-      "theme_family": "management-meeting-tracking",
-      "keywords": ["Gouvernance", "Plan d'action", "Exécution", "Direction", "Alignement"]
+      "choice": "3",
+      "title_fr": "Arrivez toujours préparé : l'IA qui rédige vos notes de briefing avant chaque rendez-vous",
+      "angle": "Pré-analyser l'entreprise et l'interlocuteur pour fournir un résumé stratégique clé en main avant chaque appel.",
+      "promise": "Fournir les arguments clés à vos commerciaux pour améliorer la pertinence de leur accroche.",
+      "business_positioning": "Amélioration du taux de closing et gain de productivité pour les équipes de vente.",
+      "theme_family": "sales-meeting-prep",
+      "keywords": ["préparation rendez-vous", "briefing", "prospection", "closing", "efficacité commerciale", "ventes"]
     }
   ]
 }

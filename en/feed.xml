@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Mon, 15 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Don't Let Revenue Evaporate: Systematize Your Post-Quote Follow-ups</title>
+            <link>https://zamania.fr/en/blog/systematiser-relances-post-devis-agent-ia.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/systematiser-relances-post-devis-agent-ia.html</guid>
+            <description>Lack of follow-up kills sales. Discover how an AI agent automates your post-quote follow-ups to boost conversion rates without any extra manual effort.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-systematiser-relances-post-devis-agent-ia.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 17 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Cut response times by three: AI to sort and prioritize customer requests</title>
             <link>https://zamania.fr/en/blog/ia-tri-automatique-priorisation-demandes-clients.html</link>

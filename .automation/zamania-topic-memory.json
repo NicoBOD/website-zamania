@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-15T12:31:20+02:00",
+  "updated_at": "2026-06-17T14:05:19+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -286,6 +286,31 @@
         "fr": "https://zamania.fr/blog/ia-tri-automatique-priorisation-demandes-clients.html",
         "en": "https://zamania.fr/en/blog/ia-tri-automatique-priorisation-demandes-clients.html",
         "ar": "https://zamania.fr/ar/blog/ia-tri-automatique-priorisation-demandes-clients.html"
+      }
+    },
+    {
+      "slug": "systematiser-relances-post-devis-agent-ia",
+      "published_at": "2026-06-17T12:04:57Z",
+      "title_fr": "Ne laissez plus de chiffre d'affaires s'évaporer : systématisez vos relances post-devis",
+      "summary_fr": "Augmenter le taux de conversion des propositions commerciales sans surcharger vos équipes.",
+      "angle": "Le manque de relances tue la conversion. Un agent IA s'assure que chaque devis est suivi avec le bon message.",
+      "business_positioning": "Hausse directe du CA et optimisation du temps effectif de vente.",
+      "theme_family": "sales-followup-automation",
+      "angle_family": null,
+      "keywords": [
+        "relance commerciale",
+        "devis",
+        "conversion",
+        "chiffre d'affaires",
+        "suivi client",
+        "agent IA"
+      ],
+      "proposal_date": "2026-06-17",
+      "choice": "2",
+      "links": {
+        "fr": "https://zamania.fr/blog/systematiser-relances-post-devis-agent-ia.html",
+        "en": "https://zamania.fr/en/blog/systematiser-relances-post-devis-agent-ia.html",
+        "ar": "https://zamania.fr/ar/blog/systematiser-relances-post-devis-agent-ia.html"
       }
     }
   ]
