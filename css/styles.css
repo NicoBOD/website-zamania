@@ -1146,18 +1146,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Bouton refuser */
-.cookie-btn-decline {
-    background: transparent;
-    color: var(--text-secondary);
-    border: 1px solid var(--border);
-}
-
-.cookie-btn-decline:hover {
-    background: var(--background);
-    color: var(--text-primary);
-}
-
 
 /* ==========================================
    16. ANIMATIONS AU SCROLL
