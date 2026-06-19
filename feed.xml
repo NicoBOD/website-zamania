@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Wed, 17 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Fri, 19 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Pilotez avec certitude : l’IA pour transformer vos données éclatées en synthèses exécutives</title>
+            <link>https://zamania.fr/blog/ia-automatisation-reporting-syntheses-executives.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/ia-automatisation-reporting-syntheses-executives.html</guid>
+            <description>Mettez fin au décalage entre opérationnel et décisionnel. Découvrez comment l’IA compile automatiquement vos reportings complexes pour un pilotage réactif.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-automatisation-reporting-syntheses-executives.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Fri, 19 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Ne laissez plus de chiffre d'affaires s'évaporer : systématisez vos relances post-devis</title>
             <link>https://zamania.fr/blog/systematiser-relances-post-devis-agent-ia.html</link>

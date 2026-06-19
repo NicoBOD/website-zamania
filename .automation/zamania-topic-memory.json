@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-17T14:05:19+02:00",
+  "updated_at": "2026-06-19T12:08:36+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -311,6 +311,31 @@
         "fr": "https://zamania.fr/blog/systematiser-relances-post-devis-agent-ia.html",
         "en": "https://zamania.fr/en/blog/systematiser-relances-post-devis-agent-ia.html",
         "ar": "https://zamania.fr/ar/blog/systematiser-relances-post-devis-agent-ia.html"
+      }
+    },
+    {
+      "slug": "ia-automatisation-reporting-syntheses-executives",
+      "published_at": "2026-06-19T12:08:36+02:00",
+      "title_fr": "Pilotez avec certitude : l'IA pour transformer vos données éclatées en synthèses exécutives",
+      "summary_fr": "Obtenir une vision claire et instantanée de l'activité pour ajuster la stratégie sans attendre les bilans mensuels.",
+      "angle": "Mettre fin au décalage entre l'opérationnel et le décisionnel en automatisant la compilation des reportings complexes.",
+      "business_positioning": "Pilotage stratégique et réactivité",
+      "theme_family": "executive-reporting-automation",
+      "angle_family": null,
+      "keywords": [
+        "décisionnel",
+        "reporting",
+        "pilotage",
+        "synthèse",
+        "stratégie",
+        "données"
+      ],
+      "proposal_date": "2026-06-19",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/ia-automatisation-reporting-syntheses-executives.html",
+        "en": "https://zamania.fr/en/blog/ia-automatisation-reporting-syntheses-executives.html",
+        "ar": "https://zamania.fr/ar/blog/ia-automatisation-reporting-syntheses-executives.html"
       }
     }
   ]

@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
         <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
         <language>ar</language>
-        <lastBuildDate>Wed, 17 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Fri, 19 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>قم بالقيادة بثقة: الذكاء الاصطناعي لتحويل بياناتك المشتتة إلى ملخصات تنفيذية</title>
+            <link>https://zamania.fr/ar/blog/ia-automatisation-reporting-syntheses-executives.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/ia-automatisation-reporting-syntheses-executives.html</guid>
+            <description>أنهِ الفجوة بين العمليات والقرارات. اكتشف كيف يقوم الذكاء الاصطناعي بتجميع تقاريرك المعقدة تلقائيا من أجل إدارة استراتيجية تفاعلية وسريعة.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-automatisation-reporting-syntheses-executives.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Fri, 19 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>لا تدع إيراداتك تتبخر: نظّم متابعة عروض الأسعار بشكل منهجي</title>
             <link>https://zamania.fr/ar/blog/systematiser-relances-post-devis-agent-ia.html</link>
