@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Fri, 19 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Sun, 21 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Unify Client Information: Automatically Sync Your Business Tools and CRM</title>
+            <link>https://zamania.fr/en/blog/unifiez-information-client-synchronisation-crm-outils-metier.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/unifiez-information-client-synchronisation-crm-outils-metier.html</guid>
+            <description>Say goodbye to information silos. Connect your CRM, ERP, and billing tools to give your teams a comprehensive, real-time view of your clients.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-unifiez-information-client-synchronisation-crm-outils-metier.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sun, 21 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Drive with Certainty: AI to Transform Scattered Data into Executive Summaries</title>
             <link>https://zamania.fr/en/blog/ia-automatisation-reporting-syntheses-executives.html</link>

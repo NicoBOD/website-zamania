@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Fri, 19 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Sun, 21 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Unifiez l'information client : synchronisez automatiquement vos outils métier et votre CRM</title>
+            <link>https://zamania.fr/blog/unifiez-information-client-synchronisation-crm-outils-metier.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/unifiez-information-client-synchronisation-crm-outils-metier.html</guid>
+            <description>Fini les silos d'information. Connectez votre CRM, votre ERP et vos outils de facturation pour offrir à vos équipes une vue client complète en temps réel.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-unifiez-information-client-synchronisation-crm-outils-metier.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sun, 21 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Pilotez avec certitude : l’IA pour transformer vos données éclatées en synthèses exécutives</title>
             <link>https://zamania.fr/blog/ia-automatisation-reporting-syntheses-executives.html</link>

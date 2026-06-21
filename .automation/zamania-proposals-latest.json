@@ -1,32 +1,47 @@
 {
-  "proposal_date": "2026-06-19",
+  "proposal_date": "2026-06-21",
   "proposals": [
     {
-      "choice": 1,
-      "title_fr": "Pilotez avec certitude : l'IA pour transformer vos données éclatées en synthèses exécutives",
-      "angle": "Mettre fin au décalage entre l'opérationnel et le décisionnel en automatisant la compilation des reportings complexes.",
-      "promise": "Obtenir une vision claire et instantanée de l'activité pour ajuster la stratégie sans attendre les bilans mensuels.",
-      "business_positioning": "Pilotage stratégique et réactivité",
-      "theme_family": "executive-reporting-automation",
-      "keywords": ["décisionnel", "reporting", "pilotage", "synthèse", "stratégie", "données"]
+      "choice": "1",
+      "title_fr": "Unifiez l'information client : synchronisez automatiquement vos outils métier et votre CRM",
+      "angle": "Les silos d'information freinent la réactivité. En connectant vos systèmes (CRM, ERP, facturation) via l'automatisation, chaque collaborateur accède à la bonne information au bon moment, sans fouiller.",
+      "promise": "Une vue client 360° en temps réel, des processus fluides et une prise de décision accélérée.",
+      "business_positioning": "Alignement marketing-ventes-opérations, valorisation des données existantes.",
+      "theme_family": "crm-erp-synchronization",
+      "keywords": [
+        "synchronisation des données",
+        "silos d'information",
+        "vue 360",
+        "alignement opérationnel"
+      ]
     },
     {
-      "choice": 2,
-      "title_fr": "Maximisez vos taux de conversion : l'IA pour pré-qualifier vos prospects 24/7",
-      "angle": "Concentrer les efforts de l'équipe commerciale uniquement sur les opportunités à forte valeur ajoutée en déléguant le premier filtre.",
-      "promise": "Augmenter le volume d'affaires signées en éliminant le temps perdu sur des leads froids ou hors cible.",
-      "business_positioning": "Performance commerciale et optimisation du temps de vente",
-      "theme_family": "sales-lead-qualification",
-      "keywords": ["conversion", "qualification", "ventes", "prospects", "pipeline", "performance"]
+      "choice": "2",
+      "title_fr": "Focalisez vos commerciaux sur l'essentiel : qualifiez vos leads entrants à l'aide d'agents IA",
+      "angle": "Les équipes commerciales s'épuisent sur des prospects non matures. Un agent IA peut engager le premier contact, qualifier le besoin et planifier le rendez-vous uniquement pour les opportunités viables.",
+      "promise": "Une augmentation du taux de transformation et des équipes dédiées uniquement à la négociation.",
+      "business_positioning": "Accélération du cycle de vente, optimisation du pipeline commercial.",
+      "theme_family": "lead-qualification-automation",
+      "keywords": [
+        "qualification de leads",
+        "conversion",
+        "pipeline commercial",
+        "agent conversationnel"
+      ]
     },
     {
-      "choice": 3,
-      "title_fr": "Garantissez vos engagements : l'IA pour anticiper les goulots d'étranglement opérationnels",
-      "angle": "Sécuriser la satisfaction client en détectant les risques de retard opérationnel avant qu'ils n'impactent la livraison finale.",
-      "promise": "Réduire les pénalités et fidéliser les clients clés grâce à une supervision prédictive des flux de travail.",
-      "business_positioning": "Qualité de service et rétention client",
-      "theme_family": "operations-sla-monitoring",
-      "keywords": ["opérations", "délais", "qualité", "anticipation", "livraison", "satisfaction"]
+      "choice": "3",
+      "title_fr": "Protégez le temps de vos experts : un agent IA interne pour répondre aux questions opérationnelles",
+      "angle": "Vos collaborateurs clés sont souvent interrompus pour des demandes d'informations internes. Un agent IA connecté à votre base de connaissances répond instantanément aux équipes sur les procédures et historiques.",
+      "promise": "Un gain de temps massif pour les profils seniors et une autonomie immédiate pour les autres.",
+      "business_positioning": "Gestion des connaissances, optimisation des ressources clés et efficacité opérationnelle.",
+      "theme_family": "internal-knowledge-base-agent",
+      "keywords": [
+        "gestion des connaissances",
+        "support interne",
+        "productivité des experts",
+        "autonomie"
+      ]
     }
   ]
 }

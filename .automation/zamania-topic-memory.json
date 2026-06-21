@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-19T12:08:36+02:00",
+  "updated_at": "2026-06-21T12:05:51+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -336,6 +336,29 @@
         "fr": "https://zamania.fr/blog/ia-automatisation-reporting-syntheses-executives.html",
         "en": "https://zamania.fr/en/blog/ia-automatisation-reporting-syntheses-executives.html",
         "ar": "https://zamania.fr/ar/blog/ia-automatisation-reporting-syntheses-executives.html"
+      }
+    },
+    {
+      "slug": "unifiez-information-client-synchronisation-crm-outils-metier",
+      "published_at": "2026-06-21T12:05:51+02:00",
+      "title_fr": "Unifiez l'information client : synchronisez automatiquement vos outils métier et votre CRM",
+      "summary_fr": "Une vue client 360° en temps réel, des processus fluides et une prise de décision accélérée.",
+      "angle": "Les silos d'information freinent la réactivité. En connectant vos systèmes (CRM, ERP, facturation) via l'automatisation, chaque collaborateur accède à la bonne information au bon moment, sans fouiller.",
+      "business_positioning": "Alignement marketing-ventes-opérations, valorisation des données existantes.",
+      "theme_family": "crm-erp-synchronization",
+      "angle_family": null,
+      "keywords": [
+        "synchronisation des données",
+        "silos d'information",
+        "vue 360",
+        "alignement opérationnel"
+      ],
+      "proposal_date": "2026-06-21",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/unifiez-information-client-synchronisation-crm-outils-metier.html",
+        "en": "https://zamania.fr/en/blog/unifiez-information-client-synchronisation-crm-outils-metier.html",
+        "ar": "https://zamania.fr/ar/blog/unifiez-information-client-synchronisation-crm-outils-metier.html"
       }
     }
   ]
