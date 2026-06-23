@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Sun, 21 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 23 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Accelerate RFP Processing with AI to Boost Your Sales</title>
+            <link>https://zamania.fr/en/blog/accelerer-traitement-appels-offres-ia.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/accelerer-traitement-appels-offres-ia.html</guid>
+            <description>Shorten your sales cycle. Discover how AI extracts requirements from specifications and automates the drafting of your business proposals.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-accelerer-traitement-appels-offres-ia.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Tue, 23 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Unify Client Information: Automatically Sync Your Business Tools and CRM</title>
             <link>https://zamania.fr/en/blog/unifiez-information-client-synchronisation-crm-outils-metier.html</link>

@@ -1,47 +1,32 @@
 {
-  "proposal_date": "2026-06-21",
+  "proposal_date": "2026-06-23",
   "proposals": [
     {
-      "choice": "1",
-      "title_fr": "Unifiez l'information client : synchronisez automatiquement vos outils métier et votre CRM",
-      "angle": "Les silos d'information freinent la réactivité. En connectant vos systèmes (CRM, ERP, facturation) via l'automatisation, chaque collaborateur accède à la bonne information au bon moment, sans fouiller.",
-      "promise": "Une vue client 360° en temps réel, des processus fluides et une prise de décision accélérée.",
-      "business_positioning": "Alignement marketing-ventes-opérations, valorisation des données existantes.",
-      "theme_family": "crm-erp-synchronization",
-      "keywords": [
-        "synchronisation des données",
-        "silos d'information",
-        "vue 360",
-        "alignement opérationnel"
-      ]
+      "choice": 1,
+      "title_fr": "Accélérez le traitement des appels d'offres : l'IA pour extraire les exigences et préparer les propositions",
+      "angle": "Raccourcir le cycle de vente sur des projets complexes en automatisant l'analyse des cahiers des charges et l'ébauche de réponse.",
+      "promise": "Augmenter le taux de participation aux appels d'offres en divisant par deux le temps de préparation.",
+      "business_positioning": "Croissance et conquête de nouveaux marchés.",
+      "theme_family": "sales-rfp-automation",
+      "keywords": ["appel d'offres", "pré-ventes", "analyse de cahier des charges", "croissance", "agent IA"]
     },
     {
-      "choice": "2",
-      "title_fr": "Focalisez vos commerciaux sur l'essentiel : qualifiez vos leads entrants à l'aide d'agents IA",
-      "angle": "Les équipes commerciales s'épuisent sur des prospects non matures. Un agent IA peut engager le premier contact, qualifier le besoin et planifier le rendez-vous uniquement pour les opportunités viables.",
-      "promise": "Une augmentation du taux de transformation et des équipes dédiées uniquement à la négociation.",
-      "business_positioning": "Accélération du cycle de vente, optimisation du pipeline commercial.",
-      "theme_family": "lead-qualification-automation",
-      "keywords": [
-        "qualification de leads",
-        "conversion",
-        "pipeline commercial",
-        "agent conversationnel"
-      ]
+      "choice": 2,
+      "title_fr": "Sécurisez vos approvisionnements : détectez proactivement les ruptures de stocks grâce aux agents IA",
+      "angle": "Utiliser l'analyse prédictive et la surveillance des commandes fournisseurs pour alerter les opérations avant l'impact client.",
+      "promise": "Réduire les pénalités de retard et fiabiliser la chaîne d'approvisionnement.",
+      "business_positioning": "Qualité de service et maîtrise des risques opérationnels.",
+      "theme_family": "supply-chain-prediction",
+      "keywords": ["supply chain", "approvisionnement", "rupture de stock", "pénalité de retard", "anticipation"]
     },
     {
-      "choice": "3",
-      "title_fr": "Protégez le temps de vos experts : un agent IA interne pour répondre aux questions opérationnelles",
-      "angle": "Vos collaborateurs clés sont souvent interrompus pour des demandes d'informations internes. Un agent IA connecté à votre base de connaissances répond instantanément aux équipes sur les procédures et historiques.",
-      "promise": "Un gain de temps massif pour les profils seniors et une autonomie immédiate pour les autres.",
-      "business_positioning": "Gestion des connaissances, optimisation des ressources clés et efficacité opérationnelle.",
-      "theme_family": "internal-knowledge-base-agent",
-      "keywords": [
-        "gestion des connaissances",
-        "support interne",
-        "productivité des experts",
-        "autonomie"
-      ]
+      "choice": 3,
+      "title_fr": "Fini la perte de savoir-faire : donnez à vos équipes l'accès immédiat à toute votre expertise technique",
+      "angle": "Déployer un agent IA interne capable de retrouver la bonne procédure ou norme de qualité enfouie dans des milliers de documents.",
+      "promise": "Réduire le temps passé à chercher l'information et éviter les erreurs coûteuses sur le terrain.",
+      "business_positioning": "Productivité opérationnelle et qualité de service.",
+      "theme_family": "internal-knowledge-retrieval",
+      "keywords": ["base documentaire", "assistant interne", "conformité", "partage de connaissances", "gain de temps"]
     }
   ]
 }

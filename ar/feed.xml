@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
         <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
         <language>ar</language>
-        <lastBuildDate>Sun, 21 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 23 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>تسريع معالجة المناقصات باستخدام الذكاء الاصطناعي</title>
+            <link>https://zamania.fr/ar/blog/accelerer-traitement-appels-offres-ia.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/accelerer-traitement-appels-offres-ia.html</guid>
+            <description>قلص دورة مبيعاتك بفعالية. اكتشف كيف يستخرج الذكاء الاصطناعي المتطلبات من دفاتر الشروط المعقدة ويقوم بأتمتة صياغة مقترحاتك التجارية لزيادة نموك.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-accelerer-traitement-appels-offres-ia.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Tue, 23 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>توحيد معلومات العملاء: مزامنة أدوات العمل وإدارة علاقات العملاء تلقائيا</title>
             <link>https://zamania.fr/ar/blog/unifiez-information-client-synchronisation-crm-outils-metier.html</link>

@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-21T12:05:51+02:00",
+  "updated_at": "2026-06-23T12:07:12+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -359,6 +359,30 @@
         "fr": "https://zamania.fr/blog/unifiez-information-client-synchronisation-crm-outils-metier.html",
         "en": "https://zamania.fr/en/blog/unifiez-information-client-synchronisation-crm-outils-metier.html",
         "ar": "https://zamania.fr/ar/blog/unifiez-information-client-synchronisation-crm-outils-metier.html"
+      }
+    },
+    {
+      "slug": "accelerer-traitement-appels-offres-ia",
+      "published_at": "2026-06-23T12:07:08+02:00",
+      "title_fr": "Accélérez le traitement des appels d'offres : l'IA pour extraire les exigences et préparer les propositions",
+      "summary_fr": "Augmenter le taux de participation aux appels d'offres en divisant par deux le temps de préparation.",
+      "angle": "Raccourcir le cycle de vente sur des projets complexes en automatisant l'analyse des cahiers des charges et l'ébauche de réponse.",
+      "business_positioning": "Croissance et conquête de nouveaux marchés.",
+      "theme_family": "sales-rfp-automation",
+      "angle_family": null,
+      "keywords": [
+        "appel d'offres",
+        "pré-ventes",
+        "analyse de cahier des charges",
+        "croissance",
+        "agent IA"
+      ],
+      "proposal_date": "2026-06-23",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/accelerer-traitement-appels-offres-ia.html",
+        "en": "https://zamania.fr/en/blog/accelerer-traitement-appels-offres-ia.html",
+        "ar": "https://zamania.fr/ar/blog/accelerer-traitement-appels-offres-ia.html"
       }
     }
   ]

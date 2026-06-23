@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Sun, 21 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 23 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Accélérez le traitement des appels d'offres avec l'IA</title>
+            <link>https://zamania.fr/blog/accelerer-traitement-appels-offres-ia.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/accelerer-traitement-appels-offres-ia.html</guid>
+            <description>Raccourcissez votre cycle de vente. Découvrez comment l'IA extrait les exigences des cahiers des charges et automatise l'ébauche de vos propositions.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-accelerer-traitement-appels-offres-ia.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Tue, 23 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Unifiez l'information client : synchronisez automatiquement vos outils métier et votre CRM</title>
             <link>https://zamania.fr/blog/unifiez-information-client-synchronisation-crm-outils-metier.html</link>
