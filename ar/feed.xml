@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
         <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
         <language>ar</language>
-        <lastBuildDate>Tue, 23 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 25 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>تبسيط دمج المواهب: إدارة الإعداد باستخدام وكيل موارد بشرية افتراضي</title>
+            <link>https://zamania.fr/ar/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</guid>
+            <description>قم بتقليل الوقت الإداري لعمليات الإعداد. اكتشف كيف يدير وكيل افتراضي دمج الموظفين ويؤمن جمع المستندات بكفاءة.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-fluidifiez-integration-onboarding-rh-agent-virtuel.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Thu, 25 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>تسريع معالجة المناقصات باستخدام الذكاء الاصطناعي</title>
             <link>https://zamania.fr/ar/blog/accelerer-traitement-appels-offres-ia.html</link>

@@ -1,32 +1,50 @@
 {
-  "proposal_date": "2026-06-23",
+  "proposal_date": "2026-06-25",
   "proposals": [
     {
       "choice": 1,
-      "title_fr": "Accélérez le traitement des appels d'offres : l'IA pour extraire les exigences et préparer les propositions",
-      "angle": "Raccourcir le cycle de vente sur des projets complexes en automatisant l'analyse des cahiers des charges et l'ébauche de réponse.",
-      "promise": "Augmenter le taux de participation aux appels d'offres en divisant par deux le temps de préparation.",
-      "business_positioning": "Croissance et conquête de nouveaux marchés.",
-      "theme_family": "sales-rfp-automation",
-      "keywords": ["appel d'offres", "pré-ventes", "analyse de cahier des charges", "croissance", "agent IA"]
+      "title_fr": "Fluidifiez l'intégration de vos talents : orchestrez l'onboarding avec un agent virtuel RH",
+      "angle": "Les allers-retours pour constituer un dossier et la charge liée à l'accueil d'un collaborateur fragmentent le temps des équipes ressources humaines et freinent l'intégration.",
+      "promise": "Piloter automatiquement les différentes étapes d'accueil, vérifier les pièces fournies et répondre aux interrogations fréquentes en temps réel.",
+      "business_positioning": "Réduction du délai de productivité (Time-to-Productivity), amélioration de la marque employeur et recentrage des RH sur le relationnel.",
+      "theme_family": "hr-onboarding-automation",
+      "keywords": [
+        "onboarding RH",
+        "agent virtuel",
+        "expérience collaborateur",
+        "productivité RH",
+        "intégration"
+      ]
     },
     {
       "choice": 2,
-      "title_fr": "Sécurisez vos approvisionnements : détectez proactivement les ruptures de stocks grâce aux agents IA",
-      "angle": "Utiliser l'analyse prédictive et la surveillance des commandes fournisseurs pour alerter les opérations avant l'impact client.",
-      "promise": "Réduire les pénalités de retard et fiabiliser la chaîne d'approvisionnement.",
-      "business_positioning": "Qualité de service et maîtrise des risques opérationnels.",
-      "theme_family": "supply-chain-prediction",
-      "keywords": ["supply chain", "approvisionnement", "rupture de stock", "pénalité de retard", "anticipation"]
+      "title_fr": "Ne perdez plus d'opportunités : qualifiez 100 % de vos leads entrants en moins de 5 minutes",
+      "angle": "La réactivité face aux sollicitations entrantes est déterminante. Un traitement retardé entraîne une perte d'attention du prospect et des délais qui tuent la vente.",
+      "promise": "Filtrer, catégoriser et qualifier les contacts de manière asynchrone pour ne transmettre aux commerciaux que des opportunités réelles et scorées.",
+      "business_positioning": "Augmentation du taux de conversion, optimisation du temps de vente des équipes, traitement fluide de l'acquisition à grande échelle.",
+      "theme_family": "sales-lead-qualification",
+      "keywords": [
+        "qualification automatique",
+        "leads entrants",
+        "taux de conversion",
+        "réactivité commerciale",
+        "acquisition"
+      ]
     },
     {
       "choice": 3,
-      "title_fr": "Fini la perte de savoir-faire : donnez à vos équipes l'accès immédiat à toute votre expertise technique",
-      "angle": "Déployer un agent IA interne capable de retrouver la bonne procédure ou norme de qualité enfouie dans des milliers de documents.",
-      "promise": "Réduire le temps passé à chercher l'information et éviter les erreurs coûteuses sur le terrain.",
-      "business_positioning": "Productivité opérationnelle et qualité de service.",
-      "theme_family": "internal-knowledge-retrieval",
-      "keywords": ["base documentaire", "assistant interne", "conformité", "partage de connaissances", "gain de temps"]
+      "title_fr": "Fiabilisez vos processus métier : automatisez la validation de conformité de vos dossiers clients",
+      "angle": "La vérification d'exigences complexes (KYC, contrats, normes) crée des goulots d'étranglement qui ralentissent le service et exposent l'entreprise à des erreurs humaines.",
+      "promise": "Croiser et analyser instantanément les éléments de dizaines de pièces pour certifier des dossiers complets et conformes avant validation finale.",
+      "business_positioning": "Sécurisation des opérations, maîtrise des risques légaux, et accélération du délai de traitement pour le client final.",
+      "theme_family": "operations-compliance-automation",
+      "keywords": [
+        "conformité",
+        "contrôle qualité",
+        "processus métier",
+        "réduction des risques",
+        "opérations"
+      ]
     }
   ]
 }

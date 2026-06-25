@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Tue, 23 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 25 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Fluidifiez l'intégration de vos talents : orchestrez l'onboarding avec un agent virtuel RH</title>
+            <link>https://zamania.fr/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</guid>
+            <description>Réduisez le temps administratif de l'onboarding RH. Découvrez comment un agent virtuel pilote l'accueil des collaborateurs et sécurise les dossiers.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-fluidifiez-integration-onboarding-rh-agent-virtuel.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Thu, 25 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Accélérez le traitement des appels d'offres avec l'IA</title>
             <link>https://zamania.fr/blog/accelerer-traitement-appels-offres-ia.html</link>

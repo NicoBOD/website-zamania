@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-23T12:07:12+02:00",
+  "updated_at": "2026-06-25T12:06:07+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -383,6 +383,30 @@
         "fr": "https://zamania.fr/blog/accelerer-traitement-appels-offres-ia.html",
         "en": "https://zamania.fr/en/blog/accelerer-traitement-appels-offres-ia.html",
         "ar": "https://zamania.fr/ar/blog/accelerer-traitement-appels-offres-ia.html"
+      }
+    },
+    {
+      "slug": "fluidifiez-integration-onboarding-rh-agent-virtuel",
+      "published_at": "2026-06-25T12:06:07+02:00",
+      "title_fr": "Fluidifiez l'intégration de vos talents : orchestrez l'onboarding avec un agent virtuel RH",
+      "summary_fr": "Piloter automatiquement les différentes étapes d'accueil, vérifier les pièces fournies et répondre aux interrogations fréquentes en temps réel.",
+      "angle": "Les allers-retours pour constituer un dossier et la charge liée à l'accueil d'un collaborateur fragmentent le temps des équipes ressources humaines et freinent l'intégration.",
+      "business_positioning": "Réduction du délai de productivité (Time-to-Productivity), amélioration de la marque employeur et recentrage des RH sur le relationnel.",
+      "theme_family": "hr-onboarding-automation",
+      "angle_family": null,
+      "keywords": [
+        "onboarding RH",
+        "agent virtuel",
+        "expérience collaborateur",
+        "productivité RH",
+        "intégration"
+      ],
+      "proposal_date": "2026-06-25",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html",
+        "en": "https://zamania.fr/en/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html",
+        "ar": "https://zamania.fr/ar/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html"
       }
     }
   ]

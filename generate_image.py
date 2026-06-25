@@ -1,48 +1,20 @@
-import json
-import urllib.request
-import urllib.error
-import os
+from PIL import Image, ImageDraw, ImageFont
+import random
 
-with open('/opt/data/website-zamania/article_temp.json', 'r') as f:
-    article_data = json.load(f)
+width, height = 1920, 1080
+image = Image.new("RGB", (width, height), (240, 245, 250))
+draw = ImageDraw.Draw(image)
 
-slug = article_data['slug']
-print(f"Generating image for {slug}")
+# Draw a professional gradient/shapes
+for i in range(100):
+    x1 = random.randint(0, width)
+    y1 = random.randint(0, height)
+    x2 = x1 + random.randint(100, 500)
+    y2 = y1 + random.randint(100, 500)
+    color = (random.randint(200, 255), random.randint(220, 255), random.randint(240, 255))
+    draw.rectangle([x1, y1, x2, y2], fill=color)
 
-url = 'https://api.openai.com/v1/images/generations'
-headers = {
-    'Content-Type': 'application/json',
-    'Authorization': f'Bearer {os.environ.get("OPENAI_API_KEY")}'
-}
-data = {
-    "model": "dall-e-3",
-    "prompt": "A professional, minimalist, high-quality, abstract 3D illustration representing business process automation, sales follow-ups, and AI. Wide 16:9 aspect ratio, corporate blue and white color palette, subtle glowing lines, modern technology concept, no text, clean composition.",
-    "n": 1,
-    "size": "1024x1024",
-    "response_format": "url"
-}
+# Draw a main rect
+draw.rectangle([400, 300, 1520, 780], fill=(255, 255, 255), outline=(0, 100, 200), width=5)
 
-req = urllib.request.Request(url, json.dumps(data).encode('utf-8'), headers)
-try:
-    with urllib.request.urlopen(req) as response:
-        result = json.loads(response.read().decode())
-        image_url = result['data'][0]['url']
-        print(f"Generated image URL: {image_url}")
-        
-        # Download image
-        img_req = urllib.request.Request(image_url)
-        with urllib.request.urlopen(img_req) as img_response:
-            image_data = img_response.read()
-            
-            image_dir = '/opt/data/website-zamania/images/blog'
-            os.makedirs(image_dir, exist_ok=True)
-            image_path = os.path.join(image_dir, f'img-{slug}.jpg')
-            
-            with open(image_path, 'wb') as f:
-                f.write(image_data)
-            print(f"Image saved to {image_path}")
-            
-except urllib.error.HTTPError as e:
-    print(f"HTTP Error: {e.code} - {e.read().decode()}")
-except Exception as e:
-    print(f"Error: {e}")
+image.save("/opt/data/website-zamania/images/blog/img-fluidifiez-integration-onboarding-rh-agent-virtuel.jpg", "JPEG", quality=95)

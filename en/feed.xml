@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Tue, 23 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 25 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Streamline Talent Integration: Orchestrate Onboarding with a Virtual HR Agent</title>
+            <link>https://zamania.fr/en/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</guid>
+            <description>Reduce administrative onboarding time. Discover how a virtual agent manages employee integration and secures document collection efficiently.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-fluidifiez-integration-onboarding-rh-agent-virtuel.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Thu, 25 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Accelerate RFP Processing with AI to Boost Your Sales</title>
             <link>https://zamania.fr/en/blog/accelerer-traitement-appels-offres-ia.html</link>
