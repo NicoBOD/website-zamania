@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/ar/feed.xml" rel="self" type="application/rss+xml"/>
         <description>أتمتة الذكاء الاصطناعي للشركات الصغيرة والمتوسطة: تحليلات وحالات استخدام وممارسات عملية.</description>
         <language>ar</language>
-        <lastBuildDate>Thu, 25 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Sat, 27 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>تأمين مبيعاتك: وكيل ذكاء اصطناعي لتأهيل العملاء المحتملين الوافدين فوراً</title>
+            <link>https://zamania.fr/ar/blog/agent-ia-qualification-leads-entrants.html</link>
+            <guid isPermaLink="true">https://zamania.fr/ar/blog/agent-ia-qualification-leads-entrants.html</guid>
+            <description>سرعة الاستجابة التجارية أمر بالغ الأهمية. اكتشف كيف يقوم وكيل الذكاء الاصطناعي بتأهيل وجدولة عملائك المحتملين على مدار الساعة لزيادة معدل التحويل.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-agent-ia-qualification-leads-entrants.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sat, 27 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>تبسيط دمج المواهب: إدارة الإعداد باستخدام وكيل موارد بشرية افتراضي</title>
             <link>https://zamania.fr/ar/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</link>

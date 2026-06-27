@@ -4,7 +4,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://zamania.fr/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/"/>
@@ -14,7 +14,7 @@
     </url>
     <url>
         <loc>https://zamania.fr/en/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/"/>
@@ -24,7 +24,7 @@
     </url>
     <url>
         <loc>https://zamania.fr/ar/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/"/>
@@ -34,7 +34,7 @@
     </url>
     <url>
         <loc>https://zamania.fr/blog/index.html</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/index.html"/>
@@ -44,7 +44,7 @@
     </url>
     <url>
         <loc>https://zamania.fr/en/blog/index.html</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/index.html"/>
@@ -54,7 +54,7 @@
     </url>
     <url>
         <loc>https://zamania.fr/ar/blog/index.html</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/index.html"/>
@@ -64,7 +64,7 @@
     </url>
     <url>
         <loc>https://zamania.fr/blog/page-2.html</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/page-2.html"/>
@@ -74,7 +74,7 @@
     </url>
     <url>
         <loc>https://zamania.fr/en/blog/page-2.html</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/page-2.html"/>
@@ -84,13 +84,43 @@
     </url>
     <url>
         <loc>https://zamania.fr/ar/blog/page-2.html</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-06-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/page-2.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://zamania.fr/en/blog/page-2.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/blog/page-2.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://zamania.fr/blog/page-2.html"/>
+    </url>
+    <url>
+        <loc>https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html</loc>
+        <lastmod>2026-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html"/>
+    </url>
+    <url>
+        <loc>https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html</loc>
+        <lastmod>2026-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html"/>
+    </url>
+    <url>
+        <loc>https://zamania.fr/ar/blog/agent-ia-qualification-leads-entrants.html</loc>
+        <lastmod>2026-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://zamania.fr/ar/blog/agent-ia-qualification-leads-entrants.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html"/>
     </url>
     <url>
         <loc>https://zamania.fr/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</loc>

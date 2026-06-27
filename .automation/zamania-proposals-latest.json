@@ -1,50 +1,32 @@
 {
-  "proposal_date": "2026-06-25",
+  "proposal_date": "2026-06-27",
   "proposals": [
     {
       "choice": 1,
-      "title_fr": "Fluidifiez l'intégration de vos talents : orchestrez l'onboarding avec un agent virtuel RH",
-      "angle": "Les allers-retours pour constituer un dossier et la charge liée à l'accueil d'un collaborateur fragmentent le temps des équipes ressources humaines et freinent l'intégration.",
-      "promise": "Piloter automatiquement les différentes étapes d'accueil, vérifier les pièces fournies et répondre aux interrogations fréquentes en temps réel.",
-      "business_positioning": "Réduction du délai de productivité (Time-to-Productivity), amélioration de la marque employeur et recentrage des RH sur le relationnel.",
-      "theme_family": "hr-onboarding-automation",
-      "keywords": [
-        "onboarding RH",
-        "agent virtuel",
-        "expérience collaborateur",
-        "productivité RH",
-        "intégration"
-      ]
+      "title_fr": "Sécurisez vos ventes : un agent IA pour qualifier instantanément 100 % de vos leads entrants",
+      "angle": "L'urgence de la réactivité commerciale : les leads qui refroidissent représentent un manque à gagner direct. L'IA qualifie et planifie 24/7 pour les commerciaux.",
+      "promise": "Augmenter le taux de conversion des prospects entrants en éliminant les délais de première réponse.",
+      "business_positioning": "Accélération du cycle de vente et optimisation du ROI marketing. Vos équipes ne se concentrent que sur les opportunités à forte valeur.",
+      "theme_family": "sales-lead-qualification",
+      "keywords": ["qualification", "conversion", "réactivité", "agent IA", "revenus"]
     },
     {
       "choice": 2,
-      "title_fr": "Ne perdez plus d'opportunités : qualifiez 100 % de vos leads entrants en moins de 5 minutes",
-      "angle": "La réactivité face aux sollicitations entrantes est déterminante. Un traitement retardé entraîne une perte d'attention du prospect et des délais qui tuent la vente.",
-      "promise": "Filtrer, catégoriser et qualifier les contacts de manière asynchrone pour ne transmettre aux commerciaux que des opportunités réelles et scorées.",
-      "business_positioning": "Augmentation du taux de conversion, optimisation du temps de vente des équipes, traitement fluide de l'acquisition à grande échelle.",
-      "theme_family": "sales-lead-qualification",
-      "keywords": [
-        "qualification automatique",
-        "leads entrants",
-        "taux de conversion",
-        "réactivité commerciale",
-        "acquisition"
-      ]
+      "title_fr": "Anticipez l'attrition : l'analyse IA au service de la fidélisation proactive de vos clients",
+      "angle": "Passer d'un support réactif à une stratégie de rétention proactive en analysant les signaux faibles d'insatisfaction sur l'ensemble de vos canaux.",
+      "promise": "Identifier les clients à risque avant qu'ils ne partent et déclencher automatiquement des actions de rétention ciblées.",
+      "business_positioning": "Sécurisation du chiffre d'affaires récurrent et augmentation de la valeur vie client (LTV).",
+      "theme_family": "customer-success-retention",
+      "keywords": ["fidélisation", "attrition", "signaux faibles", "rétention", "LTV"]
     },
     {
       "choice": 3,
-      "title_fr": "Fiabilisez vos processus métier : automatisez la validation de conformité de vos dossiers clients",
-      "angle": "La vérification d'exigences complexes (KYC, contrats, normes) crée des goulots d'étranglement qui ralentissent le service et exposent l'entreprise à des erreurs humaines.",
-      "promise": "Croiser et analyser instantanément les éléments de dizaines de pièces pour certifier des dossiers complets et conformes avant validation finale.",
-      "business_positioning": "Sécurisation des opérations, maîtrise des risques légaux, et accélération du délai de traitement pour le client final.",
-      "theme_family": "operations-compliance-automation",
-      "keywords": [
-        "conformité",
-        "contrôle qualité",
-        "processus métier",
-        "réduction des risques",
-        "opérations"
-      ]
+      "title_fr": "Sécurisez vos engagements : l'audit automatisé de vos contrats pour neutraliser les risques",
+      "angle": "La validation des contrats volumineux expose à des oublis coûteux. L'IA extrait et valide les clauses critiques de manière standardisée et infaillible.",
+      "promise": "Auditer la totalité des contrats (clients ou fournisseurs) en temps réel pour garantir la conformité et protéger vos marges.",
+      "business_positioning": "Gestion des risques, sécurisation des marges opérationnelles et accélération des cycles de signature.",
+      "theme_family": "legal-contract-audit",
+      "keywords": ["audit contrats", "conformité", "risques", "clauses", "accélération"]
     }
   ]
 }

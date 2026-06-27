@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Thu, 25 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Sat, 27 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Secure Your Sales: An AI Agent to Instantly Qualify Inbound Leads</title>
+            <link>https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html</guid>
+            <description>Commercial responsiveness is key. Discover how an AI agent qualifies and schedules your inbound leads 24/7 to maximize your conversion rate.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-agent-ia-qualification-leads-entrants.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sat, 27 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Streamline Talent Integration: Orchestrate Onboarding with a Virtual HR Agent</title>
             <link>https://zamania.fr/en/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html</link>

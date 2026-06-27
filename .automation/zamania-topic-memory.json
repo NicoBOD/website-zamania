@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-25T12:06:07+02:00",
+  "updated_at": "2026-06-27T12:03:38+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -407,6 +407,30 @@
         "fr": "https://zamania.fr/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html",
         "en": "https://zamania.fr/en/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html",
         "ar": "https://zamania.fr/ar/blog/fluidifiez-integration-onboarding-rh-agent-virtuel.html"
+      }
+    },
+    {
+      "slug": "agent-ia-qualification-leads-entrants",
+      "published_at": "2026-06-27T12:00:00Z",
+      "title_fr": "Sécurisez vos ventes : un agent IA pour qualifier instantanément 100 % de vos leads entrants",
+      "summary_fr": "Augmenter le taux de conversion des prospects entrants en éliminant les délais de première réponse.",
+      "angle": "L'urgence de la réactivité commerciale : les leads qui refroidissent représentent un manque à gagner direct. L'IA qualifie et planifie 24/7 pour les commerciaux.",
+      "business_positioning": "Accélération du cycle de vente et optimisation du ROI marketing. Vos équipes ne se concentrent que sur les opportunités à forte valeur.",
+      "theme_family": "sales-lead-qualification",
+      "angle_family": null,
+      "keywords": [
+        "qualification",
+        "conversion",
+        "réactivité",
+        "agent IA",
+        "revenus"
+      ],
+      "proposal_date": "2026-06-27",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html",
+        "en": "https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html",
+        "ar": "https://zamania.fr/ar/blog/agent-ia-qualification-leads-entrants.html"
       }
     }
   ]
