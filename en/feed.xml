@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Sat, 27 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 29 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Halve Your Response Times: AI to Sort and Prioritize Customer Requests</title>
+            <link>https://zamania.fr/en/blog/ia-triage-priorisation-demandes-clients.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/ia-triage-priorisation-demandes-clients.html</guid>
+            <description>Eliminate bottlenecks in your customer service. Discover how AI instantly categorizes and routes requests to the right team for maximum efficiency.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-triage-priorisation-demandes-clients.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Mon, 29 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Secure Your Sales: An AI Agent to Instantly Qualify Inbound Leads</title>
             <link>https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html</link>

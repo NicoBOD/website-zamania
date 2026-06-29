@@ -1,32 +1,32 @@
 {
-  "proposal_date": "2026-06-27",
+  "proposal_date": "2026-06-29",
   "proposals": [
     {
       "choice": 1,
-      "title_fr": "Sécurisez vos ventes : un agent IA pour qualifier instantanément 100 % de vos leads entrants",
-      "angle": "L'urgence de la réactivité commerciale : les leads qui refroidissent représentent un manque à gagner direct. L'IA qualifie et planifie 24/7 pour les commerciaux.",
-      "promise": "Augmenter le taux de conversion des prospects entrants en éliminant les délais de première réponse.",
-      "business_positioning": "Accélération du cycle de vente et optimisation du ROI marketing. Vos équipes ne se concentrent que sur les opportunités à forte valeur.",
-      "theme_family": "sales-lead-qualification",
-      "keywords": ["qualification", "conversion", "réactivité", "agent IA", "revenus"]
+      "title_fr": "Divisez vos temps de réponse par deux : l'IA pour trier et prioriser vos demandes clients",
+      "angle": "Utilisation de l'IA pour analyser le ton et l'urgence, catégoriser et router instantanément les requêtes du support client vers la bonne équipe.",
+      "promise": "Éliminer les goulots d'étranglement au niveau du service client, garantissant que les demandes urgentes des comptes clés sont traitées en priorité absolue.",
+      "business_positioning": "Fidélisation et amélioration du taux de rétention grâce à une réactivité sans faille face aux incidents critiques.",
+      "theme_family": "customer-support-triage",
+      "keywords": ["support client", "tri automatique", "satisfaction client", "rétention", "catégorisation IA", "réactivité"]
     },
     {
       "choice": 2,
-      "title_fr": "Anticipez l'attrition : l'analyse IA au service de la fidélisation proactive de vos clients",
-      "angle": "Passer d'un support réactif à une stratégie de rétention proactive en analysant les signaux faibles d'insatisfaction sur l'ensemble de vos canaux.",
-      "promise": "Identifier les clients à risque avant qu'ils ne partent et déclencher automatiquement des actions de rétention ciblées.",
-      "business_positioning": "Sécurisation du chiffre d'affaires récurrent et augmentation de la valeur vie client (LTV).",
-      "theme_family": "customer-success-retention",
-      "keywords": ["fidélisation", "attrition", "signaux faibles", "rétention", "LTV"]
+      "title_fr": "Sécurisez votre trésorerie : le rapprochement automatique des factures et bons de commande par l'IA",
+      "angle": "L'intelligence artificielle pour extraire les données des factures fournisseurs et les réconcilier en un clin d'œil avec les commandes dans votre système.",
+      "promise": "Accélérer les clôtures comptables, éviter les erreurs de paiement et obtenir une visibilité financière en temps réel sans intervention laborieuse.",
+      "business_positioning": "Fiabilisation des processus financiers, protection du BFR (Besoin en Fonds de Roulement) et contrôle renforcé des dépenses.",
+      "theme_family": "finance-invoice-processing",
+      "keywords": ["facturation", "réconciliation comptable", "ERP", "trésorerie", "processus financiers", "clôture"]
     },
     {
       "choice": 3,
-      "title_fr": "Sécurisez vos engagements : l'audit automatisé de vos contrats pour neutraliser les risques",
-      "angle": "La validation des contrats volumineux expose à des oublis coûteux. L'IA extrait et valide les clauses critiques de manière standardisée et infaillible.",
-      "promise": "Auditer la totalité des contrats (clients ou fournisseurs) en temps réel pour garantir la conformité et protéger vos marges.",
-      "business_positioning": "Gestion des risques, sécurisation des marges opérationnelles et accélération des cycles de signature.",
-      "theme_family": "legal-contract-audit",
-      "keywords": ["audit contrats", "conformité", "risques", "clauses", "accélération"]
+      "title_fr": "Maîtrisez vos engagements : l'IA pour auditer et extraire les clauses clés de vos contrats",
+      "angle": "Déploiement d'une IA capable de lire en masse les contrats fournisseurs ou clients pour mettre en évidence les obligations légales, les dates d'échéance et les risques cachés.",
+      "promise": "Réduire drastiquement l'exposition juridique de l'entreprise et prévenir les pénalités liées aux reconductions tacites non souhaitées.",
+      "business_positioning": "Maîtrise des risques (compliance) et sécurisation des marges commerciales, offrant aux dirigeants une vue claire sur les engagements de l'entreprise.",
+      "theme_family": "legal-contract-analysis",
+      "keywords": ["contrats", "audit juridique", "conformité", "risque", "analyse IA", "compliance"]
     }
   ]
 }

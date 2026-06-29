@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Sat, 27 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 29 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Divisez vos temps de réponse par deux : l'IA pour trier vos demandes clients</title>
+            <link>https://zamania.fr/blog/ia-triage-priorisation-demandes-clients.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/ia-triage-priorisation-demandes-clients.html</guid>
+            <description>Éliminez les goulots d'étranglement de votre service client. Découvrez comment l'IA catégorise et route instantanément les requêtes vers la bonne équipe.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-ia-triage-priorisation-demandes-clients.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Mon, 29 Jun 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Sécurisez vos ventes : un agent IA pour qualifier instantanément vos leads</title>
             <link>https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html</link>

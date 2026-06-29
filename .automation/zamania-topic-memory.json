@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-27T12:03:38+02:00",
+  "updated_at": "2026-06-29T12:05:12+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -431,6 +431,31 @@
         "fr": "https://zamania.fr/blog/agent-ia-qualification-leads-entrants.html",
         "en": "https://zamania.fr/en/blog/agent-ia-qualification-leads-entrants.html",
         "ar": "https://zamania.fr/ar/blog/agent-ia-qualification-leads-entrants.html"
+      }
+    },
+    {
+      "slug": "ia-triage-priorisation-demandes-clients",
+      "published_at": "2026-06-29T10:05:12Z",
+      "title_fr": "Divisez vos temps de réponse par deux : l'IA pour trier et prioriser vos demandes clients",
+      "summary_fr": "Éliminer les goulots d'étranglement au niveau du service client, garantissant que les demandes urgentes des comptes clés sont traitées en priorité absolue.",
+      "angle": "Utilisation de l'IA pour analyser le ton et l'urgence, catégoriser et router instantanément les requêtes du support client vers la bonne équipe.",
+      "business_positioning": "Fidélisation et amélioration du taux de rétention grâce à une réactivité sans faille face aux incidents critiques.",
+      "theme_family": "customer-support-triage",
+      "angle_family": null,
+      "keywords": [
+        "support client",
+        "tri automatique",
+        "satisfaction client",
+        "rétention",
+        "catégorisation IA",
+        "réactivité"
+      ],
+      "proposal_date": "2026-06-29",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/ia-triage-priorisation-demandes-clients.html",
+        "en": "https://zamania.fr/en/blog/ia-triage-priorisation-demandes-clients.html",
+        "ar": "https://zamania.fr/ar/blog/ia-triage-priorisation-demandes-clients.html"
       }
     }
   ]
