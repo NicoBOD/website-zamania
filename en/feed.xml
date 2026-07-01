@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Mon, 29 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jul 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Secure Your Cash Flow: Automate Bank Reconciliation and Invoice Matching</title>
+            <link>https://zamania.fr/en/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html</guid>
+            <description>Reduce your Days Sales Outstanding (DSO) and secure your cash flow. Discover how AI accelerates the reconciliation of your complex payments.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-securisez-tresorerie-automatisez-rapprochement-bancaire-ia.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 01 Jul 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Halve Your Response Times: AI to Sort and Prioritize Customer Requests</title>
             <link>https://zamania.fr/en/blog/ia-triage-priorisation-demandes-clients.html</link>

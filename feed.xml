@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Automatisation IA pour TPE et PME : analyses, cas d'usage et bonnes pratiques pour gagner du temps et de la marge.</description>
         <language>fr</language>
-        <lastBuildDate>Mon, 29 Jun 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jul 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Sécurisez votre trésorerie : automatisez le rapprochement bancaire et la réconciliation des factures</title>
+            <link>https://zamania.fr/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html</link>
+            <guid isPermaLink="true">https://zamania.fr/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html</guid>
+            <description>Réduisez vos délais d'encaissement et fiabilisez votre flux de trésorerie. Découvrez comment l'IA accélère la réconciliation de vos paiements complexes.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-securisez-tresorerie-automatisez-rapprochement-bancaire-ia.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Wed, 01 Jul 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Divisez vos temps de réponse par deux : l'IA pour trier vos demandes clients</title>
             <link>https://zamania.fr/blog/ia-triage-priorisation-demandes-clients.html</link>

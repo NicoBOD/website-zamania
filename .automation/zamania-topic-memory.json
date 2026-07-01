@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-06-29T12:05:12+02:00",
+  "updated_at": "2026-07-01T12:05:38+02:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -456,6 +456,31 @@
         "fr": "https://zamania.fr/blog/ia-triage-priorisation-demandes-clients.html",
         "en": "https://zamania.fr/en/blog/ia-triage-priorisation-demandes-clients.html",
         "ar": "https://zamania.fr/ar/blog/ia-triage-priorisation-demandes-clients.html"
+      }
+    },
+    {
+      "slug": "securisez-tresorerie-automatisez-rapprochement-bancaire-ia",
+      "published_at": "2026-07-01T10:05:38Z",
+      "title_fr": "Sécurisez votre trésorerie : automatisez le rapprochement bancaire et la réconciliation des factures",
+      "summary_fr": "Réduire les délais d'encaissement (DSO) et garantir une visibilité parfaite sur les flux de trésorerie en temps réel.",
+      "angle": "L'utilisation de l'IA pour analyser, extraire et rapprocher automatiquement les paiements complexes des factures en attente, supprimant les goulots d'étranglement financiers.",
+      "business_positioning": "Optimisation de la trésorerie (BFR) et sécurisation du chiffre d'affaires.",
+      "theme_family": "finance-invoice-reconciliation",
+      "angle_family": null,
+      "keywords": [
+        "trésorerie",
+        "rapprochement bancaire",
+        "facturation",
+        "DSO",
+        "BFR",
+        "encaissements"
+      ],
+      "proposal_date": "2026-07-01",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html",
+        "en": "https://zamania.fr/en/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html",
+        "ar": "https://zamania.fr/ar/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html"
       }
     }
   ]

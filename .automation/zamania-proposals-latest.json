@@ -1,32 +1,32 @@
 {
-  "proposal_date": "2026-06-29",
+  "proposal_date": "2026-07-01",
   "proposals": [
     {
       "choice": 1,
-      "title_fr": "Divisez vos temps de réponse par deux : l'IA pour trier et prioriser vos demandes clients",
-      "angle": "Utilisation de l'IA pour analyser le ton et l'urgence, catégoriser et router instantanément les requêtes du support client vers la bonne équipe.",
-      "promise": "Éliminer les goulots d'étranglement au niveau du service client, garantissant que les demandes urgentes des comptes clés sont traitées en priorité absolue.",
-      "business_positioning": "Fidélisation et amélioration du taux de rétention grâce à une réactivité sans faille face aux incidents critiques.",
-      "theme_family": "customer-support-triage",
-      "keywords": ["support client", "tri automatique", "satisfaction client", "rétention", "catégorisation IA", "réactivité"]
+      "title_fr": "Sécurisez votre trésorerie : automatisez le rapprochement bancaire et la réconciliation des factures",
+      "angle": "L'utilisation de l'IA pour analyser, extraire et rapprocher automatiquement les paiements complexes des factures en attente, supprimant les goulots d'étranglement financiers.",
+      "promise": "Réduire les délais d'encaissement (DSO) et garantir une visibilité parfaite sur les flux de trésorerie en temps réel.",
+      "business_positioning": "Optimisation de la trésorerie (BFR) et sécurisation du chiffre d'affaires.",
+      "theme_family": "finance-invoice-reconciliation",
+      "keywords": ["trésorerie", "rapprochement bancaire", "facturation", "DSO", "BFR", "encaissements"]
     },
     {
       "choice": 2,
-      "title_fr": "Sécurisez votre trésorerie : le rapprochement automatique des factures et bons de commande par l'IA",
-      "angle": "L'intelligence artificielle pour extraire les données des factures fournisseurs et les réconcilier en un clin d'œil avec les commandes dans votre système.",
-      "promise": "Accélérer les clôtures comptables, éviter les erreurs de paiement et obtenir une visibilité financière en temps réel sans intervention laborieuse.",
-      "business_positioning": "Fiabilisation des processus financiers, protection du BFR (Besoin en Fonds de Roulement) et contrôle renforcé des dépenses.",
-      "theme_family": "finance-invoice-processing",
-      "keywords": ["facturation", "réconciliation comptable", "ERP", "trésorerie", "processus financiers", "clôture"]
+      "title_fr": "Ne perdez plus de devis dans la nature : l'IA au service de la relance commerciale intelligente",
+      "angle": "Déploiement d'agents IA pour assurer un suivi personnalisé et au bon moment des propositions commerciales envoyées, selon l'engagement du prospect.",
+      "promise": "Augmenter mécaniquement le taux de transformation du pipeline existant sans surcharger les équipes de vente.",
+      "business_positioning": "Génération de revenus, maximisation du ROI commercial et vélocité des ventes.",
+      "theme_family": "sales-quote-followup",
+      "keywords": ["conversion", "relance commerciale", "pipeline", "devis", "revenus"]
     },
     {
       "choice": 3,
-      "title_fr": "Maîtrisez vos engagements : l'IA pour auditer et extraire les clauses clés de vos contrats",
-      "angle": "Déploiement d'une IA capable de lire en masse les contrats fournisseurs ou clients pour mettre en évidence les obligations légales, les dates d'échéance et les risques cachés.",
-      "promise": "Réduire drastiquement l'exposition juridique de l'entreprise et prévenir les pénalités liées aux reconductions tacites non souhaitées.",
-      "business_positioning": "Maîtrise des risques (compliance) et sécurisation des marges commerciales, offrant aux dirigeants une vue claire sur les engagements de l'entreprise.",
-      "theme_family": "legal-contract-analysis",
-      "keywords": ["contrats", "audit juridique", "conformité", "risque", "analyse IA", "compliance"]
+      "title_fr": "Fiabilisez votre chaîne de valeur : ajustez vos stocks en temps réel grâce à la prévision par IA",
+      "angle": "Passage d'une gestion réactive à une anticipation précise des besoins matériels grâce aux modèles d'apprentissage croisant données historiques et signaux externes.",
+      "promise": "Minimiser le capital immobilisé tout en éradiquant le risque de rupture de stock sur les produits critiques.",
+      "business_positioning": "Résilience opérationnelle, baisse des coûts de stockage et excellence logistique.",
+      "theme_family": "operations-inventory-forecasting",
+      "keywords": ["stocks", "prévision", "supply chain", "logistique", "optimisation"]
     }
   ]
 }
