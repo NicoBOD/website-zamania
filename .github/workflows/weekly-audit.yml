@@ -24,15 +24,24 @@ jobs:
       - name: Vérification des liens externes (lychee)
         uses: lycheeverse/lychee-action@v2
         with:
+          # --root-dir : sans lui, lychee ne peut pas résoudre les liens commençant
+          # par "/" (ex. /mentions-legales.html) et les signale à tort en erreur.
+          # template.html : gabarits du pipeline de publication, contiennent des
+          # placeholders {{SLUG}} etc. non substitués, ce ne sont pas de vraies pages.
+          # economie.gouv.fr : bloque les requêtes automatisées via un challenge
+          # Cloudflare (cf-mitigated: challenge) ; le site est en ligne.
           args: >-
             --no-progress
             --max-retries 2
             --timeout 20
+            --root-dir ${{ github.workspace }}
             --exclude-path .automation
+            --exclude-path 'template\.html$'
             --exclude '^mailto:'
             --exclude '(twitter|x)\.com'
             --exclude 'linkedin\.com'
             --exclude 'wa\.me'
+            --exclude 'economie\.gouv\.fr'
             '**/*.html'
           fail: true
 
