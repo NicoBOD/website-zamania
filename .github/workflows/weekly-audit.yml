@@ -30,6 +30,9 @@ jobs:
           # placeholders {{SLUG}} etc. non substitués, ce ne sont pas de vraies pages.
           # economie.gouv.fr : bloque les requêtes automatisées via un challenge
           # Cloudflare (cf-mitigated: challenge) ; le site est en ligne.
+          # iso.org : renvoie 403 Forbidden à toute requête automatisée (WAF
+          # anti-bot), y compris hors CI ; la page est bien accessible dans
+          # un navigateur classique.
           args: >-
             --no-progress
             --max-retries 2
@@ -42,6 +45,7 @@ jobs:
             --exclude 'linkedin\.com'
             --exclude 'wa\.me'
             --exclude 'economie\.gouv\.fr'
+            --exclude 'iso\.org'
             '**/*.html'
           fail: true
 
