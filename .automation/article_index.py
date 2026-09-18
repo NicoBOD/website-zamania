@@ -26,8 +26,8 @@ LANGS = {
            'locale': 'ar_AR', 'cta': 'اقرأ المقال'},
 }
 
-MONTHS_FR = ['janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet',
-             'aout', 'septembre', 'octobre', 'novembre', 'decembre']
+MONTHS_FR = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet',
+             'août', 'septembre', 'octobre', 'novembre', 'décembre']
 MONTHS_EN = ['january', 'february', 'march', 'april', 'may', 'june', 'july',
              'august', 'september', 'october', 'november', 'december']
 MONTHS_AR = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو',
