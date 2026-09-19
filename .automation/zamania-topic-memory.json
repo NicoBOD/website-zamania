@@ -1,7 +1,7 @@
 {
   "project": "zamania-blog",
   "version": 1,
-  "updated_at": "2026-07-01T12:05:38+02:00",
+  "updated_at": "2026-09-19T03:22:51+00:00",
   "rules": {
     "recent_window": 2,
     "history_window": 6,
@@ -481,6 +481,33 @@
         "fr": "https://zamania.fr/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html",
         "en": "https://zamania.fr/en/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html",
         "ar": "https://zamania.fr/ar/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html"
+      }
+    },
+    {
+      "slug": "agent-whatsapp-ia-reponse-clients-24-7",
+      "published_at": "2026-09-19",
+      "title_fr": "Ne laissez plus un message WhatsApp sans réponse : l'agent IA qui répond, chiffre et enregistre 24h/24",
+      "summary_fr": "Ne plus perdre les demandes reçues hors horaires, traiter les notes vocales et les devis photographiés, et rendre environ 25 heures par mois à l'équipe.",
+      "angle": "Déploiement d'un agent IA sur WhatsApp Business qui répond aux clients en sept secondes jour et nuit, puise les prix dans les documents de l'entreprise, vérifie les délais en code, enregistre les commandes et passe la main à un humain avec un brouillon prêt à valider.",
+      "business_positioning": "Réactivité commerciale, récupération du chiffre d'affaires hors horaires et productivité du service client.",
+      "theme_family": "customer-service-whatsapp-agent",
+      "angle_family": "conversational-channel-automation",
+      "keywords": [
+        "WhatsApp",
+        "agent conversationnel",
+        "service client",
+        "notes vocales",
+        "escalade humaine",
+        "RGPD",
+        "AI Act",
+        "24h/24"
+      ],
+      "proposal_date": "2026-09-19",
+      "choice": "1",
+      "links": {
+        "fr": "https://zamania.fr/blog/agent-whatsapp-ia-reponse-clients-24-7.html",
+        "en": "https://zamania.fr/en/blog/agent-whatsapp-ia-reponse-clients-24-7.html",
+        "ar": "https://zamania.fr/ar/blog/agent-whatsapp-ia-reponse-clients-24-7.html"
       }
     }
   ]

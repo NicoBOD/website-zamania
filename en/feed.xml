@@ -7,7 +7,15 @@
         <atom:link href="https://zamania.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
         <description>AI automation for SMBs: insights, use cases and best practices to save time and protect your margins.</description>
         <language>en</language>
-        <lastBuildDate>Tue, 01 Sep 2026 08:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Sat, 19 Sep 2026 08:00:00 +0200</lastBuildDate>
+        <item>
+            <title>Never leave a WhatsApp message unanswered: the AI agent that replies, quotes and records around the clock</title>
+            <link>https://zamania.fr/en/blog/agent-whatsapp-ia-reponse-clients-24-7.html</link>
+            <guid isPermaLink="true">https://zamania.fr/en/blog/agent-whatsapp-ia-reponse-clients-24-7.html</guid>
+            <description>A voice note at 10 pm, a photographed quote, a Sunday price question: the WhatsApp agent that replies in 7 seconds and gives your team back 25 hours a month.</description>
+            <enclosure url="https://zamania.fr/images/blog/img-agent-whatsapp-ia-reponse-clients-24-7.jpg" type="image/jpeg" length="0"/>
+            <pubDate>Sat, 19 Sep 2026 08:00:00 +0200</pubDate>
+        </item>
         <item>
             <title>Secure Your Cash Flow: Automate Bank Reconciliation and Invoice Matching</title>
             <link>https://zamania.fr/en/blog/securisez-tresorerie-automatisez-rapprochement-bancaire-ia.html</link>
