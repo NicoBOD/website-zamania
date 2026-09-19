@@ -193,6 +193,14 @@
     overflow-wrap: break-word;   /* les mots/URL longs ne débordent jamais */
 }
 
+/* styles.css remet toutes les marges à zéro (`* { margin: 0 }`) : sans cette
+   règle, deux paragraphes consécutifs se touchent et le corps de l'article
+   forme un bloc compact. On reprend les 20 px des listes et des tableaux.
+   Enfant direct seulement : .post-cta p garde ses propres 25 px. */
+.post-content > p {
+    margin-bottom: 20px;
+}
+
 .post-content h2 {
     color: var(--accent);
     margin-top: 40px;
